@@ -415,10 +415,7 @@ button {
   color: inherit; }
 
 .header {
-  position: absolute;
-  width: 100%;
-  padding-top: 24px;
-  z-index: 3; }
+  width: 100%; }
 
 .header__container {
   width: 940px;
@@ -483,7 +480,8 @@ button {
 
 .hero {
   background: #61c4d9 url("../img/bg/hero-bg-branch.png") no-repeat right;
-  position: relative; }
+  position: relative;
+  padding-top: 24px; }
   .hero::after {
     content: "";
     background: url("../img/bg/bg-single-leaf.png") no-repeat;
@@ -498,13 +496,19 @@ button {
   width: 940px;
   margin: 0 auto;
   height: 100%;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .hero__main {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  padding-top: 65px; }
+  display: flex; }
 
 .hero__promo {
   margin-right: 77px;
@@ -515,7 +519,7 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-top: 85px; }
+  margin-top: 85px; }
 
 .hero__product {
   position: relative; }
