@@ -1,28 +1,33 @@
 .review-snippet {
     height: 345px;
     background: url("../img/bg/review-bg-half-circle.jpg") no-repeat top center, #f8faf9 url("../img/bg/review-bg-branch.jpg") no-repeat top right, ;
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding-left: 45px;
+    display: none;
+
+    &--active {
+        display: flex;
+    }
 }
 
 .review-snippet__content {
-    max-width: 435px;
+    width: 500px;
     height: 260px;
     display: flex;
     flex-wrap: wrap;
     padding-left: 25px;
     text-align: left;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .review-snippet__title {
-    font-size:30px;
-    color: $title-dark-grey;
-    font-weight: $medium;
-    margin-right: auto;
-    
+    h3 {
+        font-size: 30px;
+        color: $title-dark-grey;
+        font-weight: $medium;
+        margin-right: auto;
+    }
 }
 
 .review-snippet__text {

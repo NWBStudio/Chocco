@@ -1,5 +1,6 @@
 .reviews {
     position: relative;
+    padding-top: 60px;
     
     &::before {
         @include bg-slice(150px, 86px, "../img/bg/reviews-bg-top-berries.png");
@@ -10,7 +11,7 @@
     &:after {
         @include bg-slice(139px, 288px, "../img/bg/reviews-bg-left-bottom-berries.png");
         left: 0;
-        bottom: -140px;
+        bottom: -130px;
     }
 }
 
@@ -19,7 +20,7 @@
 }
 
 .reviews__title {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     text-align: center;
 }
 
@@ -27,14 +28,12 @@
     height: 135px;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: flex-start;  
 }
 
 .reviews__switch-btn--selected {
     .reviews__small-pic {
         border: 5px solid $btn-green;
-        margin: 0px 5px;
-        
         &:hover {
             box-shadow: none;
         }
@@ -45,7 +44,6 @@
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    margin: 0px 10px;
     box-sizing: content-box;
     &:hover {
         box-shadow: 0 0 5px $black;

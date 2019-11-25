@@ -48,40 +48,40 @@
         </header>
         <section class="section hero">
             <div class="hero__container">
-                <div class="hero__promo">
-                    <div class="hero__left">
+                <div class="hero__main">
+                    <div class="hero__promo">
                         <h1 class="hero__title">
                             натуральные шоколадные батончики
-                            <div class="hero__info">
-                                <p>Наши батончики идеально подходят для тех, кто следит за своим здоровьем</p>
-                            </div>
                         </h1>
+                        <div class="hero__info">
+                            <p>Наши батончики идеально подходят для тех, кто следит за своим здоровьем</p>
+                        </div>
                         <button class="btn btn--theme--white" type="button">заказать</button>
                     </div>
-                    <div class="hero__right">
-                        <img src="img/content/choccos&berries.png" alt="Батончики" class="hero__bars-pic">
+                    <div class="hero__product">
+                        <img src="img/content/bars.png" alt="Батончики" class="hero__product-pic">
                     </div>
                 </div>
-                <div class="hero__features">
-                    <div class="feature-snippet hero__feature-snippet">
+                <ul class="hero__features">
+                    <li class="feature-snippet hero__feature-snippet">
                         <svg class="hero__feature-icon">
                             <use xlink:href="sprites/icon-sprite.svg#leaves"></use>
                         </svg>
                         <span class="feature-snippet__info">100% натуральный продукт</span>
-                    </div>
-                    <div class="feature-snippet hero__feature-snippet">
+                    </li>
+                    <li class="feature-snippet hero__feature-snippet">
                         <svg class="hero__feature-icon">
                             <use xlink:href="sprites/icon-sprite.svg#truck"></use>
                         </svg>
                         <span class="feature-snippet__info">3-5 дней доставка по РФ</span>
-                    </div>
-                    <div class="feature-snippet hero__feature-snippet">
+                    </li>
+                    <li class="feature-snippet hero__feature-snippet">
                         <svg class="hero__feature-icon">
                             <use xlink:href="sprites/icon-sprite.svg#soft-ruler"></use>
                         </svg>
                         <span class="feature-snippet__info">Не портит фигуру</span>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="section why">
@@ -100,9 +100,11 @@
                                 <use xlink:href="sprites/icon-sprite.svg#healthy"></use>
                             </svg>
                         </div>
-                        <h3 class="advantages__title">Полезно</h3>
+                        <span class="advantages__title">
+                            <h3>Полезно</h3>
+                        </span>
                         <div class="advantages__description">
-                            <p>Натуральность - ключевое качествонашей продукции. Мы
+                            <p>Натуральность - ключевое качество нашей продукции. Мы
                                 используем только природные ингредиенты.</p>
                         </div>
                     </div>
@@ -112,7 +114,9 @@
                                 <use xlink:href="sprites/icon-sprite.svg#tasty"></use>
                             </svg>
                         </div>
-                        <h3 class="advantages__title">Вкусно</h3>
+                        <span class="advantages__title">
+                            <h3>Вкусно</h3>
+                        </span>
                         <div class="advantages__description">
                             <p>Нежный, ненавязчивый, изысканный – так клиенты описывают
                                 вкусовые качества наших батончиков.</p>
@@ -124,7 +128,9 @@
                                 <use xlink:href="sprites/icon-sprite.svg#strong"></use>
                             </svg>
                         </div>
-                        <h3 class="advantages__title">Питательно</h3>
+                        <span class="advantages__title">
+                            <h3>Питательно</h3>
+                        </span>
                         <div class="advantages__description">
                             <p>Высокое содержание качественного белка, а также всех
                                 необходимых витаминов и минералов.</p>
@@ -136,26 +142,68 @@
         <div class="section reviews">
             <div class="reviews__container">
                 <h2 class="title reviews__title">отзывы</h2>
-                <div class="review-snippet">
-                    <img src="img/content/user-fem-brown.jpg" alt="user avatar" class="review-snippet__usepic">
-                    <div class="review-snippet__content">
-                        <h3 class="review-snippet__title">Лучший перекус</h3>
-                        <p class="review-snippet__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в
-                            разы. В течение дня сижу за компьютером
-                            и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда
-                            под рукой. Это приятно
-                            и удобно.</p>
-                        <span class="review-snippet__author">Алёна Хмельницкая</span>
-                    </div>
-                    </div>
-                <div class="reviews__switcher">
-                    <button type="button" class="reviews__switch-btn reviews__switch-btn--selected"><img src="img/content/user-fem-brown.jpg" alt="миниатюра фотографии автора отзыва"
-                            class="reviews__small-pic"></button>
-                    <button type="button" class="reviews__switch-btn"><img src="img/content/user-fem-ginger.jpg" alt="миниатюра фотографии автора отзыва"
-                            class="reviews__small-pic"></button>
-                    <button type="button" class="reviews__switch-btn"><img src="img/content/user-male.jpg" alt="миниатюра фотографии автора отзыва"
-                            class="reviews__small-pic"></button>
-                </div>
+                <ul class="reviews__slider">
+                    <li class="review-snippet review-snippet--active">
+                        <img src="img/content/user-fem-brown.jpg" alt="user avatar" class="review-snippet__usepic">
+                        <div class="review-snippet__content  review-snippet--active">
+                            <span class="review-snippet__title">
+                                <h3>Лучший перекус</h3>
+                            </span>
+                            <p class="review-snippet__text">Я ем малыми порциями, но часто. Это повышает мою
+                                продуктивность в
+                                разы. В течение дня сижу за компьютером
+                                и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он
+                                всегда
+                                под рукой. Это приятно
+                                и удобно.</p>
+                            <span class="review-snippet__author">Алёна Хмельницкая</span>
+                        </div>
+                    </li>
+                    <li class="review-snippet">
+                        <img src="img/content/user-fem-ginger.jpg" alt="user avatar" class="review-snippet__usepic">
+                        <div class="review-snippet__content">
+                            <span class="review-snippet__title">
+                                <h3>Лучшие батончики премиум уровня</h3>
+                            </span>
+                            <p class="review-snippet__text">После тренировок всегда хочется быстро закинуться чем-то
+                                белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики
+                                всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный
+                                продукт.</p>
+                            <span class="review-snippet__author">Мария Орлова</span>
+                        </div>
+                    </li>t
+                    <li class="review-snippet">
+                        <img src="img/content/user-male.jpg" alt="user avatar" class="review-snippet__usepic">
+                        <div class="review-snippet__content">
+                            <span class="review-snippet__title">
+                                <h3>Идеально подходят для спортсменов</h3>
+                            </span>t
+                            <p class="review-snippet__text">Я ем малыми порциями, но часто. Это повышает мою
+                                продуктивность в
+                                разы. В течение дня сижу за компьютером
+                                и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он
+                                всегда
+                                под рукой. Это приятно
+                                и удобно.</p>
+                            <span class="review-snippet__author">Вадим Грачёв</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="reviews__switcher">
+                    <li class="reviews__switcher-item">
+                        <button type="button" class="reviews__switch-btn reviews__switch-btn--selected"><img
+                                src="img/content/user-fem-brown.jpg" alt="миниатюра фотографии автора отзыва"
+                                class="reviews__small-pic"></button>
+                    </li>
+                    <li class="reviews__switcher-item">
+                        <button type="button" class="reviews__switch-btn"><img src="img/content/user-fem-ginger.jpg"
+                                alt="миниатюра фотографии автора отзыва" class="reviews__small-pic"></button>
+                    </li>
+                    <li class="reviews__switcher-item">
+                        <button type="button" class="reviews__switch-btn"><img src="img/content/user-male.jpg"
+                                alt="миниатюра фотографии автора отзыва" class="reviews__small-pic"></button>
+                    </li>
+                </ul>
 
             </div>
         </div>
@@ -185,7 +233,6 @@
                 <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
             </li>
         </ul>
-        
     </div>
 </body>
 

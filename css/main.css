@@ -313,6 +313,11 @@ template {
 
 @font-face {
   font-family: "Alegreya Sans";
+  src: local("../../fonts/AlegreyaSans/AlegreyaSans-Light.ttf") format("ttf");
+  font-weight: 300px; }
+
+@font-face {
+  font-family: "Alegreya Sans";
   src: local("../../fonts/AlegreyaSans//AlegreyaSans-Medium.ttf.ttf") format("ttf");
   font-weight: 500; }
 
@@ -337,7 +342,7 @@ body {
 
 body {
   font-size: 18px;
-  line-height: 1.42;
+  line-height: 1.2;
   font-family: "Alegreya Sans", "Arial", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -412,7 +417,7 @@ button {
 .header {
   position: absolute;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 24px;
   z-index: 3; }
 
 .header__container {
@@ -466,7 +471,7 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 30px; }
+  margin-right: 28px; }
   .nav__item:last-child {
     margin-right: 0px; }
 
@@ -487,47 +492,56 @@ button {
     position: absolute;
     z-index: 1;
     bottom: -45px;
-    left: 3.9vw;
-    z-index: 1; }
+    left: 2.8vw; }
 
 .hero__container {
   width: 940px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 100%;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   position: relative; }
 
-.hero__promo {
+.hero__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  padding-top: 65px; }
 
-.hero__bars-pic {
-  margin-left: 100px;
-  margin-top: 9.2vh;
-  position: relative;
-  z-index: 1; }
+.hero__promo {
+  margin-right: 77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 85px; }
+
+.hero__product {
+  position: relative; }
+  .hero__product::after {
+    content: "";
+    background: url("../img/bg/hero-berries.png") no-repeat;
+    width: 460px;
+    height: 341px;
+    position: absolute;
+    z-index: 1;
+    bottom: -112px;
+    left: 60px; }
 
 .hero__title {
   font-size: 60px;
   line-height: 60px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 15px; }
+  height: 190px; }
 
 .hero__info {
   font-size: 21px;
   text-transform: none;
   font-weight: normal;
-  line-height: 1.4;
-  max-width: 340px;
+  line-height: 1.2;
+  max-width: 350px;
   margin-bottom: 30px; }
 
 .hero__features {
@@ -540,7 +554,8 @@ button {
   max-width: 480px;
   position: absolute;
   left: 0;
-  bottom: 45px; }
+  bottom: 45px;
+  z-index: 2; }
 
 .hero__feature-snippet {
   font-size: 16px;
@@ -548,16 +563,17 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  margin-right: 45px; }
+
+.feature-snippet__info {
+  width: 75px; }
 
 .hero__feature-icon {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   fill: none;
   stroke: #aef5fe;
-  stroke-width: 0.5;
+  stroke-width: 0.7;
   stroke-miterlimit: 10;
   margin-right: 8px; }
 
@@ -595,7 +611,7 @@ button {
     height: 232px;
     position: absolute;
     z-index: 1;
-    bottom: -105px;
+    bottom: -110px;
     left: 0; }
 
 .why__container {
@@ -623,7 +639,9 @@ button {
   color: #666666;
   font-size: 18px;
   text-align: center;
-  max-width: 415px; }
+  max-width: 415px;
+  margin-top: 10px;
+  font-weight: 300px; }
 
 .advantages {
   display: -webkit-box;
@@ -633,7 +651,7 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: url("../img/bg/advantages-bg-three-dots.png") no-repeat 30.5% 25%, url("../img/bg/advantages-bg-three-dots.png") no-repeat 69.5% 25%; }
+  background: url("../img/bg/advantages-bg-three-dots.png") no-repeat 30.5% 20%, url("../img/bg/advantages-bg-three-dots.png") no-repeat 69.5% 20%; }
 
 .advantages__snippet {
   display: -webkit-box;
@@ -660,7 +678,8 @@ button {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 30px; }
 
 .advantages__icon {
   fill: none;
@@ -670,25 +689,26 @@ button {
   height: 70px;
   width: 70px; }
 
+.advantages__title {
+  margin-bottom: 20px; }
+  .advantages__title h3 {
+    font-size: 27px;
+    font-weight: bold;
+    color: #000000; }
+
 .advantages__description {
   color: #666666;
   font-size: 18px;
-  max-width: 270px;
+  width: 285px;
   text-align: center; }
-
-.advantages__title {
-  font-size: 27px;
-  font-weight: bold;
-  color: #000000;
-  margin: 0px; }
 
 .advantages__info {
   color: #666666;
-  font-size: 18px;
-  margin: 0px; }
+  font-size: 18px; }
 
 .reviews {
-  position: relative; }
+  position: relative;
+  padding-top: 60px; }
   .reviews::before {
     content: "";
     background: url("../img/bg/reviews-bg-top-berries.png") no-repeat;
@@ -706,14 +726,14 @@ button {
     position: absolute;
     z-index: 1;
     left: 0;
-    bottom: -140px; }
+    bottom: -130px; }
 
 .reviews__container {
   width: 940px;
   margin: 0 auto; }
 
 .reviews__title {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   text-align: center; }
 
 .reviews__switcher {
@@ -724,13 +744,12 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
 
 .reviews__switch-btn--selected .reviews__small-pic {
-  border: 5px solid #0f5a47;
-  margin: 0px 5px; }
+  border: 5px solid #0f5a47; }
   .reviews__switch-btn--selected .reviews__small-pic:hover {
     -webkit-box-shadow: none;
     box-shadow: none; }
@@ -739,7 +758,6 @@ button {
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  margin: 0px 10px;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
   .reviews__small-pic:hover {
@@ -749,18 +767,20 @@ button {
 .review-snippet {
   height: 345px;
   background: url("../img/bg/review-bg-half-circle.jpg") no-repeat top center, #f8faf9 url("../img/bg/review-bg-branch.jpg") no-repeat top right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 45px; }
+  padding-left: 45px;
+  display: none; }
+  .review-snippet--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .review-snippet__content {
-  max-width: 435px;
+  width: 500px;
   height: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,9 +789,9 @@ button {
   flex-wrap: wrap;
   padding-left: 25px;
   text-align: left;
-  padding-top: 20px; }
+  padding-top: 15px; }
 
-.review-snippet__title {
+.review-snippet__title h3 {
   font-size: 30px;
   color: #323232;
   font-weight: 500;

@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    background: url("../img/bg/advantages-bg-three-dots.png") no-repeat 30.5% 25%, url("../img/bg/advantages-bg-three-dots.png") no-repeat 69.5% 25%;
+    background: url("../img/bg/advantages-bg-three-dots.png") no-repeat 30.5% 20%, url("../img/bg/advantages-bg-three-dots.png") no-repeat 69.5% 20%;
 }
 
 .advantages__snippet {
@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .advantages__icon {
@@ -31,21 +32,21 @@
     width: 70px;
 }
 
+.advantages__title {
+margin-bottom: 20px;    
+    h3{   //В голову только такой вариант стилизации из адекватных пришёл, раз уж классы нельзя хД
+        font-size: 27px;
+        font-weight: bold;
+        color: $black;
+    }
+}
+
 .advantages__description {
     @include grey-text;
-    max-width: 270px;
+    width: 285px;
     text-align: center;
 }
 
-.advantages__title {
-    font-size: 27px;
-    font-weight: bold;
-    color: $black;
-    margin: 0px;
-}
-
-
 .advantages__info {
     @include grey-text;
-    margin: 0px;
 }

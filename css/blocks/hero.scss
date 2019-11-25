@@ -1,32 +1,40 @@
 .hero {
     background: $bg-light-blue url("../img/bg/hero-bg-branch.png") no-repeat right;
     position: relative;
+
     &::after {
-        @include bg-slice(57px, 98px,"../img/bg/bg-single-leaf.png");
+        @include bg-slice(57px, 98px, "../img/bg/bg-single-leaf.png");
         bottom: -45px;
-        left: 3.9vw;
-        z-index: 1;
+        left: 2.8vw;
     }
 }
 
 .hero__container {
     @include container();
-    display: flex;
     height: 100%;
-    flex-wrap: wrap;
     position: relative;
+}
+
+.hero__main {
+    display: flex;
+    padding-top: 65px;
 }
 
 .hero__promo {
+    margin-right: 77px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding-top: 85px;
 }
 
-.hero__bars-pic {
-    margin-left: 100px;
-    margin-top: 9.2vh;
+.hero__product {
     position: relative;
-    z-index: 1;
+
+    &::after {
+        @include bg-slice(460px, 341px, "../img/bg/hero-berries.png");
+        bottom: -112px;
+        left: 60px;
+    }
 }
 
 .hero__title {
@@ -34,16 +42,15 @@
     line-height: 60px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    height: 190px;
 }
 
 .hero__info {
     font-size: 21px;
     text-transform: none;
     font-weight: normal;
-    line-height: 1.4;
-    max-width: 340px;
-    
+    line-height: 1.2;
+    max-width: 350px;
     margin-bottom: 30px;
 }
 
@@ -54,22 +61,27 @@
     position: absolute;
     left: 0;
     bottom: 45px;
+    z-index: 2;
 }
 
 .hero__feature-snippet {
     font-size: 16px;
     height: 60px;
     display: flex;
-    justify-content: flex-start;
+    margin-right: 45px;
+}
+
+.feature-snippet__info {
+    width: 75px;
 }
 
 .hero__feature-icon {
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     //Вытащил следующие стили из svg-файлов, цвет поменял на нужный, без них нормально не отрисовывается
     fill: none;
     stroke: $icon-light-blue;
-    stroke-width: 0.5;
+    stroke-width: 0.7;
     stroke-miterlimit: 10;
     margin-right: 8px;
 }

@@ -4,7 +4,7 @@
     align-content: center;
     &::after {
         @include bg-slice(161px, 232px, "../img/bg/why-bg-raspberries.png");
-        bottom: -105px;
+        bottom: -110px;
         left: 0;
     }
 }
@@ -29,4 +29,6 @@
     @include grey-text;
     text-align: center;
     max-width: 415px;
+    margin-top: 10px;
+    font-weight: $light;
 }

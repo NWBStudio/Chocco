@@ -5,6 +5,12 @@
 
 @font-face {
     font-family: "Alegreya Sans";
+    src: local("../../fonts/AlegreyaSans/AlegreyaSans-Light.ttf") format("ttf");
+    font-weight: $light;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
     src: local("../../fonts/AlegreyaSans//AlegreyaSans-Medium.ttf.ttf") format("ttf");
     font-weight: $medium;
 }
