@@ -1,35 +1,35 @@
 @font-face {
     font-family: "Alegreya Sans";
-    src: local("../fonts/AlegreyaSans/AlegreyaSans-Regular.ttf") format("ttf");
+    src: url("../fonts/AlegreyaSans/AlegreyaSans-Regular.ttf") format("ttf");
 }
 
 @font-face {
     font-family: "Alegreya Sans";
-    src: local("../fonts/AlegreyaSans/AlegreyaSans-Light.ttf") format("ttf");
+    src: url("../fonts/AlegreyaSans/AlegreyaSans-Light.ttf") format("ttf");
     font-weight: $light;
 }
 
 @font-face {
     font-family: "Alegreya Sans";
-    src: local("../fonts/AlegreyaSans//AlegreyaSans-Medium.ttf.ttf") format("ttf");
+    src: url("../fonts/AlegreyaSans//AlegreyaSans-Medium.ttf.ttf") format("ttf");
     font-weight: $medium;
 }
 
 @font-face {
     font-family: "Alegreya Sans";
-    src: local("../fonts/AlegreyaSans-Bold.ttf") format("ttf");
+    src: url("../fonts/AlegreyaSans-Bold.ttf") format("ttf");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Alegreya Sans";
-    src: local("../fonts/AlegreyaSans/AlegreyaSans-ExtraBold.ttf") format("ttf");
+    src: url("../fonts/AlegreyaSans/AlegreyaSans-ExtraBold.ttf") format("ttf");
     font-weight: $extra-bold;
 }
 
 @font-face {
     font-family: "Museo Sans Cyrl 500";
-    src: local("../fonts//MuseoSansCyr/MuseoSansCyrl-500.woff") format("woff");
+    src: url("../fonts//MuseoSansCyr/MuseoSansCyrl-500.woff") format("woff");
     font-weight: $medium;
 }
 
