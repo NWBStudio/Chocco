@@ -11,9 +11,9 @@
 <body>
     <div class="wrapper">
         <section class="section hero">
-            <div class="hero__container">
-                <header class="header">
-                    <div class="header__container">
+            <div class="hero__inner container">
+                <header class="header hero__header">
+                    <div class="header__inner">
                         <span class="logo">chocco</span>
                         <nav class="nav">
                             <ul class="nav__list">
@@ -85,7 +85,7 @@
             </div>
         </section>
         <section class="section why">
-            <div class="why__container">
+            <div class="why__inner container">
                 <div class="why__promo">
                     <h2 class="title why__title">почему chocco?</h2>
                     <div class="why__description">
@@ -93,58 +93,63 @@
                             батончики, которые удобно взять с собой.</p>
                     </div>
                 </div>
-                <div class="advantages">
-                    <div class="advantages__snippet">
+                <ul class="advantages">
+                    <li class="advantages__snippet">
                         <div class="advantages__icon-holder">
                             <svg class="advantages__icon">
                                 <use xlink:href="sprites/icon-sprite.svg#healthy"></use>
                             </svg>
                         </div>
-                        <span class="advantages__title">
-                            <h3>Полезно</h3>
-                        </span>
-                        <div class="advantages__description">
-                            <p>Натуральность - ключевое качество нашей продукции. Мы
-                                используем только природные ингредиенты.</p>
+                        <div class="advantages__content">
+                            <div class="advantages__title">
+                                <h3>Полезно</h3>
+                            </div>
+                            <div class="advantages__description">
+                                <p>Натуральность - ключевое качество нашей продукции. Мы
+                                    используем только природные ингредиенты.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="advantages__snippet">
+                    </li>
+                    <li class="advantages__snippet">
                         <div class="advantages__icon-holder">
                             <svg class="advantages__icon">
                                 <use xlink:href="sprites/icon-sprite.svg#tasty"></use>
                             </svg>
                         </div>
-                        <span class="advantages__title">
-                            <h3>Вкусно</h3>
-                        </span>
-                        <div class="advantages__description">
-                            <p>Нежный, ненавязчивый, изысканный – так клиенты описывают
-                                вкусовые качества наших батончиков.</p>
+                        <div class="advantages__content">
+                            <div class="advantages__title">
+                                <h3>Вкусно</h3>
+                            </div>
+                            <div class="advantages__description">
+                                <p>Нежный, ненавязчивый, изысканный – так клиенты описывают
+                                    вкусовые качества наших батончиков.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="advantages__snippet">
+                    </li>
+                    <li class="advantages__snippet">
                         <div class="advantages__icon-holder">
                             <svg class="advantages__icon">
                                 <use xlink:href="sprites/icon-sprite.svg#strong"></use>
                             </svg>
                         </div>
-                        <span class="advantages__title">
-                            <h3>Питательно</h3>
-                        </span>
-                        <div class="advantages__description">
-                            <p>Высокое содержание качественного белка, а также всех
-                                необходимых витаминов и минералов.</p>
+                        <div class="advantages__content">
+                            <div class="advantages__title">
+                                <h3>Питательно</h3>
+                            </div>
+                            <div class="advantages__description">
+                                <p>Высокое содержание качественного белка, а также всех
+                                    необходимых витаминов и минералов.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </li>
+                </ul>
         </section>
-        <div class="section reviews">
-            <div class="reviews__container">
+        <section class="section reviews">
+            <div class="reviews__inner container">
                 <h2 class="title reviews__title">отзывы</h2>
                 <ul class="reviews__slider">
                     <li class="review-snippet review-snippet--active">
-                        <img src="img/content/user-fem-brown.jpg" alt="user avatar" class="review-snippet__usepic">
+                        <img src="img/content/user-fem-brown.jpg" alt="user avatar" class="review-snippet__userpic">
                         <div class="review-snippet__content  review-snippet--active">
                             <span class="review-snippet__title">
                                 <h3>Лучший перекус</h3>
@@ -171,13 +176,13 @@
                                 продукт.</p>
                             <span class="review-snippet__author">Мария Орлова</span>
                         </div>
-                    </li>t
+                    </li>
                     <li class="review-snippet">
                         <img src="img/content/user-male.jpg" alt="user avatar" class="review-snippet__usepic">
                         <div class="review-snippet__content">
                             <span class="review-snippet__title">
                                 <h3>Идеально подходят для спортсменов</h3>
-                            </span>t
+                            </span>
                             <p class="review-snippet__text">Я ем малыми порциями, но часто. Это повышает мою
                                 продуктивность в
                                 разы. В течение дня сижу за компьютером
@@ -204,9 +209,8 @@
                                 alt="миниатюра фотографии автора отзыва" class="reviews__small-pic"></button>
                     </li>
                 </ul>
-
-            </div>
-        </div>
+            </li>
+        </section>
         <ul class="fixed-menu">
             <li class="fixed-menu__item">
                 <a class="fixed-menu__dot fixed-menu__dot--active" href="#" aria-label="О нас"></a>
@@ -233,7 +237,7 @@
                 <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
             </li>
         </ul>
-    </div>
+    </li>
 </body>
 
 </html>

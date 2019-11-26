@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .advantages__icon {
@@ -33,12 +33,13 @@
 }
 
 .advantages__title {
-margin-bottom: 20px;    
-    h3{   //В голову только такой вариант стилизации из адекватных пришёл, раз уж классы нельзя хД
-        font-size: 27px;
-        font-weight: bold;
-        color: $black;
-    }
+    margin-bottom: 20px;
+    text-align: center;    
+        h3{   //В голову только такой вариант стилизации из адекватных пришёл, раз уж классы нельзя хД
+            font-size: 27px;
+            font-weight: bold;
+            color: $black;
+        }
 }
 
 .advantages__description {

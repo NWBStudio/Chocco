@@ -9,8 +9,7 @@
     }
 }
 
-.hero__container {
-    @include container();
+.hero__inner {
     height: 100%;
     position: relative;
     display: flex;
@@ -43,7 +42,7 @@
     line-height: 60px;
     font-weight: bold;
     text-transform: uppercase;
-    height: 190px;
+    margin-bottom: 10px;
 }
 
 .hero__info {
@@ -67,13 +66,12 @@
 
 .hero__feature-snippet {
     font-size: 16px;
-    height: 60px;
     display: flex;
     margin-right: 45px;
 }
 
 .feature-snippet__info {
-    width: 75px;
+    width: 70px;
 }
 
 .hero__feature-icon {
