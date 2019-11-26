@@ -1,7 +1,7 @@
 .hero {
     background: $bg-light-blue url("../img/bg/hero-bg-branch.png") no-repeat right;
     position: relative;
-
+    padding-top: 24px;
     &::after {
         @include bg-slice(57px, 98px, "../img/bg/bg-single-leaf.png");
         bottom: -45px;
@@ -9,22 +9,22 @@
     }
 }
 
-.hero__container {
-    @include container();
+.hero__inner {
     height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero__main {
     display: flex;
-    padding-top: 65px;
 }
 
 .hero__promo {
     margin-right: 77px;
     display: flex;
     flex-direction: column;
-    padding-top: 85px;
+    margin-top: 85px;
 }
 
 .hero__product {
@@ -42,7 +42,7 @@
     line-height: 60px;
     font-weight: bold;
     text-transform: uppercase;
-    height: 190px;
+    margin-bottom: 10px;
 }
 
 .hero__info {
@@ -66,13 +66,12 @@
 
 .hero__feature-snippet {
     font-size: 16px;
-    height: 60px;
     display: flex;
     margin-right: 45px;
 }
 
 .feature-snippet__info {
-    width: 75px;
+    width: 70px;
 }
 
 .hero__feature-icon {
