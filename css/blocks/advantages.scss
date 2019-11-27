@@ -32,22 +32,18 @@
     width: 70px;
 }
 
-.advantages__title {
-    margin-bottom: 20px;
-    text-align: center;    
-        h3{   //В голову только такой вариант стилизации из адекватных пришёл, раз уж классы нельзя хД
-            font-size: 27px;
-            font-weight: bold;
-            color: $black;
-        }
-}
+.advantages__content {
+    h3{   
+        font-size: 27px;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 20px;
+        text-align: center;  
+    }
 
-.advantages__description {
-    @include grey-text;
-    width: 285px;
-    text-align: center;
-}
-
-.advantages__info {
-    @include grey-text;
+    p {
+        @include grey-text;
+        width: 285px;
+        text-align: center;
+    }
 }

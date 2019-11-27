@@ -688,23 +688,18 @@ button {
   height: 70px;
   width: 70px; }
 
-.advantages__title {
+.advantages__content h3 {
+  font-size: 27px;
+  font-weight: bold;
+  color: #000000;
   margin-bottom: 20px;
   text-align: center; }
-  .advantages__title h3 {
-    font-size: 27px;
-    font-weight: bold;
-    color: #000000; }
 
-.advantages__description {
+.advantages__content p {
   color: #666666;
   font-size: 18px;
   width: 285px;
   text-align: center; }
-
-.advantages__info {
-  color: #666666;
-  font-size: 18px; }
 
 .reviews {
   position: relative;
