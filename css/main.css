@@ -800,8 +800,8 @@ button {
 
 .fixed-menu {
   position: fixed;
-  top: 32vh;
-  right: 4.5vw;
+  top: 32.6vh;
+  right: 4.1vw;
   z-index: 2; }
 
 .fixed-menu__dot {
@@ -915,4 +915,72 @@ button {
 
 .menu {
   background: black url("../img/bg/menu-bg.jpg") no-repeat;
+  background-size: cover;
+  padding: 90px 0px 0px 70px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.accordeon-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh; }
+
+.accordeon-menu__item-collapsible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.accordeon-menu__item-collapsible--active .accordeon-menu__info {
+  width: 530px; }
+
+.accordeon-menu__unfolder {
+  width: 100px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 42px;
+  background-repeat: no-repeat;
   background-size: cover; }
+  .accordeon-menu__unfolder--bg--coconut {
+    background-image: url("../img/bg/accordeon-collapsible-bg-coconut.jpg"); }
+  .accordeon-menu__unfolder--bg--honey {
+    background-image: url("../img/bg/accordeon-collapsible-bg-honey.jpg"); }
+  .accordeon-menu__unfolder--bg--berries {
+    background-image: url("../img/bg/accordeon-collapsible-bg-berries.jpg"); }
+  .accordeon-menu__unfolder h3 {
+    font-size: 48px;
+    font-weight: 500;
+    color: #ffffff;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+.accordeon-menu__info {
+  width: 0;
+  overflow: hidden;
+  background-color: rgba(47, 50, 52, 0.929); }
+  .accordeon-menu__info p {
+    font-size: 16px;
+    line-height: 23px; }

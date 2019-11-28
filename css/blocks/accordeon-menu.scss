@@ -1,0 +1,54 @@
+.accordeon-menu {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+
+.accordeon-menu__item-collapsible {
+    display: flex;
+}
+
+.accordeon-menu__item-collapsible--active {
+    .accordeon-menu__info {
+        width: 530px;
+    }
+}
+
+.accordeon-menu__unfolder {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 42px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @each $bg in (coconut, honey, berries) { //генерация пути к файлу фона на основании имени модификатора
+        &--bg--#{$bg}{
+            background-image: url("../img/bg/accordeon-collapsible-bg-#{$bg}.jpg");
+        }
+    }
+    h3 {
+        font-size: 48px;
+        font-weight: $medium;
+        color: $white;
+        writing-mode: vertical-lr;
+        transform:rotate(180deg);
+    }
+}
+
+.accordeon-menu__info {
+    width: 0; 
+    overflow: hidden;
+    background-color: $dark-grey-opacity;
+    p {
+        font-size: 16px;
+        line-height: 23px;
+    }
+}
+
+  
