@@ -373,13 +373,16 @@ body {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
 
 .title {
   color: #0d0d0d;
   font-weight: bold;
   font-size: 48px;
   text-transform: uppercase; }
+  .title--white {
+    color: #ffffff; }
 
 h1,
 h2,
@@ -483,8 +486,8 @@ button {
 
 .hero {
   background: #61c4d9 url("../img/bg/hero-bg-branch.png") no-repeat right;
-  position: relative;
-  padding-top: 24px; }
+  padding-top: 24px;
+  padding-bottom: 45px; }
   .hero::after {
     content: "";
     background: url("../img/bg/bg-single-leaf.png") no-repeat;
@@ -504,7 +507,10 @@ button {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .hero__main {
   display: -webkit-box;
@@ -531,7 +537,7 @@ button {
     height: 341px;
     position: absolute;
     z-index: 1;
-    bottom: -112px;
+    bottom: -117px;
     left: 60px; }
 
 .hero__title {
@@ -557,9 +563,6 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 480px;
-  position: absolute;
-  left: 0;
-  bottom: 45px;
   z-index: 2; }
 
 .hero__feature-snippet {
@@ -604,10 +607,7 @@ button {
       box-shadow: 0 0 3px #000000; }
 
 .why {
-  background: #ffffff url("../img/bg/why-bg-leaf.png") no-repeat left center;
-  position: relative;
-  -ms-flex-line-pack: center;
-  align-content: center; }
+  background: #ffffff url("../img/bg/why-bg-leaf.png") no-repeat left center; }
   .why::after {
     content: "";
     background: url("../img/bg/why-bg-raspberries.png") no-repeat;
@@ -703,7 +703,6 @@ button {
   text-align: center; }
 
 .reviews {
-  position: relative;
   padding-top: 60px; }
   .reviews::before {
     content: "";
@@ -829,7 +828,8 @@ button {
     transform: translate(-50%, -50%); }
 
 .team {
-  background: #ffffff url("../img/bg/team-branch-top-right.png") no-repeat top right; }
+  background: #ffffff url("../img/bg/team-branch-top-right.png") no-repeat top right;
+  position: relative; }
   .team::after {
     content: "";
     background: url("../img/bg/team-raspberry-bottom-left.png") no-repeat;
@@ -912,3 +912,7 @@ button {
     color: #666666;
     font-size: 18px;
     font-weight: 300; }
+
+.menu {
+  background: black url("../img/bg/menu-bg.jpg") no-repeat;
+  background-size: cover; }

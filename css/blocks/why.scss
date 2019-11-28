@@ -1,7 +1,5 @@
 .why {
     background: $white url("../img/bg/why-bg-leaf.png") no-repeat left center;
-    position: relative;
-    align-content: center;
     &::after {
         @include bg-slice(161px, 232px, "../img/bg/why-bg-raspberries.png");
         bottom: -110px;

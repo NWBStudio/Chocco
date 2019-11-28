@@ -1,5 +1,6 @@
 .team {
     background: $white url("../img/bg/team-branch-top-right.png") no-repeat top right;
+    position: relative;
     &::after {
         @include bg-slice(83px, 90px, "../img/bg/team-raspberry-bottom-left.png");
         bottom: -44px;

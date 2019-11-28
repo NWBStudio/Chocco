@@ -1,7 +1,7 @@
 .hero {
     background: $bg-light-blue url("../img/bg/hero-bg-branch.png") no-repeat right;
-    position: relative;
     padding-top: 24px;
+    padding-bottom: 45px;
     &::after {
         @include bg-slice(57px, 98px, "../img/bg/bg-single-leaf.png");
         bottom: -45px;
@@ -14,6 +14,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero__main {
@@ -32,7 +33,7 @@
 
     &::after {
         @include bg-slice(460px, 341px, "../img/bg/hero-berries.png");
-        bottom: -112px;
+        bottom: -117px;
         left: 60px;
     }
 }
@@ -58,9 +59,6 @@
     display: flex;
     justify-content: space-between;
     max-width: 480px;
-    position: absolute;
-    left: 0;
-    bottom: 45px;
     z-index: 2;
 }
 
