@@ -1,5 +1,5 @@
 //font-weights
-$light: 300px;
+$light: 300;
 $medium: 500;
 $extra-bold: 800;
 
@@ -7,6 +7,7 @@ $extra-bold: 800;
 $black: #000000;
 $white: #ffffff;
 $title-black: #0d0d0d;
+$dark-brown: #281e1e;
 $text-grey: #666666;
 $light-grey: #f2f5f4;
 $dark-grey: #2a2a29;
@@ -36,5 +37,6 @@ $icon-light-blue: #aef5fe;
 @import "./blocks/reviews.scss";
 @import "./blocks/review-snippet.scss";
 @import "./blocks/fixed-menu.scss";
+@import "./blocks/team.scss";
 @import "./blocks/accordeon.scss";
 
