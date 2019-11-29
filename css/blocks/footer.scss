@@ -1,0 +1,17 @@
+.footer {
+    height: 90px;
+}
+
+.footer__info {
+    width: 50%;
+    address {
+        color: $footer-black;
+        font-size: 21px;
+        line-height: 24px;
+        font-style: normal;
+    }
+}
+
+.footer__social {
+    width: 50%;
+}

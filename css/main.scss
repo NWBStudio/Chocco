@@ -4,12 +4,14 @@ $medium: 500;
 $extra-bold: 800;
 
 //colors
-$black: #000000;
 $white: #ffffff;
+$black: #000000;
+$footer-black: #010101;
 $title-black: #0d0d0d;
 $dark-brown: #281e1e;
 $text-grey: #666666;
 $light-grey: #f2f5f4;
+$cross-light-grey: #c4c5c6;
 $dark-grey: #2a2a29;
 $dark-grey-opacity: rgba(47, 50, 52, 0.929);
 $title-dark-grey: #323232;
@@ -42,4 +44,7 @@ $icon-light-blue: #aef5fe;
 @import "./blocks/accordeon.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/accordeon-menu.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
 

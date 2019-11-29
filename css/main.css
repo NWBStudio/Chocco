@@ -408,7 +408,6 @@ p {
   margin: 0; }
 
 footer {
-  position: relative;
   width: 100%; }
 
 * {
@@ -925,13 +924,10 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh; }
+  height: 100%; }
 
 .accordeon-menu__item-collapsible {
   display: -webkit-box;
@@ -978,9 +974,46 @@ button {
     transform: rotate(180deg); }
 
 .accordeon-menu__info {
+  position: relative;
   width: 0;
   overflow: hidden;
   background-color: rgba(47, 50, 52, 0.929); }
   .accordeon-menu__info p {
     font-size: 16px;
-    line-height: 23px; }
+    line-height: 24px;
+    margin: 65px 125px 10px 30px; }
+
+.accordeon-menu__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px; }
+
+.accordeon-menu__close-icon {
+  height: 18px;
+  width: 18px;
+  fill: #c4c5c6; }
+
+.contacts__footer {
+  position: absolute;
+  bottom: 0;
+  background: #ffffff; }
+
+.map {
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg/map-bg.jpg") no-repeat;
+  background-size: cover; }
+
+.footer {
+  height: 90px; }
+
+.footer__info {
+  width: 50%; }
+  .footer__info address {
+    color: #010101;
+    font-size: 21px;
+    line-height: 24px;
+    font-style: normal; }
+
+.footer__social {
+  width: 50%; }
