@@ -6,17 +6,19 @@ $extra-bold: 800;
 //colors
 $white: #ffffff;
 $black: #000000;
-$footer-black: #010101;
+$address-black: #010101;
 $title-black: #0d0d0d;
 $dark-brown: #281e1e;
 $text-grey: #666666;
 $light-grey: #f2f5f4;
+$social-grey: #b2b2b2;
 $cross-light-grey: #c4c5c6;
 $dark-grey: #2a2a29;
 $dark-grey-opacity: rgba(47, 50, 52, 0.929);
 $title-dark-grey: #323232;
 $btn-green: #0f5a47;
 $btn-green-hover: #0b4d3c;
+$light-green: #cfdeda;
 $bg-light-blue: #61c4d9;
 $icon-light-blue: #aef5fe;
 
@@ -39,6 +41,7 @@ $icon-light-blue: #aef5fe;
 @import "./blocks/advantages.scss";
 @import "./blocks/reviews.scss";
 @import "./blocks/review-snippet.scss";
+@import "./blocks/order.scss";
 @import "./blocks/fixed-menu.scss";
 @import "./blocks/team.scss";
 @import "./blocks/accordeon.scss";
@@ -47,4 +50,5 @@ $icon-light-blue: #aef5fe;
 @import "./blocks/contacts.scss";
 @import "./blocks/map.scss";
 @import "./blocks/footer.scss";
+@import "./blocks/social.scss";
 

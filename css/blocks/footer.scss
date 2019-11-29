@@ -2,16 +2,24 @@
     height: 90px;
 }
 
+.footer__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .footer__info {
     width: 50%;
     address {
-        color: $footer-black;
+        color: $address-black;
         font-size: 21px;
         line-height: 24px;
         font-style: normal;
+        margin-bottom: 5px;
     }
 }
 
 .footer__social {
     width: 50%;
+    text-align: right;
 }

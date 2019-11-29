@@ -1,0 +1,20 @@
+.social__item {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+    fill: $social-grey;    
+    &:hover {
+        fill: $black;
+    }
+}
+
+.social__link:hover {
+    .social__icon {
+    fill: $black;
+    }
+}
+

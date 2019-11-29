@@ -13,3 +13,12 @@
     fill: $white;
     margin-right: 2px;
 }
+
+
+.phone-num--theme--green {
+    color: $btn-green;
+    font-size: 21px;
+    .phone-num__icon {
+        fill: $btn-green;
+    }
+}

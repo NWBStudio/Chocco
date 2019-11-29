@@ -381,8 +381,10 @@ body {
   font-weight: bold;
   font-size: 48px;
   text-transform: uppercase; }
-  .title--white {
+  .title--color--white {
     color: #ffffff; }
+  .title--color--green {
+    color: #0f5a47; }
 
 h1,
 h2,
@@ -448,6 +450,12 @@ button {
   height: 11px;
   fill: #ffffff;
   margin-right: 2px; }
+
+.phone-num--theme--green {
+  color: #0f5a47;
+  font-size: 21px; }
+  .phone-num--theme--green .phone-num__icon {
+    fill: #0f5a47; }
 
 .logo {
   font-family: "Museo Sans Cyrl 500";
@@ -797,6 +805,10 @@ button {
   color: #666666;
   font-size: 18px; }
 
+.order {
+  background: #cfdeda url("../img/bg/order-bg.jpg") no-repeat;
+  background-size: cover; }
+
 .fixed-menu {
   position: fixed;
   top: 32.6vh;
@@ -1007,13 +1019,38 @@ button {
 .footer {
   height: 90px; }
 
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%; }
+
 .footer__info {
   width: 50%; }
   .footer__info address {
     color: #010101;
     font-size: 21px;
     line-height: 24px;
-    font-style: normal; }
+    font-style: normal;
+    margin-bottom: 5px; }
 
 .footer__social {
-  width: 50%; }
+  width: 50%;
+  text-align: right; }
+
+.social__item {
+  margin-left: 20px;
+  display: inline-block; }
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+  fill: #b2b2b2; }
+  .social__icon:hover {
+    fill: #000000; }
+
+.social__link:hover .social__icon {
+  fill: #000000; }
