@@ -989,11 +989,12 @@ button {
   position: relative;
   width: 0;
   overflow: hidden;
-  background-color: rgba(47, 50, 52, 0.929); }
+  background-color: rgba(47, 50, 52, 0.929);
+  padding: 65px 125px 10px 30px; }
   .accordeon-menu__info p {
     font-size: 16px;
     line-height: 24px;
-    margin: 65px 125px 10px 30px; }
+    display: none; }
 
 .accordeon-menu__close-btn {
   position: absolute;
