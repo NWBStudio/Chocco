@@ -340,7 +340,7 @@ html {
   font-size: 18px; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 14px; } }
+      font-size: 15px; } }
   @media screen and (max-width: 480px) {
     html {
       font-size: 11px; } }
@@ -369,6 +369,9 @@ body {
   max-width: 940px;
   width: 95%;
   margin: 0 auto; }
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 720px; } }
 
 .section {
   height: 100vh;
@@ -456,6 +459,10 @@ button {
     .header__menu-icon {
       display: block; } }
 
+@media screen and (max-width: 768px) {
+  .header__phone-num {
+    display: none; } }
+
 .phone-num {
   font-size: 1.33333rem;
   line-height: 1.66667rem;
@@ -487,6 +494,9 @@ button {
 
 .nav {
   width: 69.5%; }
+  @media screen and (max-width: 768px) {
+    .nav {
+      display: none; } }
 
 .nav__list {
   display: -webkit-box;
@@ -520,12 +530,16 @@ button {
   .hero::after {
     content: "";
     background: url("../img/bg/bg-single-leaf.png") no-repeat;
+    background-size: contain;
     width: 57px;
     height: 98px;
     position: absolute;
     z-index: 1;
     bottom: -2.5rem;
     left: 2.8vw; }
+    @media screen and (max-width: 768px) {
+      .hero::after {
+        display: none; } }
 
 .hero__inner {
   height: 100%;
@@ -540,11 +554,22 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .hero__inner {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .hero__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .hero__main {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .hero__promo {
   margin-right: 7.3%;
@@ -556,18 +581,53 @@ button {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 4.72222rem; }
+  @media screen and (max-width: 768px) {
+    .hero__promo {
+      max-width: 28.6rem;
+      margin-right: 0;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .hero__product {
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .hero__product {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+      margin-bottom: 4.44444rem; } }
   .hero__product::after {
     content: "";
     background: url("../img/bg/hero-berries.png") no-repeat;
-    width: 460px;
-    height: 341px;
+    background-size: contain;
+    width: 23rem;
+    height: 18.94444rem;
     position: absolute;
     z-index: 1;
     bottom: -6.5rem;
-    left: 3.33333rem; }
+    left: 5.66667rem; }
+  .hero__product::before {
+    content: "";
+    background: url("../img/bg/hero-blueberry.png") no-repeat;
+    background-size: contain;
+    width: 2.27778rem;
+    height: 1.77778rem;
+    position: absolute;
+    z-index: 1;
+    bottom: -1.11111rem;
+    left: 2.77778rem; }
+    @media screen and (max-width: 768px) {
+      .hero__product::before {
+        content: "";
+        background: url("../img/bg/hero-blueberry-leaf.png") no-repeat;
+        background-size: contain;
+        width: 4.11111rem;
+        height: 11.16667rem;
+        position: absolute;
+        z-index: 1;
+        bottom: 2.77778rem;
+        left: 0.55556rem; } }
 
 .hero__product-pic {
   width: 27.94444rem; }
@@ -578,6 +638,9 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 0.55556rem; }
+  @media screen and (max-width: 768px) {
+    .hero__title {
+      text-align: center; } }
 
 .hero__info {
   font-size: 1.16667rem;
@@ -594,8 +657,10 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 26.66667rem;
-  z-index: 2; }
+  max-width: 26.66667rem; }
+  @media screen and (max-width: 768px) {
+    .hero__features {
+      width: 77%; } }
 
 .hero__feature-snippet {
   font-size: 0.88889rem;
@@ -603,6 +668,9 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-right: 2.5rem; }
+  @media screen and (max-width: 768px) {
+    .hero__feature-snippet {
+      margin-right: 0; } }
 
 .feature-snippet__info {
   width: 3.88889rem; }
@@ -639,10 +707,11 @@ button {
       box-shadow: 0 0 0.16667rem #000000; }
 
 .why {
-  background: #ffffff url("../img/bg/why-bg-leaf.png") no-repeat left center; }
+  background: #ffffff url("../img/bg/why-bg-leaf.png") no-repeat left 30%; }
   .why::after {
     content: "";
     background: url("../img/bg/why-bg-raspberries.png") no-repeat;
+    background-size: contain;
     width: 8.94444rem;
     height: 12.88889rem;
     position: absolute;
@@ -684,6 +753,13 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   background: url("../img/bg/advantages-bg-three-dots.png") no-repeat 30.5% 20%, url("../img/bg/advantages-bg-three-dots.png") no-repeat 69.5% 20%; }
+  @media screen and (max-width: 768px) {
+    .advantages {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      background: none; } }
 
 .advantages__snippet {
   display: -webkit-box;
@@ -721,24 +797,38 @@ button {
   height: 3.88889rem;
   width: 3.88889rem; }
 
-.advantages__content h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000000;
-  margin-bottom: 1.11111rem;
-  text-align: center; }
-
-.advantages__content p {
-  color: #666666;
-  font-size: 1rem;
-  width: 15.83333rem;
-  text-align: center; }
+.advantages__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .advantages__content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1.11111rem;
+    text-align: center; }
+  .advantages__content p {
+    color: #666666;
+    font-size: 1rem;
+    max-width: 15.83333rem;
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      .advantages__content p {
+        max-width: 60%; } }
 
 .reviews {
   padding-top: 3.33333rem; }
   .reviews::before {
     content: "";
     background: url("../img/bg/reviews-bg-top-berries.png") no-repeat;
+    background-size: contain;
     width: 8.33333rem;
     height: 4.77778rem;
     position: absolute;
@@ -748,6 +838,7 @@ button {
   .reviews:after {
     content: "";
     background: url("../img/bg/reviews-bg-left-bottom-berries.png") no-repeat;
+    background-size: contain;
     width: 7.72222rem;
     height: 16rem;
     position: absolute;
@@ -996,12 +1087,32 @@ button {
   .team::after {
     content: "";
     background: url("../img/bg/team-raspberry-bottom-left.png") no-repeat;
+    background-size: contain;
     width: 4.61111rem;
     height: 5rem;
     position: absolute;
     z-index: 1;
     bottom: -2.44444rem;
     left: 2rem; }
+
+.team__inner {
+  height: 100%;
+  padding-top: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .team__inner {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .team__title {
   text-align: center;
@@ -1013,12 +1124,13 @@ button {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  min-height: 24.66667rem; }
+  justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .accordeon {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 60%;
+      height: 70%; } }
 
 .accordeon__item {
   display: -webkit-box;
@@ -1031,8 +1143,15 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 12.22222rem;
+  width: 23.5%;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .accordeon__item {
+      width: 45%; } }
+
+.accordeon__pic {
+  width: 100%;
+  margin-bottom: 1.66667rem; }
 
 .accordeon__collapsible--active .accordeon__arrow-icon {
   -webkit-transform: scaleY(-1);
@@ -1093,7 +1212,8 @@ button {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%; }
+  height: 100%;
+  max-width: 100%; }
 
 .accordeon-menu__item-collapsible {
   display: -webkit-box;
@@ -1123,6 +1243,9 @@ button {
   padding-bottom: 2.33333rem;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .accordeon-menu__unfolder {
+      width: 7.22222rem; } }
   .accordeon-menu__unfolder--bg--coconut {
     background-image: url("../img/bg/accordeon-collapsible-bg-coconut.jpg"); }
   .accordeon-menu__unfolder--bg--honey {

@@ -1,7 +1,7 @@
 html {
   font-size: 18px; // задал, чтобы изначальные десктопные расчёты такими как я их и задумал
   @include tablets {
-    font-size: 14px;
+    font-size: 15px;
   }
   @include phones {
     font-size: 11px;
@@ -35,6 +35,9 @@ body {
   max-width: 940px;
   width: 95%;
   margin: 0 auto;
+    @include tablets {
+      max-width: 720px;
+  }
 }
 
 .section {

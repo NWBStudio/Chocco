@@ -1,5 +1,8 @@
 .nav {
   width: 69.5%;
+  @include tablets {
+    display: none;
+  }
 }
 
 

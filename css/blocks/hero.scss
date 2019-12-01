@@ -6,6 +6,9 @@
         @include bg-slice(57px, 98px, "../img/bg/bg-single-leaf.png");
         bottom: rem(-45px);
         left: 2.8vw;
+        @include tablets {
+            display: none;
+        }
     }
 }
 
@@ -15,29 +18,58 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include tablets {
+        align-items: center;
+    }
 }
 
 .hero__main {
     display: flex;
     // justify-content: space-between;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .hero__promo {
     margin-right: 7.3%;
     display: flex;
+    
     flex-direction: column;
+    
     margin-top: rem(85px);
+    @include tablets {
+        max-width: 28.6rem;
+        margin-right: 0;
+        align-items: center;
+    }
 }
 
 .hero__product {
     position: relative;
+    @include tablets {
+        order: -1;
+        margin-bottom: rem(80px);
+    }
 
     &::after {
-        @include bg-slice(460px, 341px, "../img/bg/hero-berries.png");
+        @include bg-slice(rem(414px), rem(341px), "../img/bg/hero-berries.png");
         bottom: rem(-117px);
-        left: rem(60px);
+        left: rem(102px);
     }
-}
+
+    &::before {
+        @include bg-slice(rem(41px), rem(32px), "../img/bg/hero-blueberry.png");
+        bottom: rem(-20px);
+        left: rem(50px);
+        @include tablets {
+            @include bg-slice(rem(74px), rem(201px), "../img/bg/hero-blueberry-leaf.png");
+            bottom: rem(50px);
+            left: rem(10px);
+            }
+        }
+        
+    }
 
 .hero__product-pic {
     width: rem(503px);
@@ -49,6 +81,10 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: rem(10px);
+    @include tablets {
+        text-align: center;
+    }
+    
 }
 
 .hero__info {
@@ -64,13 +100,18 @@
     display: flex;
     justify-content: space-between;
     max-width: rem(480px);
-    z-index: 2;
+    @include tablets {
+        width: 77%;
+    }
 }
 
 .hero__feature-snippet {
     font-size: rem(16px);
     display: flex;
     margin-right: rem(45px);
+    @include tablets {
+        margin-right: 0;
+    }
 }
 
 .feature-snippet__info {

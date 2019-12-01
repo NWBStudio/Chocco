@@ -1,17 +1,30 @@
 .accordeon {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    align-items: flex-start;
-    min-height: rem(444px);
+    // align-items: flex-start;
+    @include tablets {
+        flex-wrap: wrap;
+        width: 60%;
+        height: 70%;
+        // align-content: space-between;
+    }
 }
 
 .accordeon__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: rem(220px);
+    width: 23.5%;
     position: relative;
+    @include tablets {
+        width: 45%;
+
+    }
+}
+
+.accordeon__pic {
+    width: 100%;
+    margin-bottom: rem(30px);
 }
 
 

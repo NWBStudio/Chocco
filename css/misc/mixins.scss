@@ -6,6 +6,7 @@
 @mixin bg-slice ($width, $height, $url) {
     content: "";
     background: url($url) no-repeat;
+    background-size: contain;
     width: $width;
     height: $height;
     position: absolute;

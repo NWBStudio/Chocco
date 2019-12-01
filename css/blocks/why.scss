@@ -1,10 +1,14 @@
 .why {
-    background: $white url("../img/bg/why-bg-leaf.png") no-repeat left center;
+    background: $white url("../img/bg/why-bg-leaf.png") no-repeat left 30%;
     &::after {
         @include bg-slice(rem(161px), rem(232px), "../img/bg/why-bg-raspberries.png");
         bottom: rem(-110px);
         left: 0;
     }
+}
+
+.why__inner {
+    // height: 100%;
 }
 
 .why__promo {

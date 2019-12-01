@@ -17,3 +17,9 @@
         display: block;
     }
 }
+
+.header__phone-num {
+    @include tablets {
+        display: none;
+    }
+}

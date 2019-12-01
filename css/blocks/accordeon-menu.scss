@@ -4,10 +4,12 @@
     top: 0;
     right: 0;
     height: 100%;
+    max-width: 100%;
 }
 
 .accordeon-menu__item-collapsible {
     display: flex;
+    
 }
 
 .accordeon-menu__item-collapsible--active {
@@ -20,6 +22,9 @@
 
 .accordeon-menu__unfolder {
     width: rem(100px);
+    @include tablets {
+        width: rem(130px);
+    }
     height: 100%;
     display: flex;
     flex-direction: column; //также можно делать абсолютом на случай будущих правок по расположению, подробнее в созвоне от 30.11
