@@ -380,7 +380,8 @@ body {
   color: #0d0d0d;
   font-weight: bold;
   font-size: 48px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center; }
   .title--color--white {
     color: #ffffff; }
   .title--color--green {
@@ -809,6 +810,115 @@ button {
   background: #cfdeda url("../img/bg/order-bg.jpg") no-repeat;
   background-size: cover; }
 
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.form__col {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 20px; }
+  .form__col:first-child {
+    margin-left: 0; }
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px; }
+
+.form__label {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 20px; }
+  .form__label:first-child {
+    margin-left: 0; }
+
+.form__label-title {
+  color: #0f5a47;
+  font-size: 18px;
+  line-height: 30px; }
+
+.form__input {
+  width: 100%;
+  padding: 20px 0px 20px 10px;
+  border: none;
+  outline: 3px solid transparent; }
+  .form__input:focus {
+    outline: 3px solid #dde3bd; }
+
+.form__textarea {
+  height: 180px;
+  resize: none; }
+
+.form__radio {
+  position: relative;
+  white-space: nowrap;
+  margin-right: 25px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle; }
+
+.form__radio-elem {
+  display: none; }
+
+.form__radio-fake {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; }
+  .form__radio-fake:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: #0f5a47;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: width .3s, height .3s;
+    -o-transition: width .3s, height .3s;
+    transition: width .3s, height .3s; }
+
+.form__radio-elem:checked + .form__radio-fake:after {
+  width: 12.5px;
+  height: 12.5px; }
+
+.form__radio-title {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px; }
+
+.form__radio--checkbox .form__radio-fake {
+  border-radius: 0px; }
+
+.form__radio--checkbox .form__radio-elem + .form__radio-fake:after {
+  display: none; }
+
+.form__checkbox-icon {
+  width: 12.5px;
+  height: 12.5px;
+  fill: #0f5a47;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: width .3s, height .3s;
+  -o-transition: width .3s, height .3s;
+  transition: width .3s, height .3s; }
+
 .fixed-menu {
   position: fixed;
   top: 32.6vh;
@@ -926,11 +1036,12 @@ button {
 
 .menu {
   background: black url("../img/bg/menu-bg.jpg") no-repeat;
-  background-size: cover;
-  padding: 90px 0px 0px 70px;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  background-size: cover; }
+
+.menu__title {
+  position: absolute;
+  left: 7.2%;
+  top: 15%; }
 
 .accordeon-menu {
   display: -webkit-box;
@@ -947,7 +1058,8 @@ button {
   display: flex; }
 
 .accordeon-menu__item-collapsible--active .accordeon-menu__info {
-  width: 530px; }
+  width: 530px;
+  padding: 65px 125px 10px 30px; }
 
 .accordeon-menu__unfolder {
   width: 100px;
@@ -989,12 +1101,10 @@ button {
   position: relative;
   width: 0;
   overflow: hidden;
-  background-color: rgba(47, 50, 52, 0.929);
-  padding: 65px 125px 10px 30px; }
+  background-color: rgba(47, 50, 52, 0.929); }
   .accordeon-menu__info p {
     font-size: 16px;
-    line-height: 24px;
-    display: none; }
+    line-height: 24px; }
 
 .accordeon-menu__close-btn {
   position: absolute;

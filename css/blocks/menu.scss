@@ -1,6 +1,11 @@
 .menu {
     background: black url("../img/bg/menu-bg.jpg") no-repeat;
     background-size: cover;
-    padding: 90px 0px 0px 70px;
-    justify-content: flex-start;
+    
+}
+
+.menu__title {
+    position: absolute;
+    left: 7.2%;
+    top: 15%;
 }

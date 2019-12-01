@@ -13,7 +13,9 @@
 .accordeon-menu__item-collapsible--active {
     .accordeon-menu__info {
         width: 530px;
+        padding: 65px 125px 10px 30px;
     }
+    
 }
 
 .accordeon-menu__unfolder {
@@ -45,12 +47,10 @@
     width: 0; 
     overflow: hidden;
     background-color: $dark-grey-opacity;
-    padding: 65px 125px 10px 30px;
     
     p {
         font-size: 16px;
         line-height: 24px;
-        display: none;
     }
 }
 

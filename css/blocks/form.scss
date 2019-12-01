@@ -1,0 +1,120 @@
+.form {
+    display: flex;
+}
+
+.form__col {
+    flex: 1;
+    margin-left: 20px;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form__label { 
+    flex: 1;
+    margin-left: 20px;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.form__label-title {
+    color: $btn-green;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 20px 0px 20px 10px;
+    border: none;
+    outline: 3px solid transparent;
+    &:focus {
+        outline: 3px solid $golden-khaki;
+    }
+}
+
+.form__textarea {
+    height: 180px;
+    resize: none;
+}
+
+.form__radio {
+    position: relative;
+    white-space: nowrap;
+    margin-right: 25px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.form__radio-elem {
+    display: none;
+}
+
+.form__radio-fake {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: $btn-green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+  }
+}
+
+.form__radio-elem:checked {
+    &+.form__radio-fake {
+      &:after {
+        width: 12.5px;
+        height: 12.5px;
+      }
+    }
+  }
+
+.form__radio-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.form__radio--checkbox {
+    .form__radio-fake {
+        border-radius: 0px;
+    }
+    .form__radio-elem {
+        &+.form__radio-fake {
+          &:after {
+            display: none;
+          }
+        }
+      }
+}
+
+.form__checkbox-icon {
+    width: 12.5px;
+    height: 12.5px;
+    fill: $btn-green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+}
