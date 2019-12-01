@@ -1,6 +1,6 @@
 @mixin grey-text {
     color: $text-grey;
-    font-size: 18px;
+    font-size: rem(18px);
 }
 
 @mixin bg-slice ($width, $height, $url) {
@@ -10,9 +10,4 @@
     height: $height;
     position: absolute;
     z-index: 1;
-}
-
-@mixin container($width:940px) {
-    width: $width;
-    margin: 0 auto;
 }

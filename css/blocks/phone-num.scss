@@ -1,6 +1,6 @@
 .phone-num {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: rem(24px);
+    line-height: rem(30px);
     font-family: "Alegreya Sans";
     text-transform: uppercase;
     text-decoration: none;
@@ -8,16 +8,16 @@
 }
 
 .phone-num__icon {
-    width: 11px;
-    height: 11px;
+    width: rem(11px);
+    height: rem(11px);
     fill: $white;
-    margin-right: 2px;
+    margin-right: rem(2px);
 }
 
 
 .phone-num--theme--green {
     color: $btn-green;
-    font-size: 21px;
+    font-size: rem(21px);
     .phone-num__icon {
         fill: $btn-green;
     }

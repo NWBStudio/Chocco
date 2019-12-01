@@ -1,27 +1,27 @@
 .reviews {
-    padding-top: 60px;
+    padding-top: rem(60px);
     
     &::before {
-        @include bg-slice(150px, 86px, "../img/bg/reviews-bg-top-berries.png");
+        @include bg-slice(rem(150px), rem(86px), "../img/bg/reviews-bg-top-berries.png");
         top: 5.5vh;
         right: 1.3vw;
     }
 
     &:after {
-        @include bg-slice(139px, 288px, "../img/bg/reviews-bg-left-bottom-berries.png");
+        @include bg-slice(rem(139px), rem(288px), "../img/bg/reviews-bg-left-bottom-berries.png");
         left: 0;
-        bottom: -130px;
+        bottom: rem(-130px);
     }
 }
 
 
 .reviews__title {
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
     text-align: center;
 }
 
 .reviews__slider {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .reviews__switcher {
@@ -31,7 +31,7 @@
 
 .reviews__switch-btn--selected {
     .reviews__small-pic {
-        border: 5px solid $btn-green;
+        border: rem(5px) solid $btn-green;
         &:hover {
             box-shadow: none;
         }
@@ -39,13 +39,13 @@
  }
 
 .reviews__small-pic {
-    width: 65px;
-    height: 65px;
+    width: rem(65px);
+    height: rem(65px);
     border-radius: 50%;
     box-sizing: content-box;
-    border: 5px solid transparent;
+    border: rem(5px) solid transparent;
     &:hover {
-        box-shadow: 0 0 5px $black;
+        box-shadow: 0 0 rem(5px) $black;
     }
         
 }

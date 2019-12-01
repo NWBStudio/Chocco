@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chocco</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -46,6 +46,11 @@
                             </svg>
                             8 800 903 90 90
                         </a>
+                        <button class="header__burger-menu" type="button">
+                            <svg class="header__menu-icon">
+                                <use xlink:href="sprites/icon-sprite.svg#burger-menu"></use>
+                            </svg>
+                        </button>
                     </div>
                 </header>
                 <div class="hero__main">
@@ -381,14 +386,14 @@
                                     <div class="form__label-title form__radio-title">Потребуется сдача</div>
                                 </label>
                                 <label class="form__radio">
-                                    <input type="radio" class="form__radio-elem" name="payment" value="card">
+                                    <input type="radio" class="form__radio-elem" name="payment" value="card" checked>
                                     <div class="form__radio-fake"></div>
                                     <div class="form__label-title form__radio-title">Оплата по карте</div>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__radio--checkbox">
-                                    <input type="checkbox" class="form__radio-elem form__radio-elem--checkbox" name="call" value="do-not-call">
+                                    <input type="checkbox" class="form__radio-elem form__radio-elem--checkbox" name="call" value="do-not-call" checked>
                                     <div class="form__radio-fake"> 
                                         <svg class="form__checkbox-icon">
                                         <use xlink:href="sprites/icon-sprite.svg#check"></use>

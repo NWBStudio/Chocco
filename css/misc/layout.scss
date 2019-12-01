@@ -1,10 +1,20 @@
+html {
+  font-size: 18px; // задал, чтобы изначальные десктопные расчёты такими как я их и задумал
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
+    font-size: 11px;
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 1.2; //самый распространённый размер по макету, для подстраховки
   font-family: "Alegreya Sans", "Arial", "sans-serif";
   -webkit-font-smoothing: antialiased;
@@ -17,18 +27,19 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  @include container();
+  max-width: 940px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +49,7 @@ body {
 .title {
   color: $title-black;
   font-weight: bold;
-  font-size: 48px;
+  font-size: rem(48px);
   text-transform: uppercase;
   text-align: center;
   &--color--white {
@@ -92,5 +103,5 @@ button {
   border: none;
   cursor: pointer;
   color: inherit;
-  padding: 0px;
+  padding: 0;
 }

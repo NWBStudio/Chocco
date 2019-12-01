@@ -2,13 +2,13 @@
     background: $white url("../img/bg/team-branch-top-right.png") no-repeat top right;
     position: relative;
     &::after {
-        @include bg-slice(83px, 90px, "../img/bg/team-raspberry-bottom-left.png");
-        bottom: -44px;
-        left: 36px;
+        @include bg-slice(rem(83px), rem(90px), "../img/bg/team-raspberry-bottom-left.png");
+        bottom: rem(-44px);
+        left: rem(36px);
     }
 }
 
 .team__title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: rem(50px);
 }

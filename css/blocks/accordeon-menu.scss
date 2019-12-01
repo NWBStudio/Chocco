@@ -12,20 +12,20 @@
 
 .accordeon-menu__item-collapsible--active {
     .accordeon-menu__info {
-        width: 530px;
-        padding: 65px 125px 10px 30px;
+        width: rem(530px);
+        padding: rem(65px) rem(125px) rem(10px) rem(30px);
     }
     
 }
 
 .accordeon-menu__unfolder {
-    width: 100px;
+    width: rem(100px);
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; //также можно делать абсолютом на случай будущих правок по расположению, подробнее в созвоне от 30.11
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 42px;
+    padding-bottom: rem(42px);
     background-repeat: no-repeat;
     background-size: cover;
     @each $bg in (coconut, honey, berries) { //генерация пути к файлу фона на основании имени модификатора
@@ -34,7 +34,7 @@
         }
     }
     h3 {
-        font-size: 48px;
+        font-size: rem(48px);
         font-weight: $medium;
         color: $white;
         writing-mode: vertical-lr;
@@ -49,20 +49,20 @@
     background-color: $dark-grey-opacity;
     
     p {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: rem(16px);
+        line-height: rem(24px);
     }
 }
 
 .accordeon-menu__close-btn {
     position: absolute;
-    top: 25px;
-    right: 30px;
+    top: rem(25px);
+    right: rem(30px);
 }
 
 .accordeon-menu__close-icon {
-    height: 18px;
-    width: 18px;
+    height: rem(18px);
+    width: rem(18px);
     fill: $cross-light-grey;
 }
   

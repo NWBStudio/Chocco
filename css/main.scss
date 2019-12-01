@@ -1,3 +1,7 @@
+//break-points
+$tablets: 768px;
+$phones: 480px;
+
 //font-weights
 $light: 300;
 $medium: 500;
@@ -23,13 +27,16 @@ $light-green: #cfdeda;
 $bg-light-blue: #61c4d9;
 $icon-light-blue: #aef5fe;
 
+
 //normalize
 @import "./misc/normalize.scss";
 
 //setups
+@import "./misc/media.scss";
 @import "./misc/mixins.scss";
 @import "./misc/fonts.scss";
 @import "./misc/layout.scss";
+
 
 //blocks
 @import "./blocks/header.scss";

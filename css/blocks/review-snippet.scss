@@ -1,9 +1,9 @@
 .review-snippet {
-    min-height: 345px;
+    min-height: rem(345px);
     background: url("../img/bg/review-bg-half-circle.jpg") no-repeat top center, #f8faf9 url("../img/bg/review-bg-branch.jpg") no-repeat top right, ;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 45px;
+    padding-left: rem(45px);
     display: none;
 
     &--active {
@@ -12,21 +12,21 @@
 }
 
 .review-snippet__userpic {
-    margin-right: 25px;
+    margin-right: rem(25px);
 }
 
 .review-snippet__content {
-    width: 500px;
+    width: rem(500px);
     display: flex;
     flex-wrap: wrap;
     text-align: left;
 }
 
 .review-snippet__title {
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
     margin-right: auto;
     h3 {
-        font-size: 30px;
+        font-size: rem(30px);
         color: $title-dark-grey;
         font-weight: $medium;
     }

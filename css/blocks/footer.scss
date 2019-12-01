@@ -1,5 +1,5 @@
 .footer {
-    height: 90px;
+    height: rem(90px);
 }
 
 .footer__container {
@@ -12,10 +12,10 @@
     width: 50%;
     address {
         color: $address-black;
-        font-size: 21px;
-        line-height: 24px;
+        font-size: rem(21px);
+        line-height: rem(24px);
         font-style: normal;
-        margin-bottom: 5px;
+        margin-bottom: rem(5px);
     }
 }
 

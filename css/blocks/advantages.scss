@@ -12,14 +12,14 @@
 }
 
 .advantages__icon-holder {
-    width: 125px;
-    height: 125px;
+    width: rem(125px);
+    height: rem(125px);
     background-color: $light-grey;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
 }
 
 .advantages__icon {
@@ -28,22 +28,22 @@
     stroke-width: 1;
     stroke-miterlimit: 10;
     //Вытащил следующие стили из svg-файлов, цвет поменял на нужный, без них нормально не отрисовывается
-    height: 70px;
-    width: 70px;
+    height: rem(70px);
+    width: rem(70px);
 }
 
 .advantages__content {
     h3{   
-        font-size: 27px;
+        font-size: rem(27px);
         font-weight: bold;
         color: $black;
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
         text-align: center;  
     }
 
     p {
         @include grey-text;
-        width: 285px;
+        width: rem(285px);
         text-align: center;
     }
 }

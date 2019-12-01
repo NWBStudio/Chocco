@@ -7,3 +7,13 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.header__menu-icon {
+    height: 22px;
+    width: 24px;
+    fill: $white;
+    display: none;
+    @include tablets {
+        display: block;
+    }
+}

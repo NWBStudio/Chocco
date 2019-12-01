@@ -1,15 +1,15 @@
 .why {
     background: $white url("../img/bg/why-bg-leaf.png") no-repeat left center;
     &::after {
-        @include bg-slice(161px, 232px, "../img/bg/why-bg-raspberries.png");
-        bottom: -110px;
+        @include bg-slice(rem(161px), rem(232px), "../img/bg/why-bg-raspberries.png");
+        bottom: rem(-110px);
         left: 0;
     }
 }
 
 .why__promo {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: rem(50px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,12 +17,12 @@
 
 .why__title {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }
 
 .why__description {
     @include grey-text;
     text-align: center;
-    max-width: 415px;
+    max-width: rem(415px);
     font-weight: $light;
 }
