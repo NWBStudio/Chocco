@@ -35,7 +35,7 @@ body {
   max-width: 940px;
   width: 95%;
   margin: 0 auto;
-    @include tablets {
+  @include tablets {
     max-width: 720px;
   }
   @include phones {
@@ -50,6 +50,9 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  @include tablets {
+    min-height: 0;
+  }
 }
 
 .title {
@@ -63,6 +66,9 @@ body {
   }
   &--color--green {
     color: $btn-green;
+  }
+  @include phones {
+    font-size: d-t(rem(48px));
   }
 }
 

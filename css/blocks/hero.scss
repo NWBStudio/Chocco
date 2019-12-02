@@ -2,12 +2,17 @@
     background: $bg-light-blue url("../img/bg/hero-bg-branch.png") no-repeat right;
     padding-top: rem(24px);
     padding-bottom: rem(45px);
+    @include tablets {
+        background-size: 70%;
+        background-position-y: top;
+    }
     &::after {
         @include bg-slice(57px, 98px, "../img/bg/bg-single-leaf.png");
         bottom: rem(-45px);
         left: 2.8vw;
         @include tablets {
             display: none;
+            // background-size: 50%;
         }
     }
 }
@@ -51,6 +56,10 @@
     @include tablets {
         order: -1;
         margin-bottom: 15%;
+    }
+    @include phones {
+        order: -1;
+        margin-bottom: 10%;
     }
 
     &::after {
@@ -105,14 +114,22 @@
         font-size: rem(25px);
         text-align: center;
     }
+    @include phones {
+        font-size: rem(25px);
+        text-align: center;
+        margin-bottom: rem(25px);
+    }
 }
 
 .hero__features {
     display: flex;
     justify-content: space-between;
-    max-width: rem(480px);
+    width: rem(480px);
     @include tablets {
         width: 77%;
+    }
+    @include phones {
+        width: 100%;
     }
 }
 
@@ -122,11 +139,17 @@
     margin-right: rem(45px);
     @include tablets {
         margin-right: 0;
+        font-size: calc(#{rem(16px)} * #{$d-t});
+    }
+    @include phones {
+        font-size: calc(#{rem(16px)} * #{$d-m});
+        width: 30%;
     }
 }
 
 .feature-snippet__info {
     width: rem(70px);
+    width: 65%;
 }
 
 .hero__feature-icon {

@@ -13,3 +13,11 @@
 		@content;
 	}
 }
+
+@function d-t($rem) {
+	@return $rem * $d-t;
+}
+
+@function d-m($rem) {
+	@return $rem * $d-m;
+}

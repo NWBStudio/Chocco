@@ -6,6 +6,9 @@
         bottom: rem(-44px);
         left: rem(36px);
     }
+    @include tablets {
+        background-size: 30%;
+    }
 }
 
 .team__inner {

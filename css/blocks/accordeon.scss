@@ -8,6 +8,9 @@
         height: 70%;
         // align-content: space-between;
     }
+    @include phones {
+        width: 80%;
+    }
 }
 
 .accordeon__item {
@@ -18,15 +21,25 @@
     position: relative;
     @include tablets {
         width: 45%;
-
+    }
+    @include phones {
+        width: 40%;
     }
 }
 
 .accordeon__pic {
     width: 100%;
     margin-bottom: rem(30px);
+    @include phones {
+        margin-bottom: rem(20px);
+    }
 }
 
+.accordeon__collapsible {
+    @include phones {
+        width: 120%;
+    }
+}
 
 
 .accordeon__collapsible--active {
@@ -48,6 +61,9 @@
         font-weight: $medium;
         display: inline-block;
         margin-right: rem(5px);
+        @include phones {
+            font-size: d-m(rem(21px));
+        }
     }
 }
 
@@ -71,10 +87,14 @@
         color: $dark-brown;
         font-size: rem(18px);
         margin-bottom: rem(7px);
+        @include phones {
+            font-size: d-t(rem(18px));
+        }
     }
     p {
         @include grey-text;
         font-weight: $light;
+        font-size: d-t(rem(18px));
     }
     
 }

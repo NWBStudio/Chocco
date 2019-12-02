@@ -4,6 +4,12 @@
         @include bg-slice(rem(161px), rem(232px), "../img/bg/why-bg-raspberries.png");
         bottom: rem(-110px);
         left: 0;
+        @include phones {
+            display: none;
+        }
+    }
+    @include phones {
+        background-image: none;
     }
 }
 
@@ -17,6 +23,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include phones {
+        margin-bottom: 10%;
+    }
+    
 }
 
 .why__title {
@@ -29,4 +39,8 @@
     text-align: center;
     max-width: rem(415px);
     font-weight: $light;
+    @include phones {
+        max-width: 100%;
+        font-size: d-m(rem(18px));
+    }
 }

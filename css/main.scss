@@ -1,8 +1,14 @@
 //break-points
 $tablets: 768px;
 $phones: 480px;
+$desktop-font-size: 18px;
 $tablets-font-size: 15px;
 $phones-font-size: 12px;
+$d-t: $desktop-font-size / $tablets-font-size;
+$t-m: $tablets-font-size / $phones-font-size;
+$d-m: $desktop-font-size / $phones-font-size;
+
+
 
 //font-weights
 $light: 300;

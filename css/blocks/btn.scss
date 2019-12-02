@@ -9,10 +9,18 @@
     border-radius: rem(30px);
     padding: rem(20px) rem(35px);
     @include tablets {
-        width: rem(156px);
-        height: rem(58px);
-        border-radius: rem(30px);
-        padding: rem(20px) rem(35px);
+        width: d-t(rem(156px));
+        height: d-t(rem(58px));
+        border-radius: d-t(rem(30px));
+        padding: d-t(rem(20px)) d-t(rem(35px));
+        font-size: d-t(rem(19px));
+    }
+    @include phones {
+        width: d-m(rem(156px));
+        height: d-m(rem(58px));
+        border-radius: d-m(rem(30px));
+        padding: d-m(rem(20px)) d-m(rem(35px));
+        font-size: d-m(rem(19px));
     }
 
     &:hover {
