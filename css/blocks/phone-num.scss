@@ -10,6 +10,10 @@
 .phone-num__icon {
     width: rem(11px);
     height: rem(11px);
+    @include tablets {
+        width: rem(13px);
+        height: rem(13px);
+    }
     fill: $white;
     margin-right: rem(2px);
 }
@@ -18,6 +22,10 @@
 .phone-num--theme--green {
     color: $btn-green;
     font-size: rem(21px);
+    @include tablets {
+        font-size: rem(25px);
+        line-height: rem(36px);
+    }
     .phone-num__icon {
         fill: $btn-green;
     }

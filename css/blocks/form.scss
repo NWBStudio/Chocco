@@ -1,11 +1,20 @@
 .form {
     display: flex;
+    @include tablets {
+        flex-direction: column;
+        width: 65%;
+        align-items: center;
+    }
 }
 
 .form__col {
     flex: 1;
     margin-left: rem(20px);
     &:first-child {
+        margin-left: 0;
+    }
+    @include tablets {
+        width: 100%;
         margin-left: 0;
     }
 }
@@ -48,6 +57,11 @@
     margin-bottom: rem(40px);
     .form__row {
         margin-bottom: rem(12px);
+    }
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -135,6 +149,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
+}
+
+.form__buttons {
+    @include tablets {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .form__submit {

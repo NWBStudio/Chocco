@@ -1,25 +1,43 @@
 .review-snippet {
     min-height: rem(345px);
     background: url("../img/bg/review-bg-half-circle.jpg") no-repeat top center, #f8faf9 url("../img/bg/review-bg-branch.jpg") no-repeat top right, ;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     align-items: center;
-    padding-left: rem(45px);
+    padding-left: 4.5%;
+    padding-right: 4.5%;
     display: none;
 
     &--active {
         display: flex;
     }
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        min-height: rem(720px);
+    }
 }
 
 .review-snippet__userpic {
+    width: rem(254px);
     margin-right: rem(25px);
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
 }
 
 .review-snippet__content {
-    width: rem(500px);
+    max-width: rem(500px);
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+    @include tablets {
+        width: 75%;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .review-snippet__title {
@@ -29,13 +47,25 @@
         font-size: rem(30px);
         color: $title-dark-grey;
         font-weight: $medium;
+        @include tablets {
+            text-align: center;
+            
+        }
+    }
+    @include tablets {
+        text-align: center;
+        margin-right: 0;
     }
 }
 
 .review-snippet__text {
     @include grey-text;
+    @include tablets {
+        margin-bottom: rem(42px);
+    }
 }
 
 .review-snippet__author {
     @include grey-text;
+    
 }

@@ -6,4 +6,9 @@
     text-transform: uppercase;
     width: rem(55px);
     word-wrap: break-word;
+    @include tablets {
+        font-size: rem(26px);
+        line-height: rem(23px);
+        width: rem(66px);
+    }
 }

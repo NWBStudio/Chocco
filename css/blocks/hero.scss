@@ -42,6 +42,7 @@
         max-width: 28.6rem;
         margin-right: 0;
         align-items: center;
+        margin-top: 0%;
     }
 }
 
@@ -49,13 +50,16 @@
     position: relative;
     @include tablets {
         order: -1;
-        margin-bottom: rem(80px);
+        margin-bottom: 15%;
     }
 
     &::after {
         @include bg-slice(rem(414px), rem(341px), "../img/bg/hero-berries.png");
         bottom: rem(-117px);
         left: rem(102px);
+        @include tablets {
+            bottom: rem(-65px);
+        }
     }
 
     &::before {
@@ -83,6 +87,8 @@
     margin-bottom: rem(10px);
     @include tablets {
         text-align: center;
+        font-size: rem(72px);
+        line-height: rem(72px);
     }
     
 }
@@ -92,8 +98,13 @@
     text-transform: none;
     font-weight: normal;
     line-height: 1.2;
-    max-width: rem(350px);
+    // max-width: rem(350px);
+    max-width: 84%;
     margin-bottom: rem(30px);
+    @include tablets {
+        font-size: rem(25px);
+        text-align: center;
+    }
 }
 
 .hero__features {

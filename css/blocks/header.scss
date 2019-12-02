@@ -9,12 +9,14 @@
 }
 
 .header__menu-icon {
-    height: 22px;
-    width: 24px;
+    height: rem(26px);
+    width: rem(28px);
     fill: $white;
     display: none;
     @include tablets {
         display: block;
+        height: rem(30px);
+        width: rem(32px);
     }
 }
 

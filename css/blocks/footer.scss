@@ -1,5 +1,5 @@
 .footer {
-    height: rem(90px);
+    // height: rem(90px);
 }
 
 .footer__container {
@@ -16,10 +16,15 @@
         line-height: rem(24px);
         font-style: normal;
         margin-bottom: rem(5px);
+        @include tablets {
+            font-size: rem(25px);
+            line-height: rem(28px);
+        }
     }
 }
 
 .footer__social {
     width: 50%;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }

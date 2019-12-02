@@ -3,3 +3,10 @@
     background-size: cover;
 }
 
+.order__inner {
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-around;
+    }
+}

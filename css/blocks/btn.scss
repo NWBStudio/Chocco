@@ -8,6 +8,12 @@
     background-color: $btn-green;
     border-radius: rem(30px);
     padding: rem(20px) rem(35px);
+    @include tablets {
+        width: rem(156px);
+        height: rem(58px);
+        border-radius: rem(30px);
+        padding: rem(20px) rem(35px);
+    }
 
     &:hover {
         background-color: $btn-green-hover;

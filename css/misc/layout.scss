@@ -4,7 +4,7 @@ html {
     font-size: 15px;
   }
   @include phones {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
@@ -36,7 +36,10 @@ body {
   width: 95%;
   margin: 0 auto;
     @include tablets {
-      max-width: 720px;
+    max-width: 720px;
+  }
+  @include phones {
+    max-width: 460px;
   }
 }
 
