@@ -5,6 +5,8 @@
     @include tablets {
         background-size: 70%;
         background-position-y: top;
+        padding-top: 2.5%;
+        padding-bottom: 4.5%;
     }
     &::after {
         @include bg-slice(57px, 98px, "../img/bg/bg-single-leaf.png");
@@ -33,16 +35,17 @@
     // justify-content: space-between;
     @include tablets {
         flex-direction: column;
+        align-items: center;
     }
+    width: 100%;
 }
 
 .hero__promo {
     margin-right: 7.3%;
     display: flex;
-    
     flex-direction: column;
-    
-    margin-top: rem(85px);
+    flex-wrap: wrap;
+    margin-top: rem(90px);
     @include tablets {
         max-width: 28.6rem;
         margin-right: 0;
@@ -55,11 +58,12 @@
     position: relative;
     @include tablets {
         order: -1;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
+        width: 55%;
     }
     @include phones {
         order: -1;
-        margin-bottom: 10%;
+        margin-bottom: 7%;
     }
 
     &::after {
@@ -67,7 +71,9 @@
         bottom: rem(-117px);
         left: rem(102px);
         @include tablets {
-            bottom: rem(-65px);
+            width: 80%;
+            top: 45%;
+            left: 20%;
         }
     }
 
@@ -77,15 +83,18 @@
         left: rem(50px);
         @include tablets {
             @include bg-slice(rem(74px), rem(201px), "../img/bg/hero-blueberry-leaf.png");
-            bottom: rem(50px);
-            left: rem(10px);
+            top: 35%;
+            left: -3%;
             }
         }
         
     }
 
 .hero__product-pic {
-    width: rem(503px);
+    @include tablets {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .hero__title {
@@ -96,8 +105,11 @@
     margin-bottom: rem(10px);
     @include tablets {
         text-align: center;
-        font-size: rem(72px);
-        line-height: rem(72px);
+        font-size: d-m(rem(42px));
+        line-height: d-m(rem(37px));
+    }
+    @include tablets {
+        margin-bottom: 1.5%;
     }
     
 }
@@ -115,9 +127,9 @@
         text-align: center;
     }
     @include phones {
-        font-size: rem(25px);
+        font-size: rem(23px);
         text-align: center;
-        margin-bottom: rem(25px);
+        margin-bottom: 3%;
     }
 }
 
@@ -136,20 +148,20 @@
 .hero__feature-snippet {
     font-size: rem(16px);
     display: flex;
+    justify-content: flex-end;
     margin-right: rem(45px);
     @include tablets {
         margin-right: 0;
-        font-size: calc(#{rem(16px)} * #{$d-t});
+        font-size: d-t(rem(16px));
     }
     @include phones {
-        font-size: calc(#{rem(16px)} * #{$d-m});
         width: 30%;
     }
 }
 
 .feature-snippet__info {
-    width: rem(70px);
-    width: 65%;
+    // width: rem(70px);
+    width: 55%;
 }
 
 .hero__feature-icon {

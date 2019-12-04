@@ -1,5 +1,6 @@
 .form {
     display: flex;
+    margin: 0 auto;
     @include tablets {
         flex-direction: column;
         width: 65%;

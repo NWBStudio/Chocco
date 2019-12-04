@@ -19,7 +19,8 @@
     }
     @include phones {
         flex-direction: row;
-        margin-bottom: 10%;
+        margin-bottom: 7%;
+        width: 100%;
     }
 }
 
@@ -33,10 +34,18 @@
     align-items: center;
     margin-bottom: rem(35px);
     @include phones {
-        height: d-m(rem(125px));
-        width: d-m(rem(125px));
+        // height: d-m(rem(95px));
+        // width: d-m(rem(95px));
+        width: 20%;
+        height: auto;
         margin-bottom: 0;
         margin-right: 5%;
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
     }  
 }
 
@@ -49,8 +58,10 @@
     height: rem(70px);
     width: rem(70px);
     @include phones {
-        height: d-m(rem(70px));
-        width: d-m(rem(70px));
+        width: 50%;
+        position: absolute;
+        // left: 50%;
+        // top: 50%;
     }  
 }
 
@@ -68,8 +79,9 @@
         margin-bottom: rem(20px);
         text-align: center;
         @include phones {
-            font-size: d-m(rem(27px));
+            font-size: d-m(rem(23px));
             text-align: left;
+            margin-bottom: 3%;
         }  
     }
 
@@ -82,7 +94,7 @@
             max-width: 60%;
         }
         @include phones {
-            font-size: d-m(rem(18px));
+            font-size: d-m(rem(14px));
             text-align: left;
             max-width: d-m(rem(285px));
         }  
