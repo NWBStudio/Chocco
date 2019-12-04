@@ -47,7 +47,7 @@
     flex-wrap: wrap;
     margin-top: rem(90px);
     @include tablets {
-        max-width: 60%;
+        max-width: rem(450px);
         margin-right: 0;
         align-items: center;
         margin-top: 0%;
@@ -56,14 +56,10 @@
 
 .hero__product {
     position: relative;
-    
     @include tablets {
         order: -1;
         margin-bottom: 10%;
         width: 55%;
-    }
-    @include phones {
-        margin-bottom: 7%;
     }
 
     &::after {
