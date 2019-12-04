@@ -47,7 +47,7 @@
     flex-wrap: wrap;
     margin-top: rem(90px);
     @include tablets {
-        max-width: 28.6rem;
+        max-width: 60%;
         margin-right: 0;
         align-items: center;
         margin-top: 0%;
@@ -56,20 +56,20 @@
 
 .hero__product {
     position: relative;
+    
     @include tablets {
         order: -1;
         margin-bottom: 10%;
         width: 55%;
     }
     @include phones {
-        order: -1;
         margin-bottom: 7%;
     }
 
     &::after {
         @include bg-slice(rem(414px), rem(341px), "../img/bg/hero-berries.png");
         bottom: rem(-117px);
-        left: rem(102px);
+        right: 0px;
         @include tablets {
             width: 80%;
             top: 45%;
@@ -91,6 +91,7 @@
     }
 
 .hero__product-pic {
+    max-width: 45.7vw;
     @include tablets {
         width: 100%;
         height: auto;
@@ -119,12 +120,12 @@
     text-transform: none;
     font-weight: normal;
     line-height: 1.2;
-    // max-width: rem(350px);
     max-width: 84%;
     margin-bottom: rem(30px);
     @include tablets {
         font-size: rem(25px);
         text-align: center;
+        margin-bottom: 5%;
     }
     @include phones {
         font-size: rem(23px);

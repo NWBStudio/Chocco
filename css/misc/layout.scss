@@ -68,7 +68,7 @@ body {
     color: $btn-green;
   }
   @include phones {
-    font-size: d-t(rem(44px));
+    font-size: d-m(rem(35px));
   }
 }
 

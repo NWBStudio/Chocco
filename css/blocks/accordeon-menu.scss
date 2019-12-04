@@ -9,13 +9,23 @@
 
 .accordeon-menu__item-collapsible {
     display: flex;
-    
 }
+
+
 
 .accordeon-menu__item-collapsible--active {
     .accordeon-menu__info {
         width: rem(530px);
         padding: rem(65px) rem(125px) rem(10px) rem(30px);
+        @include phones {
+            width: calc(100% - 85px);
+            padding: 8% 5% 5% 4%;
+        }
+    }
+    @include phones {
+        &~.accordeon-menu__item-collapsible {
+            display: none;
+        }
     }
     
 }
@@ -24,6 +34,9 @@
     width: rem(100px);
     @include tablets {
         width: rem(130px);
+    }
+    @include phones {
+        width: d-m(rem(85px));
     }
     height: 100%;
     display: flex;
@@ -56,6 +69,10 @@
     p {
         font-size: rem(16px);
         line-height: rem(24px);
+        @include phones {
+            font-size: d-m(rem(16px));
+            line-height: d-m(rem(24px));
+        }
     }
 }
 
@@ -63,11 +80,20 @@
     position: absolute;
     top: rem(25px);
     right: rem(30px);
+    @include tablets {
+        top: 3.5%;
+        right: 3%;
+    }
+    
 }
 
 .accordeon-menu__close-icon {
     height: rem(18px);
     width: rem(18px);
+    @include tablets {
+        height: d-t(rem(18px));
+        width: d-t(rem(18px));
+    }
     fill: $cross-light-grey;
 }
   

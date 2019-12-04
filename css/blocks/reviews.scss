@@ -5,12 +5,18 @@
         @include bg-slice(rem(150px), rem(86px), "../img/bg/reviews-bg-top-berries.png");
         top: 5.5vh;
         right: 1.3vw;
+        @include phones {
+            top: 3.5%;
+        }
     }
 
     &:after {
         @include bg-slice(rem(139px), rem(288px), "../img/bg/reviews-bg-left-bottom-berries.png");
         left: 0;
         bottom: rem(-130px);
+    }
+    @include phones {
+        padding-top: 0;
     }
 }
 
@@ -40,6 +46,9 @@
         width: 64%;
         margin-bottom: 0;
     }
+    @include phones {
+        width: 100%;
+    }
 }
 
 .reviews__switcher {
@@ -49,6 +58,9 @@
     justify-content: space-between;
     @include tablets {
         width: 40%;
+    }
+    @include phones {
+        width: 60%;
     }
 }
 
@@ -70,8 +82,6 @@
 
 .reviews__small-pic {
     width: 100%;
-    // width: rem(65px);
-    // height: rem(65px);
     border-radius: 50%;
     box-sizing: content-box;
     border: rem(5px) solid transparent;

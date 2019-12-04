@@ -1,12 +1,10 @@
 .accordeon {
     display: flex;
     justify-content: space-between;
-    // align-items: flex-start;
     @include tablets {
         flex-wrap: wrap;
         width: 60%;
         height: 70%;
-        // align-content: space-between;
     }
     @include phones {
         width: 80%;
@@ -31,13 +29,13 @@
     width: 100%;
     margin-bottom: rem(30px);
     @include phones {
-        margin-bottom: rem(20px);
+        margin-bottom: 5%;
     }
 }
 
 .accordeon__collapsible {
     @include phones {
-        width: 120%;
+        width: 150%;
     }
 }
 
@@ -62,7 +60,7 @@
         display: inline-block;
         margin-right: rem(5px);
         @include phones {
-            font-size: d-m(rem(21px));
+            font-size: d-m(rem(16px));
         }
     }
 }
@@ -79,10 +77,13 @@
     height: 0;
     overflow: hidden;
     position: absolute;
-    top: calc(100% + rem(12px));
     left: 0;
     right: 0;
     margin: auto;
+    @include phones {
+        width: 150%;
+        left: -25%;
+    }
     h4{
         color: $dark-brown;
         font-size: rem(18px);
@@ -95,6 +96,7 @@
         @include grey-text;
         font-weight: $light;
         font-size: d-t(rem(18px));
+        
     }
     
 }
