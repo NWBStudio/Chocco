@@ -1,0 +1,9 @@
+.contacts__footer {
+    position: absolute;
+    bottom: 0;
+    background: $white;
+    height: 15%;
+    @include phones {
+        height: 20%;
+    }
+}

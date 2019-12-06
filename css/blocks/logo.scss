@@ -1,9 +1,14 @@
 .logo {
     font-family: "Museo Sans Cyrl 500";
     font-weight: $medium;
-    font-size: 24px;
-    line-height: 21px;
+    font-size: rem(24px);
+    line-height: rem(21px);
     text-transform: uppercase;
-    width: 55px;
+    width: rem(55px);
     word-wrap: break-word;
+    @include tablets {
+        font-size: rem(26px);
+        line-height: rem(23px);
+        width: rem(66px);
+    }
 }

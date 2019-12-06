@@ -1,0 +1,33 @@
+.social {
+    width: rem(145px);
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+        width: d-t(rem(145px));
+    }
+    @include phones {
+        width: d-m(rem(145px));
+        
+    }
+}
+
+.social__item {
+    display: block;
+    width: 15%;
+}
+
+.social__icon {
+    width: 100%;
+    display: block;
+    fill: $social-grey;    
+    &:hover {
+        fill: $black;
+    }
+}
+
+.social__link:hover {
+    .social__icon {
+    fill: $black;
+    }
+}
+

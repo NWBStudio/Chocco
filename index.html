@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chocco</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -40,12 +40,17 @@
                                 </li>
                             </ul>
                         </nav>
-                        <a href="tel:88009039090" class="link phone-num">
+                        <a href="tel:88009039090" class="phone-num header__phone-num">
                             <svg class="phone-num__icon">
                                 <use xlink:href="sprites/icon-sprite.svg#phone"></use>
                             </svg>
                             8 800 903 90 90
                         </a>
+                        <button class="header__burger-menu" type="button">
+                            <svg class="header__menu-icon">
+                                <use xlink:href="sprites/icon-sprite.svg#burger-menu"></use>
+                            </svg>
+                        </button>
                     </div>
                 </header>
                 <div class="hero__main">
@@ -101,13 +106,9 @@
                             </svg>
                         </div>
                         <div class="advantages__content">
-                            <div class="advantages__title">
-                                <h3>Полезно</h3>
-                            </div>
-                            <div class="advantages__description">
-                                <p>Натуральность - ключевое качество нашей продукции. Мы
-                                    используем только природные ингредиенты.</p>
-                            </div>
+                            <h3>Полезно</h3>
+                            <p>Натуральность - ключевое качество нашей продукции. Мы
+                                используем только природные ингредиенты.</p>
                         </div>
                     </li>
                     <li class="advantages__snippet">
@@ -117,13 +118,9 @@
                             </svg>
                         </div>
                         <div class="advantages__content">
-                            <div class="advantages__title">
-                                <h3>Вкусно</h3>
-                            </div>
-                            <div class="advantages__description">
-                                <p>Нежный, ненавязчивый, изысканный – так клиенты описывают
-                                    вкусовые качества наших батончиков.</p>
-                            </div>
+                            <h3>Вкусно</h3>
+                            <p>Нежный, ненавязчивый, изысканный – так клиенты описывают
+                                вкусовые качества наших батончиков.</p>
                         </div>
                     </li>
                     <li class="advantages__snippet">
@@ -133,16 +130,140 @@
                             </svg>
                         </div>
                         <div class="advantages__content">
-                            <div class="advantages__title">
-                                <h3>Питательно</h3>
+                            <h3>Питательно</h3>
+                            <p>Высокое содержание качественного белка, а также всех
+                                необходимых витаминов и минералов.</p>
+                        </div>
+                    </li>
+                </ul>
+        </section>
+        <section class="section team">
+            <div class="team__inner container">
+                <h2 class="title team__title">команда</h2>
+                <ul class="accordeon">
+                    <li class="accordeon__item">
+                        <img src="./img/content/team-Boris.jpg" alt="Фотография сотрудника" class="accordeon__pic">
+                        <div class="accordeon__collapsible ">
+                            <button class="accordeon__unfolder">
+                                <h3>Борис Федорович</h3>
+                                <svg class="accordeon__arrow-icon">
+                                    <use xlink:href="sprites/icon-sprite.svg#triangle-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordeon__info">
+                                <h4>Главный технолог</h4>
+                                <p>Отвечает за вкусовые качества
+                                    и калорийность.</p>
                             </div>
-                            <div class="advantages__description">
-                                <p>Высокое содержание качественного белка, а также всех
-                                    необходимых витаминов и минералов.</p>
+                        </div>
+                    </li>
+                    <li class="accordeon__item">
+                        <img src="./img/content/team-Alla.jpg" alt="Фотография сотрудника" class="accordeon__pic">
+                        <div class="accordeon__collapsible ">
+                            <button class="accordeon__unfolder">
+                                <h3>Алла Иванова</h3>
+                                <svg class="accordeon__arrow-icon">
+                                    <use xlink:href="sprites/icon-sprite.svg#triangle-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordeon__info">
+                                <h4>Специалист по упаковке</h4>
+                                <p>Автор запоминающегося стиля
+                                    наших батончиков.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordeon__item">
+                        <img src="./img/content/team-Kirill.jpg" alt="Фотография сотрудника" class="accordeon__pic">
+                        <div class="accordeon__collapsible accordeon__collapsible--active">
+                            <button class="accordeon__unfolder ">
+                                <h3>Кирилл Матросов</h3>
+                                <svg class="accordeon__arrow-icon">
+                                    <use xlink:href="sprites/icon-sprite.svg#triangle-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordeon__info">
+                                <h4>Оператор</h4>
+                                <p>С радостью поможет подобрать батончики и оформить заказ.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordeon__item">
+                        <img src="./img/content/team-Mila.jpg" alt="Фотография сотрудника" class="accordeon__pic">
+                        <div class="accordeon__collapsible ">
+                            <button class="accordeon__unfolder">
+                                <h3>Мила Рыжкова</h3>
+                                <svg class="accordeon__arrow-icon">
+                                    <use xlink:href="sprites/icon-sprite.svg#triangle-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordeon__info">
+                                <h4>PR, маркетинг</h4>
+                                <p>По всем вопросам сотрудничества
+                                    и рекламы писать только Миле.
+                                </p>
                             </div>
                         </div>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="section menu">
+            <h2 class="title title--color--white menu__title">меню</h2>
+            <ul class="accordeon-menu">
+                <li class="accordeon-menu__item-collapsible accordeon-menu__item-collapsible--active">
+                    <button class="accordeon-menu__unfolder accordeon-menu__unfolder--bg--coconut" type="button">
+                        <h3>Батончики с молоком</h3>
+                    </button>
+                    <div class="accordeon-menu__info">
+                        <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                            полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг.
+                            Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую
+                            еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с
+                            днём Победы.</p>
+                        <button class="accordeon-menu__close-btn" type="button">
+                            <svg class="accordeon-menu__close-icon">
+                                <use xlink:href="sprites/icon-sprite.svg#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li class="accordeon-menu__item-collapsible">
+                    <button class="accordeon-menu__unfolder accordeon-menu__unfolder--bg--honey" type="button">
+                        <h3>С мёдом и фруктами</h3>
+                    </button>
+                    <div class="accordeon-menu__info">
+                        <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                            полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг.
+                            Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую
+                            еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с
+                            днём Победы.</p>
+                        <button class="accordeon-menu__close-btn" type="button">
+                            <svg class="accordeon-menu__close-icon">
+                                <use xlink:href="sprites/icon-sprite.svg#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li class="accordeon-menu__item-collapsible">
+                    <button class="accordeon-menu__unfolder accordeon-menu__unfolder--bg--berries" type="button">
+                        <h3>Дикие ягоды</h3>
+                    </button>
+                    <div class="accordeon-menu__info">
+                        <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                            полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг.
+                            Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую
+                            еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с
+                            днём Победы.</p>
+                        <button class="accordeon-menu__close-btn" type="button">
+                            <svg class="accordeon-menu__close-icon">
+                                <use xlink:href="sprites/icon-sprite.svg#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+            </ul>
         </section>
         <section class="section reviews">
             <div class="reviews__inner container">
@@ -150,7 +271,7 @@
                 <ul class="reviews__slider">
                     <li class="review-snippet review-snippet--active">
                         <img src="img/content/user-fem-brown.jpg" alt="user avatar" class="review-snippet__userpic">
-                        <div class="review-snippet__content  review-snippet--active">
+                        <div class="review-snippet__content">
                             <span class="review-snippet__title">
                                 <h3>Лучший перекус</h3>
                             </span>
@@ -165,7 +286,7 @@
                         </div>
                     </li>
                     <li class="review-snippet">
-                        <img src="img/content/user-fem-ginger.jpg" alt="user avatar" class="review-snippet__usepic">
+                        <img src="img/content/user-fem-ginger.jpg" alt="user avatar" class="review-snippet__userpic">
                         <div class="review-snippet__content">
                             <span class="review-snippet__title">
                                 <h3>Лучшие батончики премиум уровня</h3>
@@ -178,7 +299,7 @@
                         </div>
                     </li>
                     <li class="review-snippet">
-                        <img src="img/content/user-male.jpg" alt="user avatar" class="review-snippet__usepic">
+                        <img src="img/content/user-male.jpg" alt="user avatar" class="review-snippet__userpic">
                         <div class="review-snippet__content">
                             <span class="review-snippet__title">
                                 <h3>Идеально подходят для спортсменов</h3>
@@ -209,7 +330,133 @@
                                 alt="миниатюра фотографии автора отзыва" class="reviews__small-pic"></button>
                     </li>
                 </ul>
-            </li>
+                </li>
+        </section>
+        <section class="section order">
+            <div class="order__inner container">
+                <h2 class="title title--color--green">Закажите доставку</h2>
+                <form action="" class="form">
+                    <div class="form__col">
+                        <div class="form__row">
+                            <label class="form__label">
+                                <div class="form__label-title">Имя</div>
+                                <input type="text" class="form__input" name="name">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__label-title">Телефон</div>
+                                <input type="tel" class="form__input" name="tel">
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label">
+                                <div class="form__label-title">Улица</div>
+                                <input type="text" name="street" class="form__input">
+                            </label></div>
+                        <div class="form__row">
+                            <label class="form__label">
+                                <div class="form__label-title">Дом</div>
+                                <input type="text" name="house-num" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__label-title">Корпус</div>
+                                <input type="text" name="housing-num" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__label-title">Квартира</div>
+                                <input type="text" name="apartment-num" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__label-title">Этаж</div>
+                                <input type="text" name="floor-num" class="form__input">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__row">
+                            <label class="form__label">
+                                <div class="form__label-title">Комментарий</div>
+                                <textarea type="text" name="floor-num" class="form__input form__textarea"></textarea>
+                            </label>
+                        </div>
+                        <div class="form__options">
+                            <div class="form__row">
+                                <label class="form__radio">
+                                    <input type="radio" class="form__radio-elem" name="payment" value="change">
+                                    <div class="form__radio-fake"></div>
+                                    <div class="form__label-title form__radio-title">Потребуется сдача</div>
+                                </label>
+                                <label class="form__radio">
+                                    <input type="radio" class="form__radio-elem" name="payment" value="card" checked>
+                                    <div class="form__radio-fake"></div>
+                                    <div class="form__label-title form__radio-title">Оплата по карте</div>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__radio--checkbox">
+                                    <input type="checkbox" class="form__radio-elem form__radio-elem--checkbox" name="call" value="do-not-call" checked>
+                                    <div class="form__radio-fake"> 
+                                        <svg class="form__checkbox-icon">
+                                        <use xlink:href="sprites/icon-sprite.svg#check"></use>
+                                    </svg></div>
+                                    <div class="form__label-title form__radio-title">Не перезванивать</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__row form__buttons">
+                            <button class="btn form__submit" type="submit">заказать</button>
+                            <button class="form__reset" type="rese">Очистить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="section contacts">
+            <map name="map" class="map"></map>
+            <footer class="footer contacts__footer">
+                <div class="container footer__container">
+                    <div class="footer__info">
+                        <address>Москва, ул.Новый Арбат, д.31/12</address>
+                        <a href="tel:88009039090" class="phone-num phone-num--theme--green">
+                            <svg class="phone-num__icon">
+                                <use xlink:href="sprites/icon-sprite.svg#phone"></use>
+                            </svg>
+                            8 800 903 90 90
+                        </a>
+                    </div>
+                    <div class="footer__social">
+                        <ul class="social">
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social__icon" viewBox="0 0 36.7 36.7"> <!--Добавил viewBox сюда для корректной работы автоскейлинга через процентную ширину-->
+                                        <use xlink:href="sprites/icon-sprite.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social__icon" viewBox="0 0 36.7 36.7">
+                                        <use xlink:href="sprites/icon-sprite.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social__icon" viewBox="0 0 36.7 36.7">
+                                        <use xlink:href="sprites/icon-sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social__icon" viewBox="0 0 36.7 36.7">
+                                        <use xlink:href="sprites/icon-sprite.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </section>
         <ul class="fixed-menu">
             <li class="fixed-menu__item">
@@ -237,7 +484,7 @@
                 <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
             </li>
         </ul>
-    </li>
+        </li>
 </body>
 
 </html>

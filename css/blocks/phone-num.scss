@@ -1,6 +1,6 @@
 .phone-num {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: rem(24px);
+    line-height: rem(30px);
     font-family: "Alegreya Sans";
     text-transform: uppercase;
     text-decoration: none;
@@ -8,8 +8,25 @@
 }
 
 .phone-num__icon {
-    width: 11px;
-    height: 11px;
+    width: rem(11px);
+    height: rem(11px);
+    @include tablets {
+        width: rem(13px);
+        height: rem(13px);
+    }
     fill: $white;
-    margin-right: 2px;
+    margin-right: rem(2px);
+}
+
+
+.phone-num--theme--green {
+    color: $btn-green;
+    font-size: rem(21px);
+    @include tablets {
+        font-size: rem(25px);
+        line-height: rem(36px);
+    }
+    .phone-num__icon {
+        fill: $btn-green;
+    }
 }

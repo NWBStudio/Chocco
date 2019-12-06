@@ -1,13 +1,27 @@
 .btn {
     color: $white;
-    font-size: 19px;
+    font-size: rem(19px);
     font-weight: $extra-bold;
     text-transform: uppercase;
-    width: 156px;
-    height: 58px;
+    width: rem(156px);
+    height: rem(58px);
     background-color: $btn-green;
-    border-radius: 30px;
-    padding: 20px 35px;
+    border-radius: rem(30px);
+    padding: rem(20px) rem(35px);
+    @include tablets {
+        width: d-t(rem(156px));
+        height: d-t(rem(58px));
+        border-radius: d-t(rem(30px));
+        padding: d-t(rem(20px)) d-t(rem(35px));
+        font-size: d-t(rem(19px));
+    }
+    @include tablets {
+        width: rem(156px);
+        height: rem(58px);
+        border-radius: rem(30px);
+        padding: rem(20px) rem(35px);
+        font-size: rem(19px);
+    }
 
     &:hover {
         background-color: $btn-green-hover;
@@ -23,7 +37,7 @@
 
         &:hover {
             background-color: $white;
-            box-shadow: 0 0 3px $black;
+            box-shadow: 0 0 rem(3px) $black;
         }
     }
 }

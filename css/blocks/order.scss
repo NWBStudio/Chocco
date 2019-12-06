@@ -1,0 +1,11 @@
+.order {
+    background: $light-green url("../img/bg/order-bg.jpg") no-repeat;
+    background-size: cover;
+}
+
+.order__inner {
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
