@@ -1,6 +1,6 @@
 .review-snippet {
     min-height: rem(345px);
-    background: url("../img/bg/review-bg-half-circle.jpg") no-repeat top center, #f8faf9 url("../img/bg/review-bg-branch.jpg") no-repeat top right, ;
+    background: url("../img/bg/review-bg-half-circle.jpg") no-repeat top center, $light-grey-bg url("../img/bg/review-bg-branch.jpg") no-repeat top right, ;
     // flex-wrap: wrap;
     align-items: center;
     padding-left: 4.5%;

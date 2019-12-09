@@ -313,7 +313,7 @@ template {
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../fonts/AlegreyaSans/Alegreyasanslight.woff") format("woff");
+  src: url("../fonts/AlegreyaSans/AlegreyaSans-Light.ttf") format("truetype");
   font-weight: 300; }
 
 @font-face {
@@ -569,7 +569,7 @@ button {
 .fullscreen-nav__close-btn {
   position: absolute;
   top: 2.5%;
-  right: 3.5%; }
+  right: 3.6%; }
 
 .fullscreen-nav__close-icon {
   fill: #c4c5c6;
@@ -794,7 +794,8 @@ button {
   height: 3.22222rem;
   background-color: #0f5a47;
   border-radius: 1.66667rem;
-  padding: 1.11111rem 1.94444rem; }
+  padding: 1.11111rem 1.94444rem;
+  outline: none; }
   @media screen and (max-width: 768px) {
     .btn {
       width: 10.4rem;
@@ -993,6 +994,82 @@ button {
         font-size: 1.16667rem;
         text-align: left;
         max-width: 23.75rem; } }
+
+.slider {
+  background: #f8faf9; }
+
+.slider__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.hero__product-pic {
+  max-width: 39vw; }
+
+.slider__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 42%; }
+
+.slider__composition-holder {
+  height: 5rem;
+  width: 5rem;
+  background: #61c4d9;
+  border-radius: 5px;
+  margin-bottom: 6%; }
+
+.slider__info h3 {
+  color: #0d0d0d;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 4%; }
+
+.slider__info p {
+  color: #666666;
+  font-size: 1rem;
+  margin-bottom: 7%; }
+
+.slider__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 6%; }
+  .slider__row:last-child {
+    margin-bottom: 0; }
+
+.slider__spec {
+  width: 50%;
+  color: #323232;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .slider__spec span {
+    margin-bottom: 2.5%; }
+
+.slider__price {
+  font-size: 3.33333rem;
+  line-height: 3.33333rem;
+  color: #0d0d0d;
+  font-weight: 300;
+  margin-right: 7%; }
 
 .reviews {
   padding-top: 3.33333rem; }

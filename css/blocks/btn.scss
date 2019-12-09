@@ -8,6 +8,7 @@
     background-color: $btn-green;
     border-radius: rem(30px);
     padding: rem(20px) rem(35px);
+    outline: none;
     @include tablets {
         width: d-t(rem(156px));
         height: d-t(rem(58px));
@@ -29,6 +30,7 @@
 
     &:active {
         opacity: 80%;
+        
     }
 
     &--theme--white {
