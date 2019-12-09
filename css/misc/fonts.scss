@@ -3,6 +3,7 @@
     src: url("../fonts/AlegreyaSans/Alegreyasans.woff") format("woff");
 }
 
+
 @font-face {
     font-family: "Alegreya Sans";
     src: url("../fonts/AlegreyaSans/AlegreyaSans-Light.ttf") format("truetype");
@@ -25,6 +26,13 @@
     font-family: "Alegreya Sans";
     src: url("../fonts/AlegreyaSans/Alegreyasansextrabold.woff") format("woff");
     font-weight: $extra-bold;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("../../fonts/AlegreyaSans/Alegreyasansextrabolditalic.woff") format("woff");
+    font-weight: $extra-bold;
+    font-style: italic;
 }
 
 @font-face {

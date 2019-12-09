@@ -332,6 +332,12 @@ template {
   font-weight: 800; }
 
 @font-face {
+  font-family: "Alegreya Sans";
+  src: url("../../fonts/AlegreyaSans/Alegreyasansextrabolditalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
   font-family: "Museo Sans Cyrl 500";
   src: url("../fonts//MuseoSansCyr/MuseoSansCyrl-500.woff") format("woff");
   font-weight: 500; }
@@ -998,6 +1004,28 @@ button {
 .slider {
   background: #f8faf9; }
 
+.slider__inner {
+  position: relative; }
+
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  outline: none; }
+  .slider__arrow--pos--left {
+    left: -5%; }
+  .slider__arrow--pos--right {
+    right: -5%;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1); }
+
+.slider__arrow-icon {
+  height: 1.77778rem;
+  width: 1.77778rem;
+  fill: #0d0d0d; }
+
 .slider__item {
   width: 100%;
   display: -webkit-box;
@@ -1027,7 +1055,34 @@ button {
   width: 5rem;
   background: #61c4d9;
   border-radius: 5px;
-  margin-bottom: 6%; }
+  margin-bottom: 6%;
+  font-size: 0.77778rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  outline: none;
+  position: relative; }
+
+.slider__composition-holder:hover {
+  background: #00accf; }
+  .slider__composition-holder:hover .slider__composition-list {
+    display: block; }
+
+.slider__composition-icon {
+  height: 2.77778rem;
+  width: 2.77778rem;
+  fill: #ffffff;
+  margin-bottom: 0.27778rem; }
+
+.slider__composition-list {
+  position: absolute;
+  width: 15rem;
+  height: 21.22222rem;
+  background: #ffffff;
+  border-radius: 5px;
+  top: 0;
+  left: 100%;
+  display: none; }
 
 .slider__info h3 {
   color: #0d0d0d;
@@ -1053,7 +1108,7 @@ button {
 .slider__spec {
   width: 50%;
   color: #323232;
-  font-size: 18px;
+  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1474,7 +1529,7 @@ button {
 .fixed-menu {
   position: fixed;
   top: 32.6vh;
-  right: 4.1vw;
+  right: 3.5vw;
   z-index: 2; }
   @media screen and (max-width: 768px) {
     .fixed-menu {
