@@ -9,7 +9,7 @@
         padding-bottom: 4.5%;
     }
     &::after {
-        @include bg-slice(57px, 98px, "../img/bg/bg-single-leaf.png");
+        @include bg-slice(rem(57px), rem(98px), "../img/bg/bg-single-leaf.png");
         bottom: rem(-45px);
         left: 2.8vw;
         @include tablets {

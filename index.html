@@ -156,20 +156,32 @@
         </section>
         <section class="section slider">
             <div class="slider__inner container">
-                <button class="slider__arrow slider__arrow--pos--left">
+                <button class="slider__arrow slider__arrow--pos--left slider__arrow--screen--desktop">
                     <svg class="slider__arrow-icon">
                         <use xlink:href="sprites/icon-sprite.svg#arrow"></use>
                     </svg>
-                    <button class="slider__arrow slider__arrow--pos--right">
-                        <svg class="slider__arrow-icon">
-                            <use xlink:href="sprites/icon-sprite.svg#arrow"></use>
-                        </svg>
-                    </button>
+                </button>                    
+                <button class="slider__arrow slider__arrow--pos--right slider__arrow--screen--desktop">
+                    <svg class="slider__arrow-icon">
+                        <use xlink:href="sprites/icon-sprite.svg#arrow"></use>
+                    </svg>
                 </button>
                 <div class="slider__main">
                     <ul class="slider__list">
                         <li class="slider__item">
-                            <img src="./img/content/slider-product-seaweed.png" alt="Батончик Морские водоросли" class="slider__product-pic">
+                            <div class="slider__product">
+                                <img src="./img/content/slider-product-seaweed.png" alt="Батончик Морские водоросли" class="slider__product-pic">
+                                <button class="slider__arrow slider__arrow--pos--left slider__arrow--screen--mobile">
+                                    <svg class="slider__arrow-icon">
+                                        <use xlink:href="sprites/icon-sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>                    
+                                <button class="slider__arrow slider__arrow--pos--right slider__arrow--screen--mobile">
+                                    <svg class="slider__arrow-icon">
+                                        <use xlink:href="sprites/icon-sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
                             <div class="slider__content">
                                 <button class="slider__composition-holder">
                                     <svg class="slider__composition-icon">
@@ -177,47 +189,47 @@
                                     </svg>
                                     состав
                                     <ul class="slider__composition-list">
-                                        <li class="composition-item">
+                                        <li class="slider__composition-item">
                                             <svg class="slider__composition-item-pic">
                                                 <use xlink:href="sprites/icon-sprite.svg#oat"></use>
                                             </svg>
-                                            Овёс 25г
+                                            <span class="slider__component-name">Овёс</span><span class="slider__component-weight">25г</span>
                                         </li>
-                                        <li class="composition-item">
+                                        <li class="slider__composition-item">
                                             <svg class="slider__composition-item-pic">
                                                 <use xlink:href="sprites/icon-sprite.svg#seaweed"></use>
                                             </svg>
-                                            Овёс 25г
+                                            <span class="slider__component-name">Мор. водоросли</span><span class="slider__component-weight">15г</span>
                                         </li>
-                                        <li class="composition-item">
+                                        <li class="slider__composition-item">
                                             <svg class="slider__composition-item-pic">
                                                 <use xlink:href="sprites/icon-sprite.svg#almond"></use>
                                             </svg>
-                                            Овёс 25г
+                                            <span class="slider__component-name">Миндаль</span><span class="slider__component-weight">20г</span>
                                         </li>
-                                        <li class="composition-item">
+                                        <li class="slider__composition-item">
                                             <svg class="slider__composition-item-pic">
                                                 <use xlink:href="sprites/icon-sprite.svg#powder "></use>
                                             </svg>
-                                            Овёс 25г
+                                            <span class="slider__component-name">Сухое молоко</span><span class="slider__component-weight">10г</span>
                                         </li>
-                                        <li class="composition-item">
+                                        <li class="slider__composition-item">
                                             <svg class="slider__composition-item-pic">
                                                 <use xlink:href="sprites/icon-sprite.svg#seeds"></use>
                                             </svg>
-                                            Овёс 25г
+                                            <span class="slider__component-name">Тыкв. семечки</span><span class="slider__component-weight">20г</span>
                                         </li>
-                                        <li class="composition-item">
+                                        <li class="slider__composition-item">
                                             <svg class="slider__composition-item-pic">
                                                 <use xlink:href="sprites/icon-sprite.svg#honey"></use>
                                             </svg>
-                                            Овёс 25г
+                                            <span class="slider__component-name">Зам. сахара</span><span class="slider__component-weight">4г</span>
                                         </li>
-                                        <li class="composition-item">
+                                        <li class="slider__composition-item">
                                             <svg class="slider__composition-item-pic">
                                                 <use xlink:href="sprites/icon-sprite.svg#beans"></use>
                                             </svg>
-                                            Овёс 25г
+                                            <span class="slider__component-name">Какао бобы</span> <span class="slider__component-weight">4г</span>
                                         </li>
                                     </ul>  
                                 </button>
