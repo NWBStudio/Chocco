@@ -83,7 +83,13 @@
     border-radius: 5px;
     top: 0;
     left: 100%;
-    display: none;
+    // display: none;
+}
+
+.slider__composition-item-pic {
+    width: rem(35px);
+    height: rem(35px);
+    fill: $title-dark-grey;
 }
 
 

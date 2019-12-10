@@ -1081,8 +1081,12 @@ button {
   background: #ffffff;
   border-radius: 5px;
   top: 0;
-  left: 100%;
-  display: none; }
+  left: 100%; }
+
+.slider__composition-item-pic {
+  width: 1.94444rem;
+  height: 1.94444rem;
+  fill: #323232; }
 
 .slider__info h3 {
   color: #0d0d0d;
