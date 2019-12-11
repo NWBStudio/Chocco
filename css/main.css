@@ -554,7 +554,7 @@ button {
 
 .fullscreen-nav {
   background: rgba(47, 50, 52, 0.99);
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
