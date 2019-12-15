@@ -448,7 +448,36 @@ button {
   border: none;
   cursor: pointer;
   color: inherit;
-  padding: 0; }
+  padding: 0;
+  outline: none; }
+
+@-webkit-keyframes unfold {
+  0% {
+    width: 0; }
+  100% {
+    width: 29.44444rem;
+    @media screen and (max-width: 480px) {
+      width: calc(100% - 85px); } } }
+
+@keyframes unfold {
+  0% {
+    width: 0; }
+  100% {
+    width: 29.44444rem;
+    @media screen and (max-width: 480px) {
+      width: calc(100% - 85px); } } }
+
+@-webkit-keyframes appearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes appearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .header {
   width: 100%; }
@@ -1885,7 +1914,13 @@ button {
   transform: scaleY(-1); }
 
 .accordeon__collapsible--active .accordeon__info {
-  height: auto; }
+  height: auto;
+  -webkit-animation-name: appearance;
+  animation-name: appearance;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 .accordeon__unfolder {
   width: 100%;
@@ -1914,7 +1949,10 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  margin: auto; }
+  margin: auto;
+  z-index: 10;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.95); }
   @media screen and (max-width: 480px) {
     .accordeon__info {
       width: 150%;
@@ -2051,34 +2089,6 @@ button {
     .accordeon-menu__close-icon {
       height: 1.2rem;
       width: 1.2rem; } }
-
-@-webkit-keyframes unfold {
-  0% {
-    width: 0; }
-  100% {
-    width: 29.44444rem;
-    @media screen and (max-width: 480px) {
-      width: calc(100% - 85px); } } }
-
-@keyframes unfold {
-  0% {
-    width: 0; }
-  100% {
-    width: 29.44444rem;
-    @media screen and (max-width: 480px) {
-      width: calc(100% - 85px); } } }
-
-@-webkit-keyframes appearance {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes appearance {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 .contacts__footer {
   position: absolute;

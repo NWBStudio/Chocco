@@ -101,23 +101,3 @@
 }
   
 
-@keyframes unfold {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: rem(530px);
-        @include phones {
-            width: calc(100% - 85px);
-        }
-    }
-}
-
-@keyframes appearance {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}

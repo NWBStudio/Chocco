@@ -29,7 +29,6 @@ const   menu = document.querySelector('.menu'),
 menu.addEventListener('click', (e) => {
     for (let i = 0; i < collapsibleLength; i++) {
         collapsible[i].classList.remove('accordeon-menu__item-collapsible--active');
-        
     }
 });        
 
@@ -72,3 +71,27 @@ collapsibleInfo.forEach(element => { //поскольку в нашем маке
         e.stopPropagation();
     });
 }); 
+
+
+////////////////////// секция команда аккордеон
+
+const   teamCb = document.querySelectorAll('.accordeon__collapsible'),
+        teamCbLength = teamCb.length,
+        teamInfo = document.querySelectorAll('.accordeon__info');
+
+for (let i = 0; i < teamCbLength; i++) {
+    teamCb[i].addEventListener('click', (e) => {
+        e.preventDefault;
+
+        if(teamCb[i].classList.contains('accordeon__collapsible--active')) 
+            teamCb[i].classList.remove('accordeon__collapsible--active');
+        else 
+            teamCb[i].classList.add('accordeon__collapsible--active');    
+    });
+}
+
+teamInfo.forEach(element => {
+    element.addEventListener ('click', (e) => {
+        e.stopPropagation();
+    });
+});
