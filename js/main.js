@@ -17,6 +17,29 @@ fnavCloseBtn.addEventListener('click', () => {
     window.removeEventListener('scroll', noScroll);
 });
 
+////////////////////// секция команда аккордеон
+
+const   teamCb = document.querySelectorAll('.accordeon__collapsible'),
+        teamCbLength = teamCb.length,
+        teamInfo = document.querySelectorAll('.accordeon__info');
+
+for (let i = 0; i < teamCbLength; i++) {
+    teamCb[i].addEventListener('click', (e) => {
+        e.preventDefault;
+
+        if(teamCb[i].classList.contains('accordeon__collapsible--active')) 
+            teamCb[i].classList.remove('accordeon__collapsible--active');
+        else 
+            teamCb[i].classList.add('accordeon__collapsible--active');    
+    });
+}
+
+teamInfo.forEach(element => {
+    element.addEventListener ('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
 
 ////////////////////// секция меню аккордеон
 
@@ -73,25 +96,3 @@ collapsibleInfo.forEach(element => { //поскольку в нашем маке
 }); 
 
 
-////////////////////// секция команда аккордеон
-
-const   teamCb = document.querySelectorAll('.accordeon__collapsible'),
-        teamCbLength = teamCb.length,
-        teamInfo = document.querySelectorAll('.accordeon__info');
-
-for (let i = 0; i < teamCbLength; i++) {
-    teamCb[i].addEventListener('click', (e) => {
-        e.preventDefault;
-
-        if(teamCb[i].classList.contains('accordeon__collapsible--active')) 
-            teamCb[i].classList.remove('accordeon__collapsible--active');
-        else 
-            teamCb[i].classList.add('accordeon__collapsible--active');    
-    });
-}
-
-teamInfo.forEach(element => {
-    element.addEventListener ('click', (e) => {
-        e.stopPropagation();
-    });
-});
