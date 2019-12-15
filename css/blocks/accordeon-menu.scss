@@ -7,31 +7,33 @@
     max-width: 100%;
 }
 
+
 .accordeon-menu__item-collapsible {
     display: flex;
 }
-
-
 
 .accordeon-menu__item-collapsible--active {
     .accordeon-menu__info {
         width: rem(530px);
         padding: rem(65px) rem(125px) rem(10px) rem(30px);
+        animation-name: unfold;
+        animation-duration: 0.4s;
         @include phones {
             width: calc(100% - 85px);
             padding: 8% 5% 5% 4%;
         }
-    }
-    @include phones {
-        &~.accordeon-menu__item-collapsible {
-            display: none;
+        p {
+            animation-name: appearance;
+            animation-delay: 0.5s;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
         }
-    }
-    
+    }  
 }
 
 .accordeon-menu__unfolder {
     width: rem(100px);
+    outline: none;
     @include tablets {
         width: rem(130px);
     }
@@ -69,6 +71,7 @@
     p {
         font-size: rem(16px);
         line-height: rem(24px);
+        opacity: 0;
         @include phones {
             font-size: d-m(rem(16px));
             line-height: d-m(rem(24px));
@@ -97,3 +100,24 @@
     fill: $cross-light-grey;
 }
   
+
+@keyframes unfold {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: rem(530px);
+        @include phones {
+            width: calc(100% - 85px);
+        }
+    }
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

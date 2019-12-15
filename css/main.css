@@ -1958,18 +1958,28 @@ button {
 
 .accordeon-menu__item-collapsible--active .accordeon-menu__info {
   width: 29.44444rem;
-  padding: 3.61111rem 6.94444rem 0.55556rem 1.66667rem; }
+  padding: 3.61111rem 6.94444rem 0.55556rem 1.66667rem;
+  -webkit-animation-name: unfold;
+  animation-name: unfold;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s; }
   @media screen and (max-width: 480px) {
     .accordeon-menu__item-collapsible--active .accordeon-menu__info {
       width: calc(100% - 85px);
       padding: 8% 5% 5% 4%; } }
-
-@media screen and (max-width: 480px) {
-  .accordeon-menu__item-collapsible--active ~ .accordeon-menu__item-collapsible {
-    display: none; } }
+  .accordeon-menu__item-collapsible--active .accordeon-menu__info p {
+    -webkit-animation-name: appearance;
+    animation-name: appearance;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
 
 .accordeon-menu__unfolder {
   width: 5.55556rem;
+  outline: none;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2017,7 +2027,8 @@ button {
   background-color: rgba(47, 50, 52, 0.929); }
   .accordeon-menu__info p {
     font-size: 0.88889rem;
-    line-height: 1.33333rem; }
+    line-height: 1.33333rem;
+    opacity: 0; }
     @media screen and (max-width: 480px) {
       .accordeon-menu__info p {
         font-size: 1.33333rem;
@@ -2040,6 +2051,34 @@ button {
     .accordeon-menu__close-icon {
       height: 1.2rem;
       width: 1.2rem; } }
+
+@-webkit-keyframes unfold {
+  0% {
+    width: 0; }
+  100% {
+    width: 29.44444rem;
+    @media screen and (max-width: 480px) {
+      width: calc(100% - 85px); } } }
+
+@keyframes unfold {
+  0% {
+    width: 0; }
+  100% {
+    width: 29.44444rem;
+    @media screen and (max-width: 480px) {
+      width: calc(100% - 85px); } } }
+
+@-webkit-keyframes appearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes appearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .contacts__footer {
   position: absolute;
