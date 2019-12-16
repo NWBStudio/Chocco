@@ -17,6 +17,12 @@
     }
 }
 
+.slider__list {
+    display: flex;
+    position: relative;
+}
+
+
 .slider__arrow {
     position: absolute;
     top: 50%;
@@ -65,10 +71,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-shrink: 0;
+    margin-right: 100vw;
+    position: relative;
+    animation-fill-mode: forwards;
     @include tablets {
         flex-direction: column;
-    }
+    }    
 }
+
 
 .slider__product{
     position: relative;
@@ -83,6 +94,7 @@
         top: 23%;
         left: -15%;
         max-width: 20%;
+        z-index: 20;
     }
     &:after {
         @include bg-slice(rem(99px), rem(73px), "../img/bg/slider-bottom-leaf.png");

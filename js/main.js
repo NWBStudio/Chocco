@@ -17,6 +17,54 @@ fnavCloseBtn.addEventListener('click', () => {
     window.removeEventListener('scroll', noScroll);
 });
 
+/////////////////////// слайдер 
+
+const   left = document.querySelectorAll(".slider__arrow--pos--left"),
+        right = document.querySelectorAll(".slider__arrow--pos--right"),
+        sliderList = document.querySelector(".slider__list"),
+        sliderItem = document.querySelectorAll(".slider__item"),
+        sliderItemLength = sliderItem.length,
+        sliderAnimDur = 800;
+
+   
+
+    right.forEach(element => {
+        element.addEventListener("click", function(e) {
+            loop("right", e);
+        });
+    });
+
+    left.forEach(element => {
+        element.addEventListener("click", function(e) {
+            loop("left", e);
+        });
+    });
+
+    function loop(direction, e) {
+        e.preventDefault();
+        if (direction === "right") {
+            sliderList.appendChild(sliderList.firstElementChild);
+            sliderItem.forEach(element => {
+                element.style.animationName = "slideRight";
+                element.style.animationDuration = sliderAnimDur/1000 +'s';
+                setTimeout(() => {
+                    element.style.animationName = "none"; 
+                }, sliderAnimDur);
+                                     
+            });
+
+        } else {
+            sliderList.insertBefore(sliderList.lastElementChild, sliderList.firstElementChild);
+            sliderItem.forEach(element => {
+                element.style.animationName = "slideLeft";
+                setTimeout(() => {
+                    element.style.animationName = "none"; 
+                }, sliderAnimDur);                
+            });
+        }
+    }
+
+
 ////////////////////// секция команда аккордеон
 
 const   teamCb = document.querySelectorAll('.accordeon__collapsible'),
