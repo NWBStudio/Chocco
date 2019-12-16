@@ -6,9 +6,11 @@
     padding-left: 4.5%;
     padding-right: 4.5%;
     display: none;
+    position: relative;
 
     &--active {
         display: flex;
+        animation-fill-mode: forwards;
     }
 
     @include tablets {

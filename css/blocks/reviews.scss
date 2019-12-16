@@ -68,7 +68,7 @@
     width: 28%;
 }
 
-.reviews__switch-btn--selected {
+.reviews__switcher-item--selected {
     .reviews__small-pic {
         border: rem(5px) solid $btn-green;
         &:hover {
@@ -78,7 +78,8 @@
             border-width: rem(10px);
         }
     }
- }
+}
+
 
 .reviews__small-pic {
     width: 100%;

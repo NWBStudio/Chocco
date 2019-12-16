@@ -57,13 +57,13 @@ const   left = document.querySelectorAll(".slider__arrow--pos--left"),
             sliderList.insertBefore(sliderList.lastElementChild, sliderList.firstElementChild);
             sliderItem.forEach(element => {
                 element.style.animationName = "slideLeft";
+                element.style.animationDuration = sliderAnimDur/1000 +'s';
                 setTimeout(() => {
                     element.style.animationName = "none"; 
                 }, sliderAnimDur);                
             });
         }
     }
-
 
 ////////////////////// секция команда аккордеон
 
@@ -87,7 +87,6 @@ teamInfo.forEach(element => {
         e.stopPropagation();
     });
 });
-
 
 ////////////////////// секция меню аккордеон
 
@@ -143,4 +142,47 @@ collapsibleInfo.forEach(element => { //поскольку в нашем маке
     });
 }); 
 
+////////////////////// слайдшоу отзывов
 
+const   reviewSnippet = document.querySelectorAll('.review-snippet'),
+        reviewSnippetLength = reviewSnippet.length,
+        snippetActive = document.querySelectorAll('.review-snippet--active'),
+        reviewSwitcher = document.querySelectorAll('.reviews__switcher-item'),
+        reviewSwitcherLegth = reviewSwitcher.length,
+        reviewAnimDur = 800;
+
+let     switchPrev = 0,
+        switchCurr;
+
+for (let i = 0; i < reviewSwitcherLegth; i++) {
+    reviewSwitcher[i].addEventListener('click', (e) => {
+        switchCurr = i;
+        for (let i = 0; i < reviewSwitcherLegth; i++) {
+            if (reviewSwitcher[i].classList.contains('reviews__switcher-item--selected')) {
+                reviewSwitcher[i].classList.remove('reviews__switcher-item--selected');
+                reviewSnippet[i].classList.remove('review-snippet--active');
+            }
+        }
+        reviewSwitcher[i].classList.add('reviews__switcher-item--selected');
+        reviewSnippet[i].classList.add('review-snippet--active');
+        if(switchCurr < switchPrev) {
+            reviewSnippet.forEach(element => {
+                element.style.animationName = "slideLeft";
+                element.style.animationDuration = reviewAnimDur/1000 +'s';
+                setTimeout(() => {
+                    element.style.animationName = "none"; 
+                }, reviewAnimDur);                
+            });
+        }
+        else if (switchCurr > switchPrev) {
+            reviewSnippet.forEach(element => {
+                element.style.animationName = "slideRight";
+                element.style.animationDuration = reviewAnimDur/1000 +'s';
+                setTimeout(() => {
+                    element.style.animationName = "none"; 
+                }, reviewAnimDur);                
+            });
+        }
+        switchPrev = switchCurr;
+    });
+}
