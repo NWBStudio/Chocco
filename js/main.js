@@ -192,6 +192,7 @@ for (let i = 0; i < reviewSwitcherLegth; i++) {
 
 const   orderForm = document.querySelector('.form'),
         orderSubmit = document.querySelector('.form__submit'),
+        orderModalMessage = document.querySelector('.order__modal-message')
         orderEmail = "example@mail.com";
 
 orderSubmit.addEventListener('click', (e) => {
@@ -208,7 +209,9 @@ orderSubmit.addEventListener('click', (e) => {
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(formData);
         xhr.addEventListener('load', () => {
-            console.log(xhr.response);
+            if(xhr.response.status === 1){
+
+            };
         });
     }
 });
