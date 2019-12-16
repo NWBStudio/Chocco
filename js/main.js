@@ -186,3 +186,48 @@ for (let i = 0; i < reviewSwitcherLegth; i++) {
         switchPrev = switchCurr;
     });
 }
+
+
+////////////////////// работа формы в секции заказа
+
+const   orderForm = document.querySelector('.form'),
+        orderSubmit = document.querySelector('.form__submit'),
+        orderEmail = "example@mail.com";
+
+orderSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (validateForm(orderForm)) {
+        let formData = new FormData();
+        formData.append('name', orderForm.elements.name.value);
+        formData.append('phone', orderForm.elements.tel.value);
+        formData.append('comment', orderForm.elements.comment.value);
+        formData.append('to', orderEmail);
+
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(formData);
+        xhr.addEventListener('load', () => {
+            console.log(xhr.response);
+        });
+    }
+});
+ 
+function validateForm(form) {
+    let valid = true;
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.tel)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.comment)) {
+        valid = false;
+    }
+    return valid;
+}        
+
+function validateField(field) {
+    field.placeholder = field.validationMessage;
+    return field.checkValidity();
+}
