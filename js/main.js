@@ -1,20 +1,28 @@
+
+function stopScroll() {
+    document.body.style.overflow = "hidden";
+}
+
+
+function startScroll() {
+    document.body.style.overflow = "initial";
+}
+
+
 /////////////////////// полноэкранное меню
 
 const burgerMenu = document.querySelector('.header__burger-menu');
 const fnav = document.querySelector('.fullscreen-nav');
 const fnavCloseBtn = document.querySelector('.fullscreen-nav__close-btn');
-function noScroll() {
-    window.scrollTo(0, 0);
-}
 
 burgerMenu.addEventListener('click', () => {
     fnav.style.display = 'block';
-    window.addEventListener('scroll', noScroll);
+    stopScroll();
 });
 
 fnavCloseBtn.addEventListener('click', () => {
     fnav.style.display = 'none';
-    window.removeEventListener('scroll', noScroll);
+    startScroll();
 });
 
 /////////////////////// слайдер 
@@ -106,6 +114,7 @@ for (let i = 0; i < collapsibleLength; i++) {
     collapsible[i].addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+
         menuCloseBtn.forEach(element => { //реализация закрытия через крестик
             element.addEventListener('click', (e) => {
                 collapsible[i].classList.remove('accordeon-menu__item-collapsible--active');
@@ -117,6 +126,9 @@ for (let i = 0; i < collapsibleLength; i++) {
 
         if (collapsible[i].classList.contains('accordeon-menu__item-collapsible--active')){
             collapsible[i].classList.remove('accordeon-menu__item-collapsible--active');
+            for (let i = 0; i < collapsibleLength; i++) {
+                collapsible[i].style.display = 'flex';
+            }
             
         } else {
             for (let i = 0; i < collapsibleLength; i++) {
@@ -135,7 +147,7 @@ for (let i = 0; i < collapsibleLength; i++) {
     });
     
 }
-collapsibleInfo.forEach(element => { //поскольку в нашем макете есть крестик, решил реализовать сворачивание через нажатие на него, а не на текстовую зону
+collapsibleInfo.forEach(element => { //поскольку в нашем макете есть крестик, решил реализовать сворачивание через нажатие на него, а не на контентную зону
     element.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -192,6 +204,7 @@ for (let i = 0; i < reviewSwitcherLegth; i++) {
 
 const   orderForm = document.querySelector('.form'),
         orderSubmit = document.querySelector('.form__submit'),
+        orderOverlay = document.querySelector('.order__overlay'),
         orderModalMessage = document.querySelector('.order__modal-message')
         orderEmail = "example@mail.com";
 
@@ -210,11 +223,33 @@ orderSubmit.addEventListener('click', (e) => {
         xhr.send(formData);
         xhr.addEventListener('load', () => {
             if(xhr.response.status === 1){
-
-            };
+                orderModalMessage.textContent = 'Сообщение отправлено';
+            }
+            else {
+                orderModalMessage.textContent = 'Ошибка отправки' ;
+            }
+            orderOverlay.style.display = 'block';
+            stopScroll();
         });
     }
 });
+
+orderOverlay.addEventListener('click', e => {
+    let target = e.target;
+    if (target == orderOverlay || target.tagName == 'BUTTON'){
+        orderOverlay.style.display = 'none';
+        startScroll();
+    }
+});
+
+document.addEventListener('keyup', e => {
+    let key = e.key;
+    if(key = 'Escape') {
+        orderOverlay.style.display = 'none';
+        startScroll();
+    }
+});
+
  
 function validateForm(form) {
     let valid = true;

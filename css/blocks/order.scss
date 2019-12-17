@@ -14,22 +14,23 @@
 .order__overlay {
     position: absolute;
     top: 0;
-    height:100vh;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     background-color: $dark-grey-fnav;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    z-index: 50;
     display: none;
 }
 
 .order__modal {
     width: rem(300px);
-    min-height: rem(175px);
+    min-height: rem(170px); //если ставить нечётное число, то в хроме блюрит текст из - за translate ¯\_(ツ)_/¯ 
     background: $white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 60;
     display: flex;
     flex-direction: column;
     justify-content: center;
