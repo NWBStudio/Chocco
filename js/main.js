@@ -149,7 +149,6 @@ for (let i = 0; i < collapsibleLength; i++) {
 }
 collapsibleInfo.forEach(element => { //поскольку в нашем макете есть крестик, решил реализовать сворачивание через нажатие на него, а не на контентную зону
     element.addEventListener('click', (e) => {
-        e.preventDefault();
         e.stopPropagation();
     });
 }); 
