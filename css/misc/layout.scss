@@ -11,6 +11,7 @@ html {
 html,
 body {
   height: 100%;
+  // width: 100%;
 }
 
 body {
@@ -116,4 +117,5 @@ button {
   cursor: pointer;
   color: inherit;
   padding: 0;
+  outline: none;
 }

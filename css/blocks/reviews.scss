@@ -16,7 +16,7 @@
         bottom: rem(-130px);
     }
     @include phones {
-        padding-top: 0;
+        padding-top: 2%;
     }
 }
 
@@ -48,6 +48,7 @@
     }
     @include phones {
         width: 100%;
+        min-height: 80%;
     }
 }
 
@@ -68,7 +69,7 @@
     width: 28%;
 }
 
-.reviews__switch-btn--selected {
+.reviews__switcher-item--selected {
     .reviews__small-pic {
         border: rem(5px) solid $btn-green;
         &:hover {
@@ -77,8 +78,12 @@
         @include tablets {
             border-width: rem(10px);
         }
+        @include phones {
+            border-width: rem(7px);
+        }
     }
- }
+}
+
 
 .reviews__small-pic {
     width: 100%;
@@ -89,6 +94,9 @@
         box-shadow: 0 0 rem(5px) $black;
         @include tablets {
             box-shadow: 0 0 rem(10px) $black;
+        }
+        @include phones {
+            box-shadow: 0 0 rem(7px) $black;
         }
     }
     @include tablets {

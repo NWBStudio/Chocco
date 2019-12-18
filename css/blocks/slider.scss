@@ -17,15 +17,27 @@
     }
 }
 
+.slider__list {
+    display: flex;
+    position: relative;
+}
+
+
 .slider__arrow {
     position: absolute;
     top: 50%;
     outline: none;
+    z-index: 100;
     &--pos--left {
         left: 5%;
         @include tablets {
-            left: -25%;
+            left: 15%;
+            top: 35%;
         }
+        @include phones {
+            left: 3%;
+        }
+        
     }
     &--pos--right {
         right: 5%;
@@ -34,18 +46,11 @@
         -o-transform: scaleX(-1);
         transform: scaleX(-1);
         @include tablets {
-            right: -25%;
+            right: 15%;
+            top: 35%;
         }
-    }
-    &--screen--desktop {
-        @include tablets {
-            display: none;
-        }
-    }
-    &--screen--mobile {
-        display: none;
-        @include tablets {
-            display: block;
+        @include phones {
+            right: 3%;
         }
     }
 }
@@ -65,10 +70,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-shrink: 0;
+    margin-right: 100vw;
+    position: relative;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
     @include tablets {
         flex-direction: column;
-    }
+    }    
 }
+
 
 .slider__product{
     position: relative;
@@ -83,6 +94,7 @@
         top: 23%;
         left: -15%;
         max-width: 20%;
+        z-index: 20;
     }
     &:after {
         @include bg-slice(rem(99px), rem(73px), "../img/bg/slider-bottom-leaf.png");
