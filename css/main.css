@@ -1086,12 +1086,17 @@ button {
 .slider__arrow {
   position: absolute;
   top: 50%;
-  outline: none; }
+  outline: none;
+  z-index: 100; }
   .slider__arrow--pos--left {
     left: 5%; }
     @media screen and (max-width: 768px) {
       .slider__arrow--pos--left {
-        left: -25%; } }
+        left: 15%;
+        top: 35%; } }
+    @media screen and (max-width: 480px) {
+      .slider__arrow--pos--left {
+        left: 3%; } }
   .slider__arrow--pos--right {
     right: 5%;
     -webkit-transform: scaleX(-1);
@@ -1101,15 +1106,11 @@ button {
     transform: scaleX(-1); }
     @media screen and (max-width: 768px) {
       .slider__arrow--pos--right {
-        right: -25%; } }
-  @media screen and (max-width: 768px) {
-    .slider__arrow--screen--desktop {
-      display: none; } }
-  .slider__arrow--screen--mobile {
-    display: none; }
-    @media screen and (max-width: 768px) {
-      .slider__arrow--screen--mobile {
-        display: block; } }
+        right: 15%;
+        top: 35%; } }
+    @media screen and (max-width: 480px) {
+      .slider__arrow--pos--right {
+        right: 3%; } }
 
 .slider__arrow-icon {
   height: 1.77778rem;
@@ -1135,7 +1136,9 @@ button {
   margin-right: 100vw;
   position: relative;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
   @media screen and (max-width: 768px) {
     .slider__item {
       -webkit-box-orient: vertical;
@@ -1440,7 +1443,7 @@ button {
     bottom: -7.22222rem; }
   @media screen and (max-width: 480px) {
     .reviews {
-      padding-top: 0; } }
+      padding-top: 2%; } }
 
 .reviews__inner {
   display: -webkit-box;
@@ -1475,7 +1478,8 @@ button {
       margin-bottom: 0; } }
   @media screen and (max-width: 480px) {
     .reviews__slider {
-      width: 100%; } }
+      width: 100%;
+      min-height: 80%; } }
 
 .reviews__switcher {
   display: -webkit-box;
@@ -1503,6 +1507,9 @@ button {
   @media screen and (max-width: 768px) {
     .reviews__switcher-item--selected .reviews__small-pic {
       border-width: 0.55556rem; } }
+  @media screen and (max-width: 480px) {
+    .reviews__switcher-item--selected .reviews__small-pic {
+      border-width: 0.38889rem; } }
 
 .reviews__small-pic {
   width: 100%;
@@ -1517,6 +1524,10 @@ button {
       .reviews__small-pic:hover {
         -webkit-box-shadow: 0 0 0.55556rem #000000;
         box-shadow: 0 0 0.55556rem #000000; } }
+    @media screen and (max-width: 480px) {
+      .reviews__small-pic:hover {
+        -webkit-box-shadow: 0 0 0.38889rem #000000;
+        box-shadow: 0 0 0.38889rem #000000; } }
   @media screen and (max-width: 768px) {
     .reviews__small-pic {
       border-width: 0.55556rem; } }
@@ -1536,7 +1547,9 @@ button {
     display: -ms-flexbox;
     display: flex;
     -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
   @media screen and (max-width: 768px) {
     .review-snippet {
       -webkit-box-orient: vertical;
@@ -1549,8 +1562,8 @@ button {
       min-height: 40rem; } }
   @media screen and (max-width: 480px) {
     .review-snippet {
-      min-height: 0;
-      padding-top: 15%; } }
+      min-height: 100%;
+      padding-top: 10%; } }
 
 .review-snippet__userpic {
   width: 14.11111rem;
@@ -1614,7 +1627,7 @@ button {
   font-size: 1rem; }
   @media screen and (max-width: 480px) {
     .review-snippet__author {
-      margin-bottom: 5%;
+      margin-bottom: 0;
       font-size: 1.25rem; } }
 
 .order {
@@ -2096,7 +2109,9 @@ button {
     -webkit-animation-duration: 2.5s;
     animation-duration: 2.5s;
     -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
 
 .accordeon-menu__unfolder {
   width: 5.55556rem;

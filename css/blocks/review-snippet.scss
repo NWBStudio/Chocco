@@ -1,7 +1,6 @@
 .review-snippet {
     min-height: rem(345px);
     background: url("../img/bg/review-bg-half-circle.jpg") no-repeat top center, $light-grey-bg url("../img/bg/review-bg-branch.jpg") no-repeat top right, ;
-    // flex-wrap: wrap;
     align-items: center;
     padding-left: 4.5%;
     padding-right: 4.5%;
@@ -11,6 +10,7 @@
     &--active {
         display: flex;
         animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
     }
 
     @include tablets {
@@ -19,8 +19,8 @@
         min-height: rem(720px);
     }
     @include phones {
-        min-height: 0;
-        padding-top: 15%;
+        min-height: 100%;
+        padding-top: 10%;
     }
 }
 
@@ -80,7 +80,7 @@
 .review-snippet__author {
     @include grey-text;
     @include phones{
-        margin-bottom: 5%;
+        margin-bottom: 0;
         font-size: d-m(rem(15px));
     }
 }

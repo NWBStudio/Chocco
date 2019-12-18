@@ -32,7 +32,7 @@ const   left = document.querySelectorAll(".slider__arrow--pos--left"),
         sliderList = document.querySelector(".slider__list"),
         sliderItem = document.querySelectorAll(".slider__item"),
         sliderItemLength = sliderItem.length,
-        sliderAnimDur = 800;
+        sliderAnimDur = 1000;
 
    
 
@@ -160,7 +160,7 @@ const   reviewSnippet = document.querySelectorAll('.review-snippet'),
         snippetActive = document.querySelectorAll('.review-snippet--active'),
         reviewSwitcher = document.querySelectorAll('.reviews__switcher-item'),
         reviewSwitcherLegth = reviewSwitcher.length,
-        reviewAnimDur = 800;
+        reviewAnimDur = 1000;
 
 let     switchPrev = 0,
         switchCurr;
@@ -206,6 +206,31 @@ const   orderForm = document.querySelector('.form'),
         orderOverlay = document.querySelector('.order__overlay'),
         orderModalMessage = document.querySelector('.order__modal-message')
         orderEmail = "example@mail.com";
+
+orderForm.addEventListener('keydown', e => {
+    let target = e.target;
+    if (target == orderForm.elements.tel || target == orderForm.elements.apartmentNum || target == orderForm.elements.floorNum){
+        let isDigit = false;
+        let isSymbol = false;
+        let isControl = false;
+        
+        e.stopPropagation();
+        
+        if (e.key >= 0 || e.key <= 0) {
+            isDigit = true;
+        }
+        if (e.key == '-' || e.key == '+' || e.key == '/' ) {
+            isSymbol = true;
+        }
+        if (e.key == 'Shift' || e.key == 'Backspace' || e.key == 'ArrowLeft' || e.key == 'ArrowRight' ) {
+            isControl = true;
+        }
+
+        if (isDigit == false && isSymbol == false && isControl == false) {
+            e.preventDefault();
+        }
+    }
+});
 
 orderSubmit.addEventListener('click', (e) => {
     e.preventDefault();

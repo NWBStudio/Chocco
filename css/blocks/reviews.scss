@@ -16,7 +16,7 @@
         bottom: rem(-130px);
     }
     @include phones {
-        padding-top: 0;
+        padding-top: 2%;
     }
 }
 
@@ -48,6 +48,7 @@
     }
     @include phones {
         width: 100%;
+        min-height: 80%;
     }
 }
 
@@ -77,6 +78,9 @@
         @include tablets {
             border-width: rem(10px);
         }
+        @include phones {
+            border-width: rem(7px);
+        }
     }
 }
 
@@ -90,6 +94,9 @@
         box-shadow: 0 0 rem(5px) $black;
         @include tablets {
             box-shadow: 0 0 rem(10px) $black;
+        }
+        @include phones {
+            box-shadow: 0 0 rem(7px) $black;
         }
     }
     @include tablets {
