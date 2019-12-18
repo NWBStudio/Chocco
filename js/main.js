@@ -209,24 +209,39 @@ const   orderForm = document.querySelector('.form'),
 
 orderForm.addEventListener('keydown', e => {
     let target = e.target;
-    if (target == orderForm.elements.tel || target == orderForm.elements.apartmentNum || target == orderForm.elements.floorNum){
+    if (target == orderForm.elements.tel){
         let isDigit = false;
         let isSymbol = false;
         let isControl = false;
         
         e.stopPropagation();
         
-        if (e.key >= 0 || e.key <= 0) {
+        if (e.key >= 0 || e.key <= 9) {
             isDigit = true;
         }
         if (e.key == '-' || e.key == '+' || e.key == '/' ) {
             isSymbol = true;
         }
-        if (e.key == 'Shift' || e.key == 'Backspace' || e.key == 'ArrowLeft' || e.key == 'ArrowRight' ) {
+        if (e.key == 'Shift' || e.key == 'Backspace' || e.key == 'ArrowLeft' || e.key == 'ArrowRight') {
             isControl = true;
         }
 
         if (isDigit == false && isSymbol == false && isControl == false) {
+            e.preventDefault();
+        }
+    } else if (target == orderForm.elements.apartmentNum || target == orderForm.elements.floorNum){
+        let isDigit = false;  
+        let isControl = false; 
+        
+        e.stopPropagation();
+        
+        if (e.key >= 0 || e.key <= 0) {
+            isDigit = true;
+        }
+        if (e.key == 'Shift' || e.key == 'Backspace' || e.key == 'ArrowLeft' || e.key == 'ArrowRight') {
+            isControl = true;
+        }
+        if (isDigit == false && isControl == false) {
             e.preventDefault();
         }
     }
