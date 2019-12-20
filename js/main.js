@@ -1,11 +1,13 @@
 
 function stopScroll() {
-    document.body.style.overflow = "hidden";
+    // var wrapper = document.querySelector('#wrapper');
+    // wrapper.style.overflow = "hidden";
+    document.style.overflow = "hidden";
 }
 
 
 function startScroll() {
-    document.body.style.overflow = "initial";
+    document.style.overflow = "initial";
 }
 
 

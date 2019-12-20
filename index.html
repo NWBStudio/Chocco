@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="wrapper">
-        <section class="section hero">
+    <div class="wrapper" id="wrapper">
+        <section class="section hero" id="hero">
             <div class="hero__inner container">
                 <header class="header hero__header">
                     <div class="header__inner">
@@ -17,25 +17,25 @@
                         <nav class="nav">
                             <ul class="nav__list">
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">О нас</a>
+                                    <a href="#why" class="nav__link">О нас</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">Батончики</a>
+                                    <a href="#slider" class="nav__link">Батончики</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">Команда</a>
+                                    <a href="#team" class="nav__link">Команда</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">Меню</a>
+                                    <a href="#menu" class="nav__link">Меню</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">Отзывы</a>
+                                    <a href="#reviews" class="nav__link">Отзывы</a>
                                 </li>
                                 <li class="nav__item">
                                     <a href="#" class="nav__link">Как мы работаем</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">Контакты</a>
+                                    <a href="#contacts" class="nav__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -88,7 +88,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section why">
+        <section class="section why" id="why">
             <div class="why__inner container">
                 <div class="why__promo">
                     <h2 class="title why__title">почему chocco?</h2>
@@ -136,7 +136,7 @@
                     </li>
                 </ul>
         </section>
-        <section class="section slider">
+        <section class="section slider" id="slider">
             <div class="slider__inner container">
                 <button class="slider__arrow slider__arrow--pos--left">
                     <svg class="slider__arrow-icon">
@@ -286,7 +286,7 @@
                 </div>
             </div>
         </section>
-        <section class="section team">
+        <section class="section team" id="team">
             <div class="team__inner container">
                 <h2 class="title team__title">команда</h2>
                 <ul class="accordeon">
@@ -358,7 +358,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section menu">
+        <section class="section menu" id="menu">
             <h2 class="title title--color--white menu__title">меню</h2>
             <ul class="accordeon-menu">
                 <li class="accordeon-menu__item-collapsible">
@@ -414,7 +414,7 @@
                 </li>
             </ul>
         </section>
-        <section class="section reviews">
+        <section class="section reviews" id="reviews">
             <div class="reviews__inner container">
                 <h2 class="title reviews__title">отзывы</h2>
                 <ul class="reviews__slider">
@@ -482,7 +482,7 @@
                 </li>
             </div>    
         </section>
-        <section class="section order">
+        <section class="section order" id="order">
             <div class="order__inner container">
                 <h2 class="title title--color--green">Закажите доставку</h2>
                 <form class="form">
@@ -561,7 +561,7 @@
             </div>
             
         </section>
-        <section class="section contacts">
+        <section class="section contacts" id="contacts">
             <map name="map" class="map"></map>
             <footer class="footer contacts__footer">
                 <div class="container footer__container">
@@ -659,9 +659,9 @@
                 <button class="modal-btn btn">Закрыть</button>
             </div>
         </div>
-    </div>    
-        <script src="js/main.js"></script>
-
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>    
+    <script src="js/main.js"></script>
 </body>
 
 </html>
