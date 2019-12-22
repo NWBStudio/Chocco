@@ -1,14 +1,139 @@
+/////////////////////// OnePageScroll
 
-function stopScroll() {
-    // var wrapper = document.querySelector('#wrapper');
-    // wrapper.style.overflow = "hidden";
-    document.style.overflow = "hidden";
-}
+const sections = $(".section");
+const display = $(".maincontent");
+let inscroll = false;
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+const touchpadInertiaTime = 300;
+
+const countPositionPercent = sectionEq => {
+  return `${sectionEq * -100}%`;
+};
+
+const switchActiveClass = (elems, elemNdx) => {
+  elems
+    .eq(elemNdx)
+    .addClass("section--active")
+    .siblings()
+    .removeClass("section--active");
+};
+
+const unBlockScroll = () => {
+  display.on('transitionend', () => {
+    setTimeout(() => {
+        inscroll = false;
+      }, touchpadInertiaTime); // нельзя прокрутить до завершение анимации, плюс сглаживание инерции на тачпадах
+  });
+};
+
+const performTransition = sectionEq => {
+  if (inscroll) return;
+  inscroll = true;
+
+  const position = countPositionPercent(sectionEq);
+  const switchFixedMenuClass = () =>
+    switchActiveClass($(".fixed-menu__item"), sectionEq);
+
+  switchActiveClass(sections, sectionEq);
+  switchFixedMenuClass();
+
+  display.css({
+    transform: `translateY(${position})`
+  });
+
+  unBlockScroll();
+};
+
+const scrollViewport = direction => {
+  const activeSection = sections.filter(".section--active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === "next" && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+
+  if (direction === "prev" && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+};
+
+$(document).on({
+  wheel: e => {
+    const deltaY = e.originalEvent.deltaY;
+    const direction = deltaY > 0 ? "next" : "prev";
+    scrollViewport(direction);
+  },
+  keydown: e => {
+    const tagName = e.target.tagName.toLowerCase();
+    const userTypingInInputs = tagName === "input" || tagName === "textarea";
+
+    if (userTypingInInputs) return;
+
+    switch (e.keyCode) {
+      case 40:
+        scrollViewport("next");
+        break;
+
+      case 38:
+        scrollViewport("prev");
+        break;
+    }
+  }
+});
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
+});
+
+// разрешаем свайп на мобильниках
+if (isMobile) {
+    sections.css ({
+        height: '100%'
+    });
+    window.addEventListener(
+        "touchmove",
+        e => {
+        e.preventDefault();
+        },
+        { passive: false }
+    );
+
+    $("body").swipe({
+        swipe: (event, direction) => {
+        let scrollDirecrion;
+        if (direction === "up") scrollDirecrion = "next";
+        if (direction === "down") scrollDirecrion = "prev";
+        scrollViewport(scrollDirecrion);
+        }
+    });
+    } else {
+        sections.css ({
+            height: '100vh'
+        });
+    }
 
 
-function startScroll() {
-    document.style.overflow = "initial";
-}
+
+
+
+
+
+
+
+// function stopScroll() {
+//     // var wrapper = document.querySelector('#wrapper');
+//     // wrapper.style.overflow = "hidden";
+//     document.style.overflow = "hidden";
+// }
+
+
+// function startScroll() {
+//     document.style.overflow = "initial";
+// }
 
 
 /////////////////////// полноэкранное меню
@@ -19,12 +144,12 @@ const fnavCloseBtn = document.querySelector('.fullscreen-nav__close-btn');
 
 burgerMenu.addEventListener('click', () => {
     fnav.style.display = 'block';
-    stopScroll();
+    // stopScroll();
 });
 
 fnavCloseBtn.addEventListener('click', () => {
     fnav.style.display = 'none';
-    startScroll();
+    // startScroll();
 });
 
 /////////////////////// слайдер 
@@ -270,7 +395,7 @@ orderSubmit.addEventListener('click', (e) => {
                 orderModalMessage.textContent = 'Ошибка отправки' ;
             }
             orderOverlay.style.display = 'block';
-            stopScroll();
+            // stopScroll();
         });
     }
 });
@@ -279,7 +404,7 @@ orderOverlay.addEventListener('click', e => {
     let target = e.target;
     if (target == orderOverlay || target.tagName == 'BUTTON'){
         orderOverlay.style.display = 'none';
-        startScroll();
+        // startScroll();
     }
 });
 
@@ -287,7 +412,7 @@ document.addEventListener('keyup', e => {
     let key = e.key;
     if(key = 'Escape') {
         orderOverlay.style.display = 'none';
-        startScroll();
+        // startScroll();
     }
 });
 
@@ -310,3 +435,4 @@ function validateField(field) {
     field.placeholder = field.validationMessage;
     return field.checkValidity();
 }
+
