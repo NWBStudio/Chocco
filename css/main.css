@@ -1900,13 +1900,10 @@ button {
   border: 0.05556rem solid transparent;
   margin-bottom: 0.27778rem;
   position: relative; }
-  .fixed-menu__dot--active {
-    border-color: #ffffff; }
   .fixed-menu__dot:before {
     content: '';
     width: 0.33333rem;
     height: 0.33333rem;
-    background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -1914,6 +1911,18 @@ button {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+
+.fixed-menu--color--white .fixed-menu__dot:before {
+  background-color: #ffffff; }
+
+.fixed-menu--color--white .fixed-menu__item--active .fixed-menu__dot {
+  border-color: #ffffff; }
+
+.fixed-menu--color--blue .fixed-menu__dot:before {
+  background-color: #61c4d9; }
+
+.fixed-menu--color--blue .fixed-menu__item--active .fixed-menu__dot {
+  border-color: #61c4d9; }
 
 .team {
   background: #ffffff url("../img/bg/team-branch-top-right.png") no-repeat top right;

@@ -7,17 +7,20 @@ let inscroll = false;
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 const touchpadInertiaTime = 300;
+const fixedMenuList = $(".fixed-menu");
+
 
 const countPositionPercent = sectionEq => {
   return `${sectionEq * -100}%`;
 };
 
 const switchActiveClass = (elems, elemNdx) => {
-  elems
-    .eq(elemNdx)
-    .addClass("section--active")
-    .siblings()
-    .removeClass("section--active");
+    const className = elems.eq(elemNdx).attr('class').split(' ')[0];
+    elems
+        .eq(elemNdx)
+        .addClass(className + "--active")
+        .siblings()
+        .removeClass(className + "--active");
 };
 
 const unBlockScroll = () => {
@@ -29,22 +32,64 @@ const unBlockScroll = () => {
 };
 
 const performTransition = sectionEq => {
-  if (inscroll) return;
-  inscroll = true;
+    if (inscroll) return;
+    inscroll = true;
+    let currentId = sections.eq(sectionEq).attr('id');  
+    let menuColor = 'white';
+    const position = countPositionPercent(sectionEq);
+    const switchFixedMenuClass = () =>
+      switchActiveClass($(".fixed-menu__item"), sectionEq);
+    const switchFixedMenuColor = (color) => {
+        let colorClassTemplate = 'fixed-menu--color';
+        let fixedClassList = fixedMenuList.attr('class').split(' ');
+        for (let i = 0; i < fixedClassList.length; i++) {
+            if (fixedClassList[i].toLowerCase().includes(colorClassTemplate)){
+                fixedMenuList.removeClass(fixedClassList[i]);
+                fixedMenuList.addClass(colorClassTemplate + '--' + color);
+            }
+          }
+    }         
+    
+    switchActiveClass(sections, sectionEq);
+    switchFixedMenuClass();
+    
+    display.css({
+      transform: `translateY(${position})`
+    });
+    unBlockScroll();
 
-  const position = countPositionPercent(sectionEq);
-  const switchFixedMenuClass = () =>
-    switchActiveClass($(".fixed-menu__item"), sectionEq);
+    switch (currentId) {
+        case 'hero':
+            menuColor = 'white';
+            break;
+        case 'why':
+            menuColor = 'blue';
+            break;
+        case 'slider':
+            menuColor = 'blue';
+            break;
+        case 'team':
+            menuColor = 'blue';
+            break;
+        case 'menu':
+            menuColor = 'white';
+            break;
+        case 'reviews':
+            menuColor = 'blue';
+            break;
+        case 'order':
+            menuColor = 'white';
+            break;
+        case 'contacts':
+            menuColor = 'blue';
+            break;                                                  
+        default:
+            menuColor = 'white';
+            break;
+    }
 
-  switchActiveClass(sections, sectionEq);
-  switchFixedMenuClass();
-
-  display.css({
-    transform: `translateY(${position})`
-  });
-
-  unBlockScroll();
-};
+    switchFixedMenuColor(menuColor);
+};  
 
 const scrollViewport = direction => {
   const activeSection = sections.filter(".section--active");
@@ -58,6 +103,7 @@ const scrollViewport = direction => {
   if (direction === "prev" && prevSection.length) {
     performTransition(prevSection.index());
   }
+
 };
 
 $(document).on({
@@ -85,11 +131,11 @@ $(document).on({
 });
 
 $("[data-scroll-to]").on("click", e => {
-  e.preventDefault();
-  performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
+    let currentTarget = e.currentTarget;
+    e.preventDefault();
+    performTransition(parseInt($(currentTarget).attr("data-scroll-to")));
 });
 
-// разрешаем свайп на мобильниках
 if (isMobile) {
     sections.css ({
         height: '100%'
@@ -116,26 +162,6 @@ if (isMobile) {
         });
     }
 
-
-
-
-
-
-
-
-
-// function stopScroll() {
-//     // var wrapper = document.querySelector('#wrapper');
-//     // wrapper.style.overflow = "hidden";
-//     document.style.overflow = "hidden";
-// }
-
-
-// function startScroll() {
-//     document.style.overflow = "initial";
-// }
-
-
 /////////////////////// полноэкранное меню
 
 const burgerMenu = document.querySelector('.header__burger-menu');
@@ -144,12 +170,12 @@ const fnavCloseBtn = document.querySelector('.fullscreen-nav__close-btn');
 
 burgerMenu.addEventListener('click', () => {
     fnav.style.display = 'block';
-    // stopScroll();
+    inscroll = true;
 });
 
 fnavCloseBtn.addEventListener('click', () => {
     fnav.style.display = 'none';
-    // startScroll();
+    inscroll = false;
 });
 
 /////////////////////// слайдер 
@@ -395,7 +421,7 @@ orderSubmit.addEventListener('click', (e) => {
                 orderModalMessage.textContent = 'Ошибка отправки' ;
             }
             orderOverlay.style.display = 'block';
-            // stopScroll();
+            inscroll = true;
         });
     }
 });
@@ -404,15 +430,14 @@ orderOverlay.addEventListener('click', e => {
     let target = e.target;
     if (target == orderOverlay || target.tagName == 'BUTTON'){
         orderOverlay.style.display = 'none';
-        // startScroll();
+        inscroll = false;
     }
 });
 
 document.addEventListener('keyup', e => {
-    let key = e.key;
-    if(key = 'Escape') {
+    if(e.key == 'Escape') {
         orderOverlay.style.display = 'none';
-        // startScroll();
+        inscroll = false;
     }
 });
 

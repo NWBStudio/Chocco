@@ -17,19 +17,37 @@
   margin-bottom: rem(5px);
   position: relative;
 
-  &--active {
-    border-color: $white;
-  }
-
   &:before {
     content: '';
     width: rem(6px);
     height: rem(6px);
-    background-color: $white;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+
+.fixed-menu--color--white {
+  .fixed-menu__dot:before {
+    background-color: $white;
+  }
+  .fixed-menu__item--active{
+    .fixed-menu__dot{
+      border-color: $white;
+    }
+  }
+}
+
+.fixed-menu--color--blue {
+  .fixed-menu__dot:before {
+    background-color: $bg-light-blue;
+  }
+  .fixed-menu__item--active{
+    .fixed-menu__dot{
+      border-color: $bg-light-blue;
+    }
   }
 }
