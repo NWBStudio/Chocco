@@ -333,13 +333,13 @@ template {
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../../fonts/AlegreyaSans/Alegreyasansextrabolditalic.woff") format("woff");
+  src: url("../fonts/AlegreyaSans/Alegreyasansextrabolditalic.woff") format("woff");
   font-weight: 800;
   font-style: italic; }
 
 @font-face {
   font-family: "Museo Sans Cyrl 500";
-  src: url("../fonts//MuseoSansCyr/MuseoSansCyrl-500.woff") format("woff");
+  src: url("../fonts/MuseoSansCyr/MuseoSansCyrl-500.woff") format("woff");
   font-weight: 500; }
 
 html {

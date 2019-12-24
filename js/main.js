@@ -27,7 +27,7 @@ const unBlockScroll = () => {
   display.on('transitionend', () => {
     setTimeout(() => {
         inscroll = false;
-      }, touchpadInertiaTime); // нельзя прокрутить до завершение анимации, плюс сглаживание инерции на тачпадах
+      }, touchpadInertiaTime); // нельзя прокрутить до завершения анимации, плюс сглаживание инерции на тачпадах
   });
 };
 
