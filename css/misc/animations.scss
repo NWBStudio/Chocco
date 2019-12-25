@@ -4,9 +4,9 @@
     }
     100% {
         width: rem(530px);
-        @include phones {
-            width: calc(100% - 85px);
-        }
+        // @include phones {
+        //     width: calc(100% - 85px);
+        // }
     }
 }
 

@@ -40,10 +40,6 @@ $bg-light-blue: #61c4d9;
 $light-blue-hover: #00accf;
 $icon-light-blue: #aef5fe;
 
-
-//normalize
-@import "./misc/normalize.scss";
-
 //setups
 @import "./misc/media.scss";
 @import "./misc/mixins.scss";
@@ -76,4 +72,3 @@ $icon-light-blue: #aef5fe;
 @import "./blocks/map.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/social.scss";
-

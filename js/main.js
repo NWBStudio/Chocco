@@ -8,6 +8,7 @@ const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 const touchpadInertiaTime = 300;
 const fixedMenuList = $(".fixed-menu");
+const fnavLink = document.querySelector('.fullscreen-nav__link');
 
 
 const countPositionPercent = sectionEq => {
@@ -133,6 +134,8 @@ $(document).on({
 $("[data-scroll-to]").on("click", e => {
     let currentTarget = e.currentTarget;
     e.preventDefault();
+    fnav.style.display = 'none';
+    inscroll = false;
     performTransition(parseInt($(currentTarget).attr("data-scroll-to")));
 });
 
