@@ -1,0 +1,321 @@
+.slider {
+    background: $light-grey-bg url("img/bg/slider-branch-bottom-right.png") no-repeat bottom right;
+    @include tablets {
+        background-size: 30%;
+    }
+    &::after {
+        @include bg-slice(rem(135px), rem(112px), "img/bg/slider-blueberries.png");
+        bottom: rem(-73px);
+        right: 1.4vw;
+        @include tablets {
+            bottom: rem(-50px);
+            right: -2vw;
+        }
+        @include phones {
+            width: 18%;
+        }
+    }
+}
+
+.slider__inner {
+    position: relative;
+}
+
+.slider__list {
+    display: flex;
+    position: relative;
+}
+
+
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    z-index: 80;
+    &--pos--left {
+        left: -5%;
+        @include tablets {
+            left: 15%;
+            top: 25%;
+        }
+        @include phones {
+            left: 3%;
+        }
+        
+    }
+    &--pos--right {
+        right: -5%;
+        -webkit-transform: scaleX(-1);
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        transform: scaleX(-1);
+        @include tablets {
+            right: 15%;
+            top: 25%;
+        }
+        @include phones {
+            right: 3%;
+        }
+    }
+}
+
+.slider__arrow-icon {
+    height: rem(32px);
+    width: rem(32px);
+    @include tablets {
+        height: d-t(rem(32px));
+        width: d-t(rem(32px));
+    }
+    fill: $title-black;
+}
+
+.slider__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 100vw;
+    position: relative;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    @include tablets {
+        flex-direction: column;
+    }    
+}
+
+
+.slider__product{
+    position: relative;
+    @include tablets {
+        margin-bottom: 6%;
+    }
+    @include phones {
+        width: 65%;
+    }
+    &:before {
+        @include bg-slice(rem(75px), rem(92px), "img/bg/slider-top-leaf.png");
+        top: 23%;
+        left: -15%;
+        max-width: 20%;
+        z-index: 20;
+    }
+    &:after {
+        @include bg-slice(rem(99px), rem(73px), "img/bg/slider-bottom-leaf.png");
+        bottom: -8%;
+        right: -8%;
+        max-width: 25%;
+    }
+}
+
+
+.slider__product-pic {
+    max-width: 39vw;
+    width: 100%;
+    @include phones {
+        max-width: 100%;
+    }
+}
+
+.slider__content {
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    @include tablets {
+        width: 80%;
+        align-items: center;
+    }
+    @include phones {
+        width: 90%;
+        align-items: center;
+    }
+}
+
+.slider__composition-holder {
+    height: rem(90px);
+    width: rem(90px);
+    background: $bg-light-blue;
+    border-radius: 5px;
+    margin-bottom: 6%; 
+    font-size: rem(14px);
+    font-weight: $extra-bold;
+    font-style: italic;
+    text-transform: uppercase;
+    outline: none;
+    position: relative;
+    @include tablets {
+        position: absolute;
+        top: 2.2%;
+        right: 2.4%;
+        height: d-t(rem(90px));
+        width: d-t(rem(90px));
+        font-size: d-t(rem(14px));
+    }
+    @include phones {
+        width: 17.6%;
+        height: 11%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: d-t(rem(12px));
+        padding-bottom: 1%;
+    }
+         
+}
+
+.slider__composition-holder:hover {
+    background: $light-blue-hover;
+    .slider__composition-list {
+        display: flex;
+    }
+}
+
+
+.slider__composition-icon {
+    height: rem(50px);
+    width: rem(50px);
+    fill: $white;
+    margin-bottom: rem(5px);
+    @include tablets {
+        height: d-t(rem(50px));
+        width: d-t(rem(50px));
+        margin-bottom: d-t(rem(5px));
+    }
+    @include phones {
+        width: 50%;
+        margin-bottom: 8%;
+    }
+}
+
+.slider__composition-list {
+    position: absolute;
+    width: rem(270px);
+    min-height: rem(360px);
+    background: $white-opacity;
+    border-radius: 5px;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30%;
+    display: none;
+    z-index: 90;
+    @include tablets {
+        left: auto;
+        right: 100%;
+    }
+    @include phones {
+        padding: 25%;
+    }
+      
+}
+
+.slider__composition-item {
+    font-weight: $medium;
+    font-size: rem(16px);
+    color: $slider-hover-dark-grey;
+    font-style: normal;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.slider__composition-item-pic {
+    width: rem(35px);
+    height: rem(35px);
+    fill: $title-dark-grey;
+    margin-right: 10%;
+}
+
+.slider__component-name {
+    margin-right: auto;
+}
+
+
+.slider__info {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    h3 {
+        color: $title-black;
+        font-size: rem(36px);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 4%; 
+        @include tablets {
+            width: 65%;
+            font-size: d-t(rem(30px));
+        }
+        @include phones {
+            width: 85%;
+            font-size: d-t(rem(25px));
+        }
+    }
+    p {
+        @include grey-text;
+        margin-bottom: 7%;
+        font-size: d-t(rem(18px));
+        @include phones {
+            font-size: d-t(rem(17px));
+        }
+    }
+}
+
+.slider__row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 6%;
+    @include tablets {
+        width: 45%;
+        justify-content: space-between;
+    }
+    @include phones {
+        width: 65%;
+    } 
+    &:last-child {
+        margin-bottom: 0;
+        @include tablets {
+            width: 50%;
+        }
+        @include phones {
+            width: 70%;
+        }  
+    }
+     
+}
+
+.slider__spec {
+    width: 50%;
+    color: $title-dark-grey;
+    font-size: rem(18px);
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        font-size: d-t(rem(18px));
+    }
+    span {
+        margin-bottom: 2.5%;
+    }
+    @include phones {
+        width: 40%;
+    } 
+}
+
+.slider__price {
+    font-size: rem(60px);
+    line-height: rem(60px);
+    color: $title-black;
+    font-weight: $light;
+    margin-right: 7%;
+    @include phones {
+        font-size: rem(50px);
+    }
+}
+

@@ -1,0 +1,106 @@
+.reviews {
+    padding-top: rem(60px);
+    
+    &::before {
+        @include bg-slice(rem(150px), rem(86px), "img/bg/reviews-bg-top-berries.png");
+        top: 5.5vh;
+        right: 1.3vw;
+        @include phones {
+            top: 3.5%;
+        }
+    }
+
+    &:after {
+        @include bg-slice(rem(139px), rem(288px), "img/bg/reviews-bg-left-bottom-berries.png");
+        left: 0;
+        bottom: rem(-130px);
+    }
+    @include phones {
+        padding-top: 2%;
+    }
+}
+
+
+.reviews__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablets {
+        justify-content: space-around;
+        height: 100%;
+    }
+}
+
+.reviews__title {
+    margin-bottom: rem(35px);
+    text-align: center;
+    @include tablets {
+        margin-bottom: 0;
+    }
+}
+
+.reviews__slider {
+    margin-bottom: 3.5%;
+    width: 100%;
+    @include tablets {
+        width: 64%;
+        margin-bottom: 0;
+    }
+    @include phones {
+        width: 100%;
+        min-height: 80%;
+    }
+}
+
+.reviews__switcher {
+    display: flex;
+    width: 25%;
+    // justify-content: center;
+    justify-content: space-between;
+    @include tablets {
+        width: 40%;
+    }
+    @include phones {
+        width: 60%;
+    }
+}
+
+.reviews__switcher-item {
+    width: 28%;
+}
+
+.reviews__switcher-item--selected {
+    .reviews__small-pic {
+        border: rem(5px) solid $btn-green;
+        &:hover {
+            box-shadow: none;
+        }
+        @include tablets {
+            border-width: rem(10px);
+        }
+        @include phones {
+            border-width: rem(7px);
+        }
+    }
+}
+
+
+.reviews__small-pic {
+    width: 100%;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: rem(5px) solid transparent;
+    &:hover {
+        box-shadow: 0 0 rem(5px) $black;
+        @include tablets {
+            box-shadow: 0 0 rem(10px) $black;
+        }
+        @include phones {
+            box-shadow: 0 0 rem(7px) $black;
+        }
+    }
+    @include tablets {
+        border-width: rem(10px);
+    }
+        
+}
