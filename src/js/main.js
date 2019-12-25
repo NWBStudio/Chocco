@@ -78,6 +78,9 @@ const performTransition = sectionEq => {
         case 'reviews':
             menuColor = 'blue';
             break;
+        case 'how':
+            menuColor = 'blue';
+            break;            
         case 'order':
             menuColor = 'white';
             break;
@@ -528,7 +531,7 @@ function init() {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../img/content/map-sign.png',
+                iconImageHref: 'img/content/map-sign.png',
                 iconImageSize: [46, 57]
             });
     }
@@ -536,7 +539,7 @@ function init() {
     var clusterer = new ymaps.Clusterer({
         clusterIcons: [
             {
-                href: '../img/content/bars.png',
+                href: 'img/content/bars.png',
                 size: [100, 100],
                 offset: [-50, -50]
             }
