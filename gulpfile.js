@@ -58,6 +58,11 @@ task('copy:fonts', () => {
     .pipe(reload({ stream: true }));
 });
 
+task('copy:video', () => {
+    return src(`${SRC_PATH}/video/**/*`).pipe(dest(`${DIST_PATH}/video/`))
+    .pipe(reload({ stream: true }));
+});
+
 
 task("compileToCSS", () => {
     return src(styles)
@@ -116,7 +121,7 @@ task('deploy', () => {
 task("default", 
     series(
         "clean",
-        parallel("compileToCSS", "copy:html", "copy:img", "copy:sprites", "copy:fonts", "scripts"),
+        parallel("compileToCSS", "copy:html", "copy:img", "copy:sprites", "copy:fonts", "copy:video", "scripts"),
         parallel("watch", "server")
 ));
 

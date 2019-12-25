@@ -357,7 +357,6 @@ for (let i = 0; i < reviewSwitcherLegth; i++) {
     });
 }
 
-
 ////////////////////// работа формы в секции заказа
 
 const   orderForm = document.querySelector('.form'),
@@ -520,8 +519,15 @@ function init() {
         center: [55.751947, 37.599337],
         zoom: 14.5,
         controls: ['zoomControl'],
-        behaviors: ['drag']
-    });
+        behaviors: ['drag'],
+    },
+        {
+            restrictMapArea: [
+                [30.67,15.57],
+                [75.36,-175.67] //ограничение максимальной области отдаления
+            ]
+        }
+    );
 
     for (var i = 0; i < placemarks.length; i++) {
             geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
@@ -545,9 +551,25 @@ function init() {
             }
         ],
         clusterIconContentLayout: null,
-        minClusterSize: 4
+        minClusterSize: 4 //минимальное количество элементов для объединения в кластер
     });
 
     map.geoObjects.add(clusterer);
     clusterer.add(geoObjects);
 }
+
+
+/////////////////////////////////////работа плеера 
+
+var video = document.querySelector('.player__video');
+
+var playBtn = document.querySelector('.player__play-btn');
+
+playBtn.addEventListener ('click', (e) => {
+    if (video.paused == true) {
+        video.play();
+    }
+    else {
+        video.pause();
+    }
+});
