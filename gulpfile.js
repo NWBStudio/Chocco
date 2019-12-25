@@ -123,6 +123,5 @@ task("default",
 task('build',
     series(
       'clean',
-      parallel('copy:html', 'compileToCSS', "copy:img", "copy:sprites", "copy:fonts", 'scripts'),
-      'deploy'
+      parallel('copy:html', 'compileToCSS', "copy:img", "copy:sprites", "copy:fonts", 'scripts')
 ));    
