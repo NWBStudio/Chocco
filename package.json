@@ -22,7 +22,8 @@
     "jquery": "^3.4.1",
     "jquery-touchswipe": "^1.6.19",
     "mobile-detect": "^1.4.4",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "yandex-map-widget": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",

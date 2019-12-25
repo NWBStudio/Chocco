@@ -464,3 +464,87 @@ function validateField(field) {
     return field.checkValidity();
 }
 
+/////////////////////////Виджет карты
+
+ymaps.ready(init);
+
+var placemarks = [
+    {
+        latitude: 55.751947,
+        longitude: 37.599337,
+        hintContent: '<div class="map__hint">ул.Новый Арбат, д.31/12</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            'Самые вкусные батончики у нас! Заходите по адресу:ул.Новый Арбат, д.31/12',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 55.759,
+        longitude: 37.583,
+        hintContent: '<div class="map__hint">Кудринская площадь</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            'Самые вкусные бургеры у нас! Заходите по адресу: Кудринская площадь',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 55.75,
+        longitude: 37.58,
+        hintContent: '<div class="map__hint">1-й Смоленский пер."</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            'Самые вкусные бургеры у нас! Заходите по адресу: 1-й Смоленский пер.',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 55.756928,
+        longitude: 37.619156,
+        hintContent: '<div class="map__hint">станция метро "Театральная"</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            'Самые вкусные бургеры у нас! Заходите по адресу: станция метро "Театральная"',
+            '</div>'
+        ]
+    }
+],
+    geoObjects= [];
+
+function init() {
+    var map = new ymaps.Map('map', {
+        center: [55.751947, 37.599337],
+        zoom: 14.5,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+    for (var i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+            {
+                hintContent: placemarks[i].hintContent,
+                balloonContent: placemarks[i].balloonContent.join('')
+            },
+            {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/content/map-sign.png',
+                iconImageSize: [46, 57]
+            });
+    }
+
+    var clusterer = new ymaps.Clusterer({
+        clusterIcons: [
+            {
+                href: '../img/content/bars.png',
+                size: [100, 100],
+                offset: [-50, -50]
+            }
+        ],
+        clusterIconContentLayout: null,
+        minClusterSize: 4
+    });
+
+    map.geoObjects.add(clusterer);
+    clusterer.add(geoObjects);
+}
