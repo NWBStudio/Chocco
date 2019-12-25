@@ -4,6 +4,7 @@ const { src, dest, task, series, watch, parallel} = require('gulp'); //импо�
 
 var clean  = require("gulp-clean"); //импорт пакета gulp-clean (плагин реализующий удаление)
 var compileSass = require('gulp-sass'); //компиляция sass
+var ghPages = require('gulp-gh-pages'); //деплой на GH-Pages
  
 compileSass.compiler = require('node-sass'); //указываем что компилятор node, т.к. sass мультиязычный
 
@@ -16,6 +17,10 @@ const sourcemaps = require('gulp-sourcemaps'); //сохраняет в итог�
 const babel = require('gulp-babel'); //поддержка ES6 старыми браузерами
 const uglify = require('gulp-uglify'); //минификация JS
 const concat = require('gulp-concat'); //склейка файлов
+const gulpif = require('gulp-if');//работа с условиями
+
+const env = process.env.NODE_ENV; //переменная окружения отвечающая за статус dev/prod
+
 const {SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config'); //переменные путей и либ из конфига
 
 const styles = [ //массив склеиваемых CSS файлов
@@ -56,29 +61,29 @@ task('copy:fonts', () => {
 
 task("compileToCSS", () => {
     return src(styles)
-    // .pipe(sourcemaps.init())
+    .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.scss'))
     .pipe(compileSass())
-    .pipe(autoprefixer({
+    .pipe(gulpif(env === 'prod', autoprefixer({
         browsers: ['last 2 versions'], 
         cascade: false //влияет только на внешний вид стилевого файла
-      }))
-    .pipe(groupMediaQ())
-    .pipe(cleanCSS())
-    // .pipe(sourcemaps.write())
+      })))
+    .pipe(gulpif(env === 'prod', groupMediaQ()))
+    .pipe(gulpif(env === 'prod',cleanCSS()))
+    .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
 
 task("scripts", () => {
     return src(libs)
-    // .pipe(sourcemaps.init())
+    .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.min.js', {newLine: ';'}))
-    .pipe(babel({
+    .pipe(gulpif(env === 'prod', babel({
         presets: ['@babel/env']
-      }))
-    .pipe(uglify())      
-    // .pipe(sourcemaps.write())
+      })))
+    .pipe(gulpif(env === 'prod', uglify()))      
+    .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
@@ -101,10 +106,23 @@ task ("watch", () => {
     watch('./src/fonts/**/*', series("copy:fonts"));
 });
 
+task('deploy', () => {
+    return src(`${DIST_PATH}/**/*`)
+    .pipe(ghPages());
+});
 
 
-task("default", series(
-    "clean",
-    parallel("compileToCSS", "copy:html", "copy:img", "copy:sprites", "copy:fonts", "scripts"),
-    parallel("watch", "server")
-    ));
+
+task("default", 
+    series(
+        "clean",
+        parallel("compileToCSS", "copy:html", "copy:img", "copy:sprites", "copy:fonts", "scripts"),
+        parallel("watch", "server")
+));
+
+task('build',
+    series(
+      'clean',
+      parallel('copy:html', 'compileToCSS', "copy:img", "copy:sprites", "copy:fonts", 'scripts'),
+      'deploy'
+));    
