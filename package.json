@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/NWBStudio/Chocco#readme",
   "dependencies": {
+    "input-range-scss": "^1.5.2",
     "jquery": "^3.4.1",
     "jquery-touchswipe": "^1.6.19",
     "mobile-detect": "^1.4.4",

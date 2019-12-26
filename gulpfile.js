@@ -25,7 +25,8 @@ const {SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config'); //�
 
 const styles = [ //массив склеиваемых CSS файлов
     ...STYLE_LIBS,
-    "src/css/main.scss"
+    "src/css/main.scss",
+    "./node_modules/input-range-scss/_inputrange.scss"
 ];
 
 const libs = [ //все js библиотеки и файлы используемые в prod
@@ -128,5 +129,5 @@ task("default",
 task('build',
     series(
       'clean',
-      parallel('copy:html', 'compileToCSS', "copy:img", "copy:sprites", "copy:fonts", 'scripts')
+      parallel('copy:html', 'compileToCSS', "copy:img", "copy:sprites", "copy:fonts", "copy:video", 'scripts')
 ));    

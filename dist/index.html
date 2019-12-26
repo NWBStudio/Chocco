@@ -487,13 +487,24 @@
                 <div class="how__inner container">
                     <h2 class="title how__title">как мы работаем</h2>
                     <div class="player">
-                        <video src="video/videoplayback.mp4" class="player__video"></video>
+                        <video src="video/videoplayback.mp4" class="player__video" loop></video>
                         <div class="player__controls">
                             <buttton class="player__play-btn">
                                 <svg class="player__play-icon">
-                                    <use xlink:href="sprites/icon-sprite.svg#pause"></use>
+                                    <use xlink:href="sprites/icon-sprite.svg#play"></use>
                                 </svg>
                             </buttton>
+                            <div class="player__seek-bar-wrapper">
+                                <input type="range" class="player__seek-bar" value="0" min='0' max='100'>
+                            </div>
+                            <button class="player__volume-btn">
+                                <svg class="player__volume-icon">
+                                    <use xlink:href="sprites/icon-sprite.svg#volume"></use>
+                                </svg>
+                            </button>
+                            <div class="player__volume-bar-wrapper">
+                                <input type="range" class="player__volume-bar" value="100" min='0' max='100'>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -663,7 +674,7 @@
                         <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-scroll-to="3">Команда</a></li>
                         <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-scroll-to="4">Меню</a></li>
                         <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-scroll-to="5">Отзывы</a></li>
-                        <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-scroll-to="7">Как мы работаем</a></li>
+                        <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-scroll-to="6">Как мы работаем</a></li>
                         <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-scroll-to="8">Контакты</a></li>
                     </ul>
                     <button class="fullscreen-nav__close-btn">

@@ -1,6 +1,10 @@
 .how {
     background: $light-grey-bg;
-    
+    &::after {
+        @include bg-slice(rem(197px), rem(264px), "img/bg/how-blackberries.png");
+        bottom: rem(-105px);
+        right: 0;
+    }
 }
 
 .how__inner {
