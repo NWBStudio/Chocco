@@ -57,10 +57,11 @@
 
 .player__play-btn {
     height: 75%;
-    margin-right: 3%;
+    margin-right: 2%;
     @include tablets {
         height: 50%;
     }
+    
 }
 
 .player__play-icon {
@@ -71,12 +72,15 @@
 
 .player__seek-bar-wrapper {
     width: 65%;
-    margin-right: 2%; 
+    margin-right: 2%;
+    @include phones {
+        width: 55%
+    } 
 }
 
 .player__volume-btn {
     height: 75%;
-    margin-right: 3%; 
+    margin-right: 2%; 
     @include tablets {
         height: 50%;
     }
@@ -96,7 +100,8 @@
     color: $social-grey;
     display: flex;
     font-size: rem(15px);
-    margin-right: 2%;
+    margin-right: 4%;
+    width: 15%;
 }
 
 
