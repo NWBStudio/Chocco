@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("fonts/AlegreyaSans/Alegreyasans.woff") format("woff");
+}
+
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("fonts/AlegreyaSans/AlegreyaSans-Light.ttf") format("truetype");
+    font-weight: $light;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("fonts/AlegreyaSans/Alegreyasansmedium.woff") format("woff");
+    font-weight: $medium;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("fonts/AlegreyaSans/Alegreyasansbold.woff") format("woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("fonts/AlegreyaSans/Alegreyasansextrabold.woff") format("woff");
+    font-weight: $extra-bold;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("fonts/AlegreyaSans/Alegreyasansextrabolditalic.woff") format("woff");
+    font-weight: $extra-bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Museo Sans Cyrl 500";
+    src: url("fonts/MuseoSansCyr/MuseoSansCyrl-500.woff") format("woff");
+    font-weight: $medium;
+}
+

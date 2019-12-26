@@ -1,0 +1,143 @@
+.player {
+    width: 70%;
+    position: relative;
+    &::before {
+        @include bg-slice(rem(90px), rem(77px), "img/bg/how-top-leaf.png");
+        top: -15%;
+        right: -20%;
+        @include tablets {
+            right: -7%;
+        }
+    }
+    &::after {
+        @include bg-slice(rem(72px), rem(135px), "img/bg/how-bottom-leaf.png");
+        bottom: -20%;
+        left: -20%;
+        @include tablets {
+            bottom: -5%;
+            left: -12%;
+        }
+    }
+    @include tablets {
+        width: 85%;
+    }
+
+    @include phones {
+        width: 90%;
+    }
+}
+
+.player__video {
+    width: 100%;
+    display: block; //убирает странный отступ снизу у оборачивающего дива
+}
+
+.player__controls {
+    width: 100%;
+    height: 10%;
+    background-color: $dark-grey-opacity;
+    position: absolute;
+    bottom: -10%;
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+    z-index: 100;
+    @include tablets {
+        left: -0.1%;
+        height: 15%;
+        bottom: -14.5%;
+    }
+    @include phones {
+        left: -0.1%;
+        height: 25%;
+        bottom: -24.5%;
+    }
+}
+
+
+.player__play-btn {
+    height: 75%;
+    margin-right: 2%;
+    @include tablets {
+        height: 50%;
+    }
+    
+}
+
+.player__play-icon {
+    height: rem(30px);
+    width: rem(20px);
+    fill: $player-grey;
+}
+
+.player__seek-bar-wrapper {
+    width: 65%;
+    margin-right: 2%;
+    @include phones {
+        width: 55%
+    } 
+}
+
+.player__volume-btn {
+    height: 75%;
+    margin-right: 2%; 
+    @include tablets {
+        height: 50%;
+    }
+}
+
+.player__volume-icon {
+    height: rem(30px);
+    width: rem(20px);
+    fill: $player-grey;
+}
+
+.player__volume-bar-wrapper {
+    width: 10%; 
+}
+
+.player__time {
+    color: $social-grey;
+    display: flex;
+    font-size: rem(15px);
+    margin-right: 4%;
+    width: 15%;
+}
+
+
+
+$track-width: 100%; //Набор параметров для кастомного input:range
+$track-color: $player-grey;
+$thumb-color: $player-grey;
+$track-border-width: 0;
+
+$track-radius: 0;
+$track-height: rem(5px);
+$thumb-height: rem(15px);
+$thumb-width: rem(15px);
+$thumb-radius: 50%;
+$thumb-border-width: 0;
+
+// // $track-color: #eceff1 !default;
+// // $thumb-color: #607d8b !default;
+
+// // $thumb-radius: 12px !default;
+// // $thumb-height: 24px !default;
+// // $thumb-width: 24px !default;
+// // $thumb-shadow-size: 4px !default;
+// // $thumb-shadow-blur: 4px !default;
+// // $thumb-shadow-color: rgba(0, 0, 0, .2) !default;
+// // $thumb-border-width: 2px !default;
+// // $thumb-border-color: #eceff1 !default;
+
+// // $track-width: 100% !default;
+// // $track-height: 8px !default;
+// // $track-shadow-size: 1px !default;
+// // $track-shadow-blur: 1px !default;
+// // $track-shadow-color: rgba(0, 0, 0, .2) !default;
+// // $track-border-width: 2px !default;
+// // $track-border-color: #cfd8dc !default;
+
+// // $track-radius: 5px !default;
+// // $contrast: 5% !default;
+

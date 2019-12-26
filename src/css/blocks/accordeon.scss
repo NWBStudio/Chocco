@@ -1,0 +1,108 @@
+.accordeon {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+        flex-wrap: wrap;
+        width: 60%;
+        height: 70%;
+    }
+    @include phones {
+        width: 80%;
+    }
+}
+
+.accordeon__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23.5%;
+    position: relative;
+    @include tablets {
+        width: 45%;
+    }
+    @include phones {
+        width: 40%;
+    }
+}
+
+.accordeon__pic {
+    width: 100%;
+    margin-bottom: rem(30px);
+    @include phones {
+        margin-bottom: 5%;
+    }
+}
+
+.accordeon__collapsible {
+    @include phones {
+        width: 150%;
+    }
+}
+
+
+.accordeon__collapsible--active {
+    .accordeon__arrow-icon {
+        transform: scaleY(-1);
+        }
+    .accordeon__info {
+        height: auto;
+        animation-name: appearance;
+        animation-duration: 2.5s;
+        animation-fill-mode: forwards;
+        }
+}
+
+.accordeon__unfolder {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    h3 {
+        color: $title-dark-grey;
+        font-size: rem(21px);
+        font-weight: $medium;
+        display: inline-block;
+        margin-right: rem(5px);
+        @include phones {
+            font-size: d-m(rem(16px));
+        }
+    }
+}
+
+.accordeon__arrow-icon {
+    height: rem(9px);
+    width: rem(9px);
+    fill: $btn-green;
+    display: inline-block;
+}
+
+.accordeon__info {
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    opacity: 0;
+    background-color: $white-opacity;
+    @include phones {
+        width: 150%;
+        left: -25%;
+    }
+    h4{
+        color: $dark-brown;
+        font-size: rem(18px);
+        margin-bottom: rem(7px);
+        @include phones {
+            font-size: d-t(rem(18px));
+        }
+    }
+    p {
+        @include grey-text;
+        font-weight: $light;
+        font-size: d-t(rem(18px));
+        
+    }
+    
+}

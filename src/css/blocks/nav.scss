@@ -1,0 +1,25 @@
+.nav {
+  width: 69.5%;
+  @include tablets {
+    display: none;
+  }
+}
+
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav__link {
+    text-decoration: none;
+    color: $white;
+    font-size: rem(18px);
+    line-height: rem(30px);
+  }

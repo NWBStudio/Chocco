@@ -1,0 +1,127 @@
+html {
+  font-size: 18px; // задал, чтобы изначальные десктопные расчёты такими как я их и задумал
+  @include tablets {
+    font-size: 15px;
+  }
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  // width: 100%;
+}
+
+body {
+  font-size: rem(18px);
+  line-height: 1.2; //самый распространённый размер по макету, для подстраховки
+  font-family: "Alegreya Sans", "Arial", "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background-color: $white;
+  color: $white;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // min-height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+}
+
+.container {
+  max-width: 940px;
+  width: 95%;
+  margin: 0 auto;
+  @include tablets {
+    max-width: 720px;
+  }
+  @include phones {
+    max-width: 460px;
+  }
+}
+
+.section {
+  height: 100vh;
+  // min-height: rem(650px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  @include tablets {
+    min-height: 0;
+  }
+}
+
+.title {
+  color: $title-black;
+  font-weight: bold;
+  font-size: rem(48px);
+  text-transform: uppercase;
+  text-align: center;
+  &--color--white {
+    color: $white;
+  }
+  &--color--green {
+    color: $btn-green;
+  }
+  @include phones {
+    font-size: d-m(rem(35px));
+  }
+}
+
+// tag styles reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  & > li {
+    list-style: none;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  outline: none;
+}
