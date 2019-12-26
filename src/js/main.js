@@ -357,6 +357,75 @@ for (let i = 0; i < reviewSwitcherLegth; i++) {
     });
 }
 
+
+/////////////////////////////////////работа плеера 
+
+var player = document.querySelector('player');
+var video = document.querySelector('.player__video');
+var playBtnIcon = document.querySelector('.player__play-icon').querySelector('use');
+var seekBar = document.querySelector('.player__seek-bar');
+var volumeBar = document.querySelector('.player__volume-bar');
+var clickEvent  = document.createEvent ('MouseEvents');
+let videoMouseOver = false;
+
+const playerControls = document.querySelector('.player__controls')
+const playBtn = document.querySelector('.player__play-btn');
+const volumeBtn = document.querySelector('.player__volume-btn');
+const playIcon = 'play';
+const pauseIcon = 'pause';
+
+const playPause = () => {
+    if (video.paused) {
+        playBtnIcon.setAttribute('xlink:href', 'sprites/icon-sprite.svg#' + pauseIcon);
+        video.play();  
+    }
+    else {
+        playBtnIcon.setAttribute('xlink:href', 'sprites/icon-sprite.svg#' + playIcon);
+        video.pause();
+    }
+}
+
+video.addEventListener ('click', () => {
+    playPause();
+});
+
+
+playBtn.addEventListener ('click', () => {
+    playPause();
+});
+
+seekBar.addEventListener('click', e => {
+    clickEvent.initEvent ('dblclick', true, true); //xD
+});
+
+seekBar.addEventListener('change', () => {
+    let time = video.duration * (seekBar.value / 100);
+    video.currentTime = Math.floor(time);
+});
+
+
+video.addEventListener("timeupdate", () => {
+    let value = (100 / video.duration) * video.currentTime;
+    seekBar.value = Math.floor(value);
+});
+
+volumeBtn.addEventListener('click', () => {
+    if(volumeBar.value > 0){     
+        volumeBar.value = 0;
+        video.volume = volumeBar.value / 100; 
+    }
+    else {
+        volumeBar.value = 100;
+        video.volume = volumeBar.value / 100;     
+    }
+});
+
+volumeBar.addEventListener('change', () => {
+    video.volume = volumeBar.value / 100;
+});
+
+
+
 ////////////////////// работа формы в секции заказа
 
 const   orderForm = document.querySelector('.form'),
@@ -523,8 +592,8 @@ function init() {
     },
         {
             restrictMapArea: [
-                [30.67,15.57],
-                [75.36,-175.67] //ограничение максимальной области отдаления
+                [41.731005687468794,-4.59481612804766],
+                [65.9812392734476,79.78018387195233] //ограничение максимальной области отдаления
             ]
         }
     );
@@ -559,70 +628,5 @@ function init() {
 }
 
 
-/////////////////////////////////////работа плеера 
-
-var player = document.querySelector('player');
-var video = document.querySelector('.player__video');
-var playBtnIcon = document.querySelector('.player__play-icon').querySelector('use');
-var seekBar = document.querySelector('.player__seek-bar');
-var volumeBar = document.querySelector('.player__volume-bar');
-var clickEvent  = document.createEvent ('MouseEvents');
-let videoMouseOver = false;
-
-const playerControls = document.querySelector('.player__controls')
-const playBtn = document.querySelector('.player__play-btn');
-const volumeBtn = document.querySelector('.player__volume-btn');
-const playIcon = 'play';
-const pauseIcon = 'pause';
-
-const playPause = () => {
-    if (video.paused) {
-        playBtnIcon.setAttribute('xlink:href', 'sprites/icon-sprite.svg#' + pauseIcon);
-        video.play();  
-    }
-    else {
-        playBtnIcon.setAttribute('xlink:href', 'sprites/icon-sprite.svg#' + playIcon);
-        video.pause();
-    }
-}
-
-video.addEventListener ('click', () => {
-    playPause();
-});
-
-
-playBtn.addEventListener ('click', () => {
-    playPause();
-});
-
-seekBar.addEventListener('click', e => {
-    clickEvent.initEvent ('dblclick', true, true); //xD
-});
-
-seekBar.addEventListener('change', () => {
-    let time = video.duration * (seekBar.value / 100);
-    video.currentTime = Math.floor(time);
-});
-
-
-video.addEventListener("timeupdate", () => {
-    let value = (100 / video.duration) * video.currentTime;
-    seekBar.value = Math.floor(value);
-});
-
-volumeBtn.addEventListener('click', () => {
-    if(volumeBar.value > 0){     
-        volumeBar.value = 0;
-        video.volume = volumeBar.value / 100; 
-    }
-    else {
-        volumeBar.value = 100;
-        video.volume = volumeBar.value / 100;     
-    }
-});
-
-volumeBar.addEventListener('change', () => {
-    video.volume = volumeBar.value / 100;
-});
 
 
