@@ -373,6 +373,33 @@ const playBtn = document.querySelector('.player__play-btn');
 const volumeBtn = document.querySelector('.player__volume-btn');
 const playIcon = 'play';
 const pauseIcon = 'pause';
+const timeElapsed = document.querySelector('.player__time-elapsed');
+const duration = document.querySelector('.player__duration');
+
+function formatTime(timeInSeconds) {
+    const result = new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
+  
+    return {
+      minutes: result.substr(3, 2),
+      seconds: result.substr(6, 2),
+    };
+};
+
+function initializeVideo() {
+    const videoDuration = Math.round(video.duration);
+    const time = formatTime(videoDuration);
+    duration.innerText = `${time.minutes}:${time.seconds}`;
+    duration.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
+}
+
+function updateTimeElapsed() {
+    const time = formatTime(Math.round(video.currentTime));
+    timeElapsed.innerText = `${time.minutes}:${time.seconds}`;
+    timeElapsed.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
+}
+
+video.addEventListener('loadedmetadata', initializeVideo);
+video.addEventListener('timeupdate', updateTimeElapsed);
 
 const playPause = () => {
     if (video.paused) {
@@ -387,8 +414,8 @@ const playPause = () => {
 
 video.addEventListener ('click', () => {
     playPause();
+    console.log(video.duration);
 });
-
 
 playBtn.addEventListener ('click', () => {
     playPause();

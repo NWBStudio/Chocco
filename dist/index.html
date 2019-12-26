@@ -487,7 +487,7 @@
                 <div class="how__inner container">
                     <h2 class="title how__title">как мы работаем</h2>
                     <div class="player">
-                        <video src="../src/video/videoplayback.mp4" class="player__video" loop></video>
+                        <video src="video/videoplayback.mp4" class="player__video" loop></video>
                         <div class="player__controls">
                             <buttton class="player__play-btn">
                                 <svg class="player__play-icon">
@@ -496,6 +496,11 @@
                             </buttton>
                             <div class="player__seek-bar-wrapper">
                                 <input type="range" class="player__seek-bar" value="0" min='0' max='100'>
+                            </div>
+                            <div class="player__time">
+                                <time class="player__time-elapsed">00:00</time>
+                                <span> / </span>
+                                <time class="player__duration">00:00</time>
                             </div>
                             <button class="player__volume-btn">
                                 <svg class="player__volume-icon">

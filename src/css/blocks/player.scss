@@ -71,7 +71,7 @@
 
 .player__seek-bar-wrapper {
     width: 65%;
-    margin-right: 5%; 
+    margin-right: 2%; 
 }
 
 .player__volume-btn {
@@ -91,6 +91,14 @@
 .player__volume-bar-wrapper {
     width: 10%; 
 }
+
+.player__time {
+    color: $social-grey;
+    display: flex;
+    font-size: rem(15px);
+    margin-right: 2%;
+}
+
 
 
 $track-width: 100%; //Набор параметров для кастомного input:range
